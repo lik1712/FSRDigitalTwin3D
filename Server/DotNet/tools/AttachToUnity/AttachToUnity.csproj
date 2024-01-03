@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ProtocExec>$(SolutionDir)..\..\Tools\protoc\protoc.exe</ProtocExec>
+    <ProtocCSharpPlugin>$(SolutionDir)..\..\Tools\protoc\grpc_csharp_plugin.exe</ProtocCSharpPlugin>
+    <UnityOutputDir>$(SolutionDir)..\..\Client\Unity\DTClient\Assets\Scripts\DigitalTwin\FSR.DigitalTwin.Generated\</UnityOutputDir>
+    <Protoc>$(ProtocExec) --csharp_out=$(UnityOutputDir)\Message.Generated\ --grcp_out=$(UnityOutputDir)\GRPC.Generated\ --plugin=protoc-gen-grcp=$(ProtocCSharpPlugin)</Protoc>
+  </PropertyGroup>
+
+  <Target Name="AttachToUnityWin" BeforeTargets="BeforeBuild" Condition=" '$(OS)' == 'Windows_NT' ">
+    <Exec Command="if exist $(ProjectDir)\Protos\ del /F /Q $(ProjectDir)\Protos\" />
+    <Exec Command="if exist $(UnityOutputDir)Message.Generated\ del /F /Q $(UnityOutputDir)Message.Generated\" />
+    <Exec Command="if exist $(UnityOutputDir)GRPC.Generated\ del /F /Q $(UnityOutputDir)GRPC.Generated\" />
+    <Exec Command="if not exist $(UnityOutputDir)Message.Generated\ mkdir $(UnityOutputDir)Message.Generated\" />
+    <Exec Command="if not exist $(UnityOutputDir)GRPC.Generated\ mkdir $(UnityOutputDir)GRPC.Generated\" />
+    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.GRPC.V3\Protos\ $(ProjectDir)\Protos\" />
+    <!-- Protos here -->
+    <Exec Command="$(Protoc) .\Protos\AasModels.V3.proto" />
+    <Exec Command="$(Protoc) .\Protos\AasApiModels.V3.proto" />
+    <Exec Command="$(Protoc) .\Protos\Services\AdminShellRepositoryService.proto" />
+    <Exec Command="$(Protoc) .\Protos\Services\SubmodelRepositoryService.proto" />
+    <Exec Command="$(Protoc) .\Protos\Services\AssetAdministrationShellService.proto" />
+    <Exec Command="$(Protoc) .\Protos\Services\SubmodelService.proto" />
+  </Target>
+
+</Project>

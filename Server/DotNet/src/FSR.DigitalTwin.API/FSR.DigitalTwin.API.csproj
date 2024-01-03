@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <PropertyGroup>
+		<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../FSR.DigitalTwin.Domain/FSR.DigitalTwin.Domain.csproj" />
+    <ProjectReference Include="../FSR.DigitalTwin.App/FSR.DigitalTwin.App.csproj" />
+    <ProjectReference Include="../FSR.DigitalTwin.Infra/FSR.DigitalTwin.Infra.csproj" />
+    <ProjectReference Include="../FSR.GRPC.V3/FSR.GRPC.V3.csproj" />
+    <ProjectReference Include="../../aasx/src/IO.Swagger.Lib.V3/IO.Swagger.Lib.V3.csproj" />
+    <ProjectReference Include="../../aasx/src/IO.Swagger.Registry.Lib.V3/IO.Swagger.registry.Lib.V3.csproj" />
+  </ItemGroup>
+
+</Project>
