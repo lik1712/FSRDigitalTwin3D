@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.V3.Services.SubmodelService";
+option csharp_namespace = "FSR.GRPC.Lib.V3.Services.SubmodelService";
 
 import "Protos/AasModels.V3.proto";
 import "Protos/AasApiModels.V3.proto";
 
-package FSR.GRPC.V3;
+package FSR.GRPC.Lib.V3;
 
 /* SubmodelService */
 
@@ -15,8 +15,8 @@ message GetSubmodelRpcRequest {
 }
 message GetSubmodelRpcResponse {
     int32 statusCode = 1;
-    SubmodelModel payload = 2;
-    ReferenceModel reference = 3;
+    SubmodelDTO payload = 2;
+    ReferenceDTO reference = 3;
 }
 
 
@@ -27,66 +27,66 @@ message GetAllSubmodelElementsRpcRequest {
 message GetAllSubmodelElementsRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated SubmodelElementModel payload = 3;
+    repeated SubmodelElementDTO payload = 3;
     repeated string value = 4;
-    repeated ReferenceModel reference = 5;
+    repeated ReferenceDTO reference = 5;
     repeated string path = 6;
 }
 
 message GetSubmodelElementByPathRpcRequest {
     string submodelId = 1;
-    repeated KeyModel path = 2;
+    repeated KeyDTO path = 2;
     OutputModifier outputModifier = 3;
 }
 message GetSubmodelElementByPathRpcResponse {
     int32 statusCode = 1;
-    SubmodelElementModel payload = 2;
+    SubmodelElementDTO payload = 2;
     string value = 3;
-    ReferenceModel reference = 4;
+    ReferenceDTO reference = 4;
     string path = 5;
 }
 
 message PutSubmodelRpcRequest {
     string submodelId = 1;
-    SubmodelModel submodel = 2;
+    SubmodelDTO submodel = 2;
 }
 message PutSubmodelRpcResponse {
     int32 statusCode = 1;
-    SubmodelModel submodel = 2;
+    SubmodelDTO submodel = 2;
 }
 
 message PostSubmodelElementRpcRequest {
     string submodelId = 1;
-    SubmodelElementModel submodelElement = 2;
+    SubmodelElementDTO submodelElement = 2;
 }
 message PostSubmodelElementRpcResponse {
     int32 statusCode = 1;
-    SubmodelElementModel submodelElement = 2;
+    SubmodelElementDTO submodelElement = 2;
 }
 
 message PostSubmodelElementByPathRpcRequest {
     string submodelId = 1;
-    repeated KeyModel path = 2;
-    SubmodelElementModel submodelElement = 3;
+    repeated KeyDTO path = 2;
+    SubmodelElementDTO submodelElement = 3;
 }
 message PostSubmodelElementByPathRpcResponse {
     int32 statusCode = 1;
-    SubmodelElementModel submodelElement = 2;
+    SubmodelElementDTO submodelElement = 2;
 }
 
 message PutSubmodelElementByPathRpcRequest {
     string submodelId = 1;
-    repeated KeyModel path = 2;
-    SubmodelElementModel submodelElement = 3;
+    repeated KeyDTO path = 2;
+    SubmodelElementDTO submodelElement = 3;
 }
 message PutSubmodelElementByPathRpcResponse {
     int32 statusCode = 1;
-    SubmodelElementModel submodelElement = 2;
+    SubmodelElementDTO submodelElement = 2;
 }
 
 message SetSubmodelElementValueByPathRpcRequest {
     string submodelId = 1;
-    repeated KeyModel path = 2;
+    repeated KeyDTO path = 2;
     string value = 3;
 }
 message SetSubmodelElementValueByPathRpcResponse {
@@ -95,7 +95,7 @@ message SetSubmodelElementValueByPathRpcResponse {
 
 message DeleteSubmodelElementByPathRpcRequest {
     string submodelId = 1;
-    repeated KeyModel path = 2;
+    repeated KeyDTO path = 2;
 }
 message DeleteSubmodelElementByPathRpcResponse {
     int32 statusCode = 1;

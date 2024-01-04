@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.V3";
+option csharp_namespace = "FSR.GRPC.Lib.V3";
 
-package FSR.GRPC.V3;
+package FSR.GRPC.Lib.V3;
 
 /* Profbuf example */
 
@@ -17,13 +17,13 @@ package FSR.GRPC.V3;
 
 /* AAS Models V3 */
 
-message ExtensionModel {
-  ReferenceModel semanticId = 1;
-  repeated ReferenceModel supplementalSemanticIds = 2;
+message ExtensionDTO {
+  ReferenceDTO semanticId = 1;
+  repeated ReferenceDTO supplementalSemanticIds = 2;
   string name = 3;
   DataTypeDefXsd valueType = 4;
   string value = 5;
-  repeated ReferenceModel refersTo = 6;
+  repeated ReferenceDTO refersTo = 6;
 }
 
 enum ModellingKind {
@@ -31,11 +31,11 @@ enum ModellingKind {
   MODELLING_KIND_INSTANCE = 1;
 }
 
-message AdministrativeInformationModel {
-  repeated EmbeddedDataSpecificationModel embeddedDataSpecifications = 1;
+message AdministrativeInformationDTO {
+  repeated EmbeddedDataSpecificationDTO embeddedDataSpecifications = 1;
   string version = 2;
   string revision = 3;
-  ReferenceModel creator = 4;
+  ReferenceDTO creator = 4;
   string templateId = 5;
 }
 
@@ -45,39 +45,39 @@ enum QualifierKind {
   QUALIFIER_KIND_TEMPLATE_QUALIFIER = 2;
 }
 
-message QualifierModel {
-  ReferenceModel semanticId = 1;
-  repeated ReferenceModel supplementalSemanticIds = 2;
+message QualifierDTO {
+  ReferenceDTO semanticId = 1;
+  repeated ReferenceDTO supplementalSemanticIds = 2;
   QualifierKind kind = 3;
   string type = 4;
   DataTypeDefXsd valueType = 5;
   string value = 6;
-  ReferenceModel valueId = 7;
+  ReferenceDTO valueId = 7;
 }
 
-message AssetAdministrationShellModel {
-  repeated ExtensionModel extensions = 1;
+message AssetAdministrationShellDTO {
+  repeated ExtensionDTO extensions = 1;
   string category = 2;
   string idShort = 3;
-  repeated LangStringModel displayName = 4;
-  repeated LangStringModel description = 5;
-  AdministrativeInformationModel administration = 6;
+  repeated LangStringDTO displayName = 4;
+  repeated LangStringDTO description = 5;
+  AdministrativeInformationDTO administration = 6;
   string id = 7;
-  repeated EmbeddedDataSpecificationModel embeddedDataSpecifications = 8;
-  ReferenceModel derivedFrom = 9;
-  AssetInformationModel assetInformation = 10;
-  repeated ReferenceModel submodels = 11;
+  repeated EmbeddedDataSpecificationDTO embeddedDataSpecifications = 8;
+  ReferenceDTO derivedFrom = 9;
+  AssetInformationDTO assetInformation = 10;
+  repeated ReferenceDTO submodels = 11;
 }
 
-message AssetInformationModel {
+message AssetInformationDTO {
   AssetKind assetKind = 1;
   string globalAssetId = 2;
-  repeated SpecificAssetIdModel specificAssetIds = 3;
+  repeated SpecificAssetIdDTO specificAssetIds = 3;
   string assetType = 4;
-  ResourceModel defaultThumbnail = 5;
+  ResourceDTO defaultThumbnail = 5;
 }
 
-message ResourceModel {
+message ResourceDTO {
   string Path = 1;
   string ContentType = 2;
 }
@@ -88,28 +88,28 @@ enum AssetKind {
   ASSET_KIND_NOT_APPLICABLE = 2;
 }
 
-message SpecificAssetIdModel {
-  ReferenceModel semanticId = 1;
-  repeated ReferenceModel supplementalSemanticIds = 2;
+message SpecificAssetIdDTO {
+  ReferenceDTO semanticId = 1;
+  repeated ReferenceDTO supplementalSemanticIds = 2;
   string name = 3;
   string value = 4;
-  ReferenceModel externalSubjectId = 5;
+  ReferenceDTO externalSubjectId = 5;
 }
 
-message SubmodelModel {
-  repeated ExtensionModel extensions = 1;
+message SubmodelDTO {
+  repeated ExtensionDTO extensions = 1;
   string category = 2;
   string idShort = 3;
-  repeated LangStringModel displayName = 4;
-  repeated LangStringModel description = 5;
-  AdministrativeInformationModel administration = 6;
+  repeated LangStringDTO displayName = 4;
+  repeated LangStringDTO description = 5;
+  AdministrativeInformationDTO administration = 6;
   string id = 7;
   ModellingKind kind = 8;
-  ReferenceModel semanticId = 9;
-  repeated ReferenceModel supplementalSemanticIds = 10;
-  repeated QualifierModel qualifiers = 11;
-  repeated EmbeddedDataSpecificationModel embeddedDataSpecifications = 12;
-  repeated SubmodelElementModel submodelElements = 13;
+  ReferenceDTO semanticId = 9;
+  repeated ReferenceDTO supplementalSemanticIds = 10;
+  repeated QualifierDTO qualifiers = 11;
+  repeated EmbeddedDataSpecificationDTO embeddedDataSpecifications = 12;
+  repeated SubmodelElementDTO submodelElements = 13;
 }
 
 enum SubmodelElementType {
@@ -132,121 +132,121 @@ enum SubmodelElementType {
   SUBMODEL_ELEMENT_TYPE_SUBMODEL_ELEMENT_COLLECTION = 16;
 }
 
-message SubmodelElementModel {
-  repeated ExtensionModel extensions = 1;
+message SubmodelElementDTO {
+  repeated ExtensionDTO extensions = 1;
   string category = 2;
   string idShort = 3;
-  repeated LangStringModel displayName = 4;
-  repeated LangStringModel description = 5;
-  ReferenceModel semanticId = 6;
-  repeated ReferenceModel supplementalSemanticIds = 7;
-  repeated QualifierModel qualifiers = 8;
-  repeated EmbeddedDataSpecificationModel embeddedDataSpecifications = 9;
+  repeated LangStringDTO displayName = 4;
+  repeated LangStringDTO description = 5;
+  ReferenceDTO semanticId = 6;
+  repeated ReferenceDTO supplementalSemanticIds = 7;
+  repeated QualifierDTO qualifiers = 8;
+  repeated EmbeddedDataSpecificationDTO embeddedDataSpecifications = 9;
   SubmodelElementType submodelElementType = 10;
   // SubmodelElement payload here.
   // TODO: Find better solution! (Current solution causes an overhead of around 128 bytes per model)
-  AnnotatedRelationshipElementDTO annotatedRelationshipElement = 11;
-  BasicEventElementDTO basicEventElement = 12;
-  BlobDTO blob = 13;
-  CapabilityDTO capability = 14;
-  DataElementDTO dataElement = 15;
-  EntityDTO entity = 16;
-  EventElementDTO eventElement = 17;
-  FileDTO file = 18;
-  MultiLanguagePropertyDTO multiLanguageProperty = 19;
-  OperationDTO operation = 20;
-  PropertyDTO property = 21;
-  RangeDTO range = 22;
-  ReferenceElementDTO referenceElement = 23;
-  RelationshipElementDTO relationshipElement = 24;
-  SubmodelElementListDTO submodelElementList = 25;
-  SubmodelElementCollectionDTO submodelElementCollection = 26;
+  AnnotatedRelationshipElementPayloadDTO annotatedRelationshipElement = 11;
+  BasicEventElementPayloadDTO basicEventElement = 12;
+  BlobPayloadDTO blob = 13;
+  CapabilityPayloadDTO capability = 14;
+  DataElementPayloadDTO dataElement = 15;
+  EntityPayloadDTO entity = 16;
+  EventElementPayloadDTO eventElement = 17;
+  FilePayloadDTO file = 18;
+  MultiLanguagePropertyPayloadDTO multiLanguageProperty = 19;
+  OperationPayloadDTO operation = 20;
+  PropertyPayloadDTO property = 21;
+  RangePayloadDTO range = 22;
+  ReferenceElementPayloadDTO referenceElement = 23;
+  RelationshipElementPayloadDTO relationshipElement = 24;
+  SubmodelElementListPayloadDTO submodelElementList = 25;
+  SubmodelElementCollectionPayloadDTO submodelElementCollection = 26;
 }
 
-message RelationshipElementDTO {
-  ReferenceModel first = 1;
-  ReferenceModel second = 2;
+message RelationshipElementPayloadDTO {
+  ReferenceDTO first = 1;
+  ReferenceDTO second = 2;
 }
 
-message SubmodelElementListDTO {
+message SubmodelElementListPayloadDTO {
   bool orderRelevant = 1;
-  ReferenceModel semanticIdListElement = 2;
+  ReferenceDTO semanticIdListElement = 2;
   SubmodelElementType typeValueListElement = 3;
   DataTypeDefXsd valueTypeListElement = 4;
-  repeated SubmodelElementModel value = 5;
+  repeated SubmodelElementDTO value = 5;
 }
 
-message SubmodelElementCollectionDTO {
-  repeated SubmodelElementModel value = 1;
+message SubmodelElementCollectionPayloadDTO {
+  repeated SubmodelElementDTO value = 1;
 }
 
-message DataElementDTO {
+message DataElementPayloadDTO {
   // Intentionally empty
 }
 
-message DataElementModel {
-  repeated ExtensionModel extensions = 1;
+message DataElementDTO {
+  repeated ExtensionDTO extensions = 1;
   string category = 2;
   string idShort = 3;
-  repeated LangStringModel displayName = 4;
-  repeated LangStringModel description = 5;
-  ReferenceModel semanticId = 6;
-  repeated ReferenceModel supplementalSemanticIds = 7;
-  repeated QualifierModel qualifiers = 8;
-  repeated EmbeddedDataSpecificationModel embeddedDataSpecifications = 9;
+  repeated LangStringDTO displayName = 4;
+  repeated LangStringDTO description = 5;
+  ReferenceDTO semanticId = 6;
+  repeated ReferenceDTO supplementalSemanticIds = 7;
+  repeated QualifierDTO qualifiers = 8;
+  repeated EmbeddedDataSpecificationDTO embeddedDataSpecifications = 9;
   SubmodelElementType submodelElementType = 10;
   // DataElement payload here.
   // TODO: Find better solution! (Current solution causes an overhead of around 48 bytes per model)
-  PropertyDTO property = 11;
-  MultiLanguagePropertyDTO multiLanguageProperty = 12;
-  RangeDTO range = 13;
-  ReferenceElementDTO referenceElement = 14;
-  BlobDTO blob = 15;
-  FileDTO file = 16;
+  PropertyPayloadDTO property = 11;
+  MultiLanguagePropertyPayloadDTO multiLanguageProperty = 12;
+  RangePayloadDTO range = 13;
+  ReferenceElementPayloadDTO referenceElement = 14;
+  BlobPayloadDTO blob = 15;
+  FilePayloadDTO file = 16;
 }
 
-message PropertyDTO {
+message PropertyPayloadDTO {
   DataTypeDefXsd valueType = 1;
   string value = 2;
-  ReferenceModel valueId = 3;
+  ReferenceDTO valueId = 3;
 }
 
-message MultiLanguagePropertyDTO {
-  repeated LangStringModel value = 1;
-  ReferenceModel valueId = 2;
+message MultiLanguagePropertyPayloadDTO {
+  repeated LangStringDTO value = 1;
+  ReferenceDTO valueId = 2;
 }
 
-message RangeDTO {
+message RangePayloadDTO {
   DataTypeDefXsd valueType = 1;
   string min = 2;
   string max = 3;
 }
 
-message ReferenceElementDTO {
-  ReferenceModel value = 1;
+message ReferenceElementPayloadDTO {
+  ReferenceDTO value = 1;
 }
 
-message BlobDTO {
+message BlobPayloadDTO {
   bytes value = 1;
   string contentType = 2;
 }
 
-message FileDTO {
+message FilePayloadDTO {
   string value = 1;
   string contentType = 2;
 }
 
-message AnnotatedRelationshipElementDTO {
-  ReferenceModel first = 1;
-  ReferenceModel second = 2;
-  repeated DataElementModel annotations = 3;
+message AnnotatedRelationshipElementPayloadDTO {
+  ReferenceDTO first = 1;
+  ReferenceDTO second = 2;
+  repeated DataElementDTO annotations = 3;
 }
 
-message EntityDTO {
-  repeated SubmodelElementModel statements = 1;
+message EntityPayloadDTO {
+  repeated SubmodelElementDTO statements = 1;
   EntityType entityType = 2;
   string globalAssetId = 3;
-  repeated SpecificAssetIdModel specificAssetIds = 4;
+  repeated SpecificAssetIdDTO specificAssetIds = 4;
 }
 
 enum EntityType {
@@ -264,56 +264,56 @@ enum StateOfEvent {
   STATE_OF_EVENT_OFF = 1;
 }
 
-message EventPayloadModel {
-  ReferenceModel source = 1;
-  ReferenceModel sourceSemanticId = 2;
-  ReferenceModel observableReference = 3;
-  ReferenceModel observableSemanticId = 4;
+message EventPayloadDTO {
+  ReferenceDTO source = 1;
+  ReferenceDTO sourceSemanticId = 2;
+  ReferenceDTO observableReference = 3;
+  ReferenceDTO observableSemanticId = 4;
   string topic = 5;
-  ReferenceModel subjectId = 6;
+  ReferenceDTO subjectId = 6;
   string timestamp = 7;
   bytes payload = 8;
 }
 
-message EventElementDTO {
+message EventElementPayloadDTO {
   // Intentionally empty
 }
 
-message BasicEventElementDTO {
-  ReferenceModel observed = 1;
+message BasicEventElementPayloadDTO {
+  ReferenceDTO observed = 1;
   Direction direction = 2;
   StateOfEvent state = 3;
   string messageTopic = 4;
-  ReferenceModel messageBroker = 5;
+  ReferenceDTO messageBroker = 5;
   string lastUpdate = 6;
   string minInterval = 7;
   string maxInterval = 8;
 }
 
-message OperationDTO {
-  repeated OperationVariableModel inputVariables = 1;
-  repeated OperationVariableModel outputVariables = 2;
-  repeated OperationVariableModel inoutVariables = 3;
+message OperationPayloadDTO {
+  repeated OperationVariableDTO inputVariables = 1;
+  repeated OperationVariableDTO outputVariables = 2;
+  repeated OperationVariableDTO inoutVariables = 3;
 }
 
-message OperationVariableModel {
-  SubmodelElementModel value = 1;
+message OperationVariableDTO {
+  SubmodelElementDTO value = 1;
 }
 
-message CapabilityDTO {
+message CapabilityPayloadDTO {
   // Intentionally empty
 }
 
-message ConceptDescriptionModel {
-  repeated ExtensionModel extensions = 1;
+message ConceptDescriptionDTO {
+  repeated ExtensionDTO extensions = 1;
   string category = 2;
   string idShort = 3;
-  repeated LangStringModel displayName = 4;
-  repeated LangStringModel description = 5;
-  AdministrativeInformationModel administration = 6;
+  repeated LangStringDTO displayName = 4;
+  repeated LangStringDTO description = 5;
+  AdministrativeInformationDTO administration = 6;
   string id = 7;
-  repeated EmbeddedDataSpecificationModel embeddedDataSpecifications = 8;
-  repeated ReferenceModel isCaseOf = 9;
+  repeated EmbeddedDataSpecificationDTO embeddedDataSpecifications = 8;
+  repeated ReferenceDTO isCaseOf = 9;
 }
 
 enum ReferenceTypes {
@@ -321,13 +321,13 @@ enum ReferenceTypes {
   REFERENCE_TYPE_MODEL_REFERENCE = 1;
 }
 
-message ReferenceModel {
+message ReferenceDTO {
   ReferenceTypes type = 1;
-  ReferenceModel ReferredSemanticId = 2;
-  repeated KeyModel keys = 3;
+  ReferenceDTO ReferredSemanticId = 2;
+  repeated KeyDTO keys = 3;
 }
 
-message KeyModel {
+message KeyDTO {
   KeyTypes type = 1;
   string Value = 2;
 }
@@ -392,14 +392,14 @@ enum DataTypeDefXsd {
   DATA_TYPE_DEF_XSD_UNSIGNED_SHORT = 29;
 }
 
-message LangStringModel {
+message LangStringDTO {
   string language = 1;
   string text = 2;
 }
 
-message EmbeddedDataSpecificationModel {
-  ReferenceModel dataSpecification = 1;
-  DataSpecificationContentModel dataSpecificationContent = 2;
+message EmbeddedDataSpecificationDTO {
+  ReferenceDTO dataSpecification = 1;
+  DataSpecificationContentDTO dataSpecificationContent = 2;
 }
 
 enum DataTypeIec61360 {
@@ -424,32 +424,32 @@ enum DataTypeIec61360 {
   DATA_TYPE_IEC_61360_BLOB = 18;
 }
 
-message LevelTypeModel {
+message LevelTypeDTO {
   bool min = 1;
   bool nom = 2;
   bool typ = 3;
   bool max = 4;
 }
 
-message ValueReferencePairModel {
+message ValueReferencePairDTO {
   string value = 1;
-  ReferenceModel valueId = 2;
+  ReferenceDTO valueId = 2;
 }
 
-message ValueListModel {
-  repeated ValueReferencePairModel valueReferencePairs = 1;
+message ValueListDTO {
+  repeated ValueReferencePairDTO valueReferencePairs = 1;
 }
 
-message DataSpecificationContentModel {
-  repeated LangStringModel preferredName = 1;
-  repeated LangStringModel shortName = 2;
+message DataSpecificationContentDTO {
+  repeated LangStringDTO preferredName = 1;
+  repeated LangStringDTO shortName = 2;
   string unit = 3;
-  ReferenceModel unitId = 4;
+  ReferenceDTO unitId = 4;
   string symbol = 5;
   DataTypeIec61360 dataType = 6;
-  repeated LangStringModel definition = 7;
+  repeated LangStringDTO definition = 7;
   string valueFormat = 8;
-  ValueListModel valueList = 9;
+  ValueListDTO valueList = 9;
   string value = 10;
-  LevelTypeModel levelType = 11;
+  LevelTypeDTO levelType = 11;
 }

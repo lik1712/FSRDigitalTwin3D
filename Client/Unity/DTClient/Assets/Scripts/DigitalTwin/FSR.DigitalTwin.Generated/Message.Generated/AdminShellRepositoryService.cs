@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
+namespace FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository {
 
   /// <summary>Holder for reflection information generated from Protos/Services/AdminShellRepositoryService.proto</summary>
   public static partial class AdminShellRepositoryServiceReflection {
@@ -25,96 +25,98 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFQcm90b3MvU2VydmljZXMvQWRtaW5TaGVsbFJlcG9zaXRvcnlTZXJ2aWNl",
-            "LnByb3RvEgtGU1IuR1JQQy5WMxoZUHJvdG9zL0Fhc01vZGVscy5WMy5wcm90",
-            "bxocUHJvdG9zL0Fhc0FwaU1vZGVscy5WMy5wcm90byJgCilHZXRBbGxBc3Nl",
-            "dEFkbWluaXN0cmF0aW9uU2hlbGxzUnBjUmVxdWVzdBIzCg5vdXRwdXRNb2Rp",
-            "ZmllchgBIAEoCzIbLkZTUi5HUlBDLlYzLk91dHB1dE1vZGlmaWVyIu0BCipH",
-            "ZXRBbGxBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxzUnBjUmVzcG9uc2USEgoK",
-            "c3RhdHVzQ29kZRgBIAEoBRI+Cg5wYWdpbmdNZXRhRGF0YRgCIAEoCzImLkZT",
-            "Ui5HUlBDLlYzLlBhZ2VkUmVzdWx0UGFnaW5nTWV0YWRhdGESOwoHcGF5bG9h",
-            "ZBgDIAMoCzIqLkZTUi5HUlBDLlYzLkFzc2V0QWRtaW5pc3RyYXRpb25TaGVs",
-            "bE1vZGVsEi4KCXJlZmVyZW5jZRgEIAMoCzIbLkZTUi5HUlBDLlYzLlJlZmVy",
-            "ZW5jZU1vZGVsImwKKUdldEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbEJ5SWRS",
-            "cGNSZXF1ZXN0EgoKAmlkGAEgASgJEjMKDm91dHB1dE1vZGlmaWVyGAIgASgL",
-            "MhsuRlNSLkdSUEMuVjMuT3V0cHV0TW9kaWZpZXIirQEKKkdldEFzc2V0QWRt",
-            "aW5pc3RyYXRpb25TaGVsbEJ5SWRScGNSZXNwb25zZRISCgpzdGF0dXNDb2Rl",
-            "GAEgASgFEjsKB3BheWxvYWQYAiABKAsyKi5GU1IuR1JQQy5WMy5Bc3NldEFk",
-            "bWluaXN0cmF0aW9uU2hlbGxNb2RlbBIuCglyZWZlcmVuY2UYAyABKAsyGy5G",
-            "U1IuR1JQQy5WMy5SZWZlcmVuY2VNb2RlbCKNAQoyR2V0QWxsQXNzZXRBZG1p",
-            "bmlzdHJhdGlvblNoZWxsc0J5QXNzZXRJZFJwY1JlcXVlc3QSCwoDa2V5GAEg",
-            "ASgJEhUKDWtleUlkZW50aWZpZXIYAiABKAkSMwoOb3V0cHV0TW9kaWZpZXIY",
-            "AyABKAsyGy5GU1IuR1JQQy5WMy5PdXRwdXRNb2RpZmllciL2AQozR2V0QWxs",
-            "QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc0J5QXNzZXRJZFJwY1Jlc3BvbnNl",
-            "EhIKCnN0YXR1c0NvZGUYASABKAUSPgoOcGFnaW5nTWV0YURhdGEYAiABKAsy",
-            "Ji5GU1IuR1JQQy5WMy5QYWdlZFJlc3VsdFBhZ2luZ01ldGFkYXRhEjsKB3Bh",
-            "eWxvYWQYAyADKAsyKi5GU1IuR1JQQy5WMy5Bc3NldEFkbWluaXN0cmF0aW9u",
-            "U2hlbGxNb2RlbBIuCglyZWZlcmVuY2UYBCADKAsyGy5GU1IuR1JQQy5WMy5S",
-            "ZWZlcmVuY2VNb2RlbCJ6CjJHZXRBbGxBc3NldEFkbWluaXN0cmF0aW9uU2hl",
-            "bGxzQnlJZFNob3J0UnBjUmVxdWVzdBIPCgdpZFNob3J0GAEgASgJEjMKDm91",
-            "dHB1dE1vZGlmaWVyGAIgASgLMhsuRlNSLkdSUEMuVjMuT3V0cHV0TW9kaWZp",
-            "ZXIi9gEKM0dldEFsbEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbHNCeUlkU2hv",
-            "cnRScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgFEj4KDnBhZ2luZ01l",
-            "dGFEYXRhGAIgASgLMiYuRlNSLkdSUEMuVjMuUGFnZWRSZXN1bHRQYWdpbmdN",
-            "ZXRhZGF0YRI7CgdwYXlsb2FkGAMgAygLMiouRlNSLkdSUEMuVjMuQXNzZXRB",
-            "ZG1pbmlzdHJhdGlvblNoZWxsTW9kZWwSLgoJcmVmZXJlbmNlGAQgAygLMhsu",
-            "RlNSLkdSUEMuVjMuUmVmZXJlbmNlTW9kZWwiYQomUG9zdEFzc2V0QWRtaW5p",
-            "c3RyYXRpb25TaGVsbFJwY1JlcXVlc3QSNwoDYWFzGAEgASgLMiouRlNSLkdS",
-            "UEMuVjMuQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsTW9kZWwidgonUG9zdEFz",
-            "c2V0QWRtaW5pc3RyYXRpb25TaGVsbFJwY1Jlc3BvbnNlEhIKCnN0YXR1c0Nv",
-            "ZGUYASABKAUSNwoDYWFzGAIgASgLMiouRlNSLkdSUEMuVjMuQXNzZXRBZG1p",
-            "bmlzdHJhdGlvblNoZWxsTW9kZWwiZAopUHV0QXNzZXRBZG1pbmlzdHJhdGlv",
-            "blNoZWxsQnlJZFJwY1JlcXVlc3QSNwoDYWFzGAEgASgLMiouRlNSLkdSUEMu",
-            "VjMuQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsTW9kZWwieQoqUHV0QXNzZXRB",
-            "ZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJwY1Jlc3BvbnNlEhIKCnN0YXR1c0Nv",
-            "ZGUYASABKAUSNwoDYWFzGAIgASgLMiouRlNSLkdSUEMuVjMuQXNzZXRBZG1p",
-            "bmlzdHJhdGlvblNoZWxsTW9kZWwiOgosRGVsZXRlQXNzZXRBZG1pbmlzdHJh",
-            "dGlvblNoZWxsQnlJZFJwY1JlcXVlc3QSCgoCaWQYASABKAkiQwotRGVsZXRl",
-            "QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJwY1Jlc3BvbnNlEhIKCnN0",
-            "YXR1c0NvZGUYASABKAUy9AgKKUFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbFJl",
-            "cG9zaXRvcnlTZXJ2aWNlEpIBCh9HZXRBbGxBc3NldEFkbWluaXN0cmF0aW9u",
-            "U2hlbGxzEjYuRlNSLkdSUEMuVjMuR2V0QWxsQXNzZXRBZG1pbmlzdHJhdGlv",
-            "blNoZWxsc1JwY1JlcXVlc3QaNy5GU1IuR1JQQy5WMy5HZXRBbGxBc3NldEFk",
-            "bWluaXN0cmF0aW9uU2hlbGxzUnBjUmVzcG9uc2USkgEKH0dldEFzc2V0QWRt",
-            "aW5pc3RyYXRpb25TaGVsbEJ5SWQSNi5GU1IuR1JQQy5WMy5HZXRBc3NldEFk",
-            "bWluaXN0cmF0aW9uU2hlbGxCeUlkUnBjUmVxdWVzdBo3LkZTUi5HUlBDLlYz",
-            "LkdldEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbEJ5SWRScGNSZXNwb25zZRKt",
-            "AQooR2V0QWxsQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc0J5QXNzZXRJZBI/",
-            "LkZTUi5HUlBDLlYzLkdldEFsbEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbHNC",
-            "eUFzc2V0SWRScGNSZXF1ZXN0GkAuRlNSLkdSUEMuVjMuR2V0QWxsQXNzZXRB",
-            "ZG1pbmlzdHJhdGlvblNoZWxsc0J5QXNzZXRJZFJwY1Jlc3BvbnNlEq0BCihH",
-            "ZXRBbGxBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxzQnlJZFNob3J0Ej8uRlNS",
-            "LkdSUEMuVjMuR2V0QWxsQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc0J5SWRT",
-            "aG9ydFJwY1JlcXVlc3QaQC5GU1IuR1JQQy5WMy5HZXRBbGxBc3NldEFkbWlu",
-            "aXN0cmF0aW9uU2hlbGxzQnlJZFNob3J0UnBjUmVzcG9uc2USiQEKHFBvc3RB",
-            "c3NldEFkbWluaXN0cmF0aW9uU2hlbGwSMy5GU1IuR1JQQy5WMy5Qb3N0QXNz",
-            "ZXRBZG1pbmlzdHJhdGlvblNoZWxsUnBjUmVxdWVzdBo0LkZTUi5HUlBDLlYz",
-            "LlBvc3RBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxScGNSZXNwb25zZRKSAQof",
-            "UHV0QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZBI2LkZTUi5HUlBDLlYz",
-            "LlB1dEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbEJ5SWRScGNSZXF1ZXN0Gjcu",
-            "RlNSLkdSUEMuVjMuUHV0QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJw",
-            "Y1Jlc3BvbnNlEpsBCiJEZWxldGVBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxC",
-            "eUlkEjkuRlNSLkdSUEMuVjMuRGVsZXRlQXNzZXRBZG1pbmlzdHJhdGlvblNo",
-            "ZWxsQnlJZFJwY1JlcXVlc3QaOi5GU1IuR1JQQy5WMy5EZWxldGVBc3NldEFk",
-            "bWluaXN0cmF0aW9uU2hlbGxCeUlkUnBjUmVzcG9uc2VCOqoCN0ZTUi5HUlBD",
-            "LlYzLlNlcnZpY2VzLkFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbFJlcG9zaXRv",
-            "cnliBnByb3RvMw=="));
+            "LnByb3RvEg9GU1IuR1JQQy5MaWIuVjMaGVByb3Rvcy9BYXNNb2RlbHMuVjMu",
+            "cHJvdG8aHFByb3Rvcy9BYXNBcGlNb2RlbHMuVjMucHJvdG8iZAopR2V0QWxs",
+            "QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc1JwY1JlcXVlc3QSNwoOb3V0cHV0",
+            "TW9kaWZpZXIYASABKAsyHy5GU1IuR1JQQy5MaWIuVjMuT3V0cHV0TW9kaWZp",
+            "ZXIi9QEKKkdldEFsbEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbHNScGNSZXNw",
+            "b25zZRISCgpzdGF0dXNDb2RlGAEgASgFEkIKDnBhZ2luZ01ldGFEYXRhGAIg",
+            "ASgLMiouRlNSLkdSUEMuTGliLlYzLlBhZ2VkUmVzdWx0UGFnaW5nTWV0YWRh",
+            "dGESPQoHcGF5bG9hZBgDIAMoCzIsLkZTUi5HUlBDLkxpYi5WMy5Bc3NldEFk",
+            "bWluaXN0cmF0aW9uU2hlbGxEVE8SMAoJcmVmZXJlbmNlGAQgAygLMh0uRlNS",
+            "LkdSUEMuTGliLlYzLlJlZmVyZW5jZURUTyJwCilHZXRBc3NldEFkbWluaXN0",
+            "cmF0aW9uU2hlbGxCeUlkUnBjUmVxdWVzdBIKCgJpZBgBIAEoCRI3Cg5vdXRw",
+            "dXRNb2RpZmllchgCIAEoCzIfLkZTUi5HUlBDLkxpYi5WMy5PdXRwdXRNb2Rp",
+            "ZmllciKxAQoqR2V0QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJwY1Jl",
+            "c3BvbnNlEhIKCnN0YXR1c0NvZGUYASABKAUSPQoHcGF5bG9hZBgCIAEoCzIs",
+            "LkZTUi5HUlBDLkxpYi5WMy5Bc3NldEFkbWluaXN0cmF0aW9uU2hlbGxEVE8S",
+            "MAoJcmVmZXJlbmNlGAMgASgLMh0uRlNSLkdSUEMuTGliLlYzLlJlZmVyZW5j",
+            "ZURUTyKRAQoyR2V0QWxsQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc0J5QXNz",
+            "ZXRJZFJwY1JlcXVlc3QSCwoDa2V5GAEgASgJEhUKDWtleUlkZW50aWZpZXIY",
+            "AiABKAkSNwoOb3V0cHV0TW9kaWZpZXIYAyABKAsyHy5GU1IuR1JQQy5MaWIu",
+            "VjMuT3V0cHV0TW9kaWZpZXIi/gEKM0dldEFsbEFzc2V0QWRtaW5pc3RyYXRp",
+            "b25TaGVsbHNCeUFzc2V0SWRScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEg",
+            "ASgFEkIKDnBhZ2luZ01ldGFEYXRhGAIgASgLMiouRlNSLkdSUEMuTGliLlYz",
+            "LlBhZ2VkUmVzdWx0UGFnaW5nTWV0YWRhdGESPQoHcGF5bG9hZBgDIAMoCzIs",
+            "LkZTUi5HUlBDLkxpYi5WMy5Bc3NldEFkbWluaXN0cmF0aW9uU2hlbGxEVE8S",
+            "MAoJcmVmZXJlbmNlGAQgAygLMh0uRlNSLkdSUEMuTGliLlYzLlJlZmVyZW5j",
+            "ZURUTyJ+CjJHZXRBbGxBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxzQnlJZFNo",
+            "b3J0UnBjUmVxdWVzdBIPCgdpZFNob3J0GAEgASgJEjcKDm91dHB1dE1vZGlm",
+            "aWVyGAIgASgLMh8uRlNSLkdSUEMuTGliLlYzLk91dHB1dE1vZGlmaWVyIv4B",
+            "CjNHZXRBbGxBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxzQnlJZFNob3J0UnBj",
+            "UmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRJCCg5wYWdpbmdNZXRhRGF0",
+            "YRgCIAEoCzIqLkZTUi5HUlBDLkxpYi5WMy5QYWdlZFJlc3VsdFBhZ2luZ01l",
+            "dGFkYXRhEj0KB3BheWxvYWQYAyADKAsyLC5GU1IuR1JQQy5MaWIuVjMuQXNz",
+            "ZXRBZG1pbmlzdHJhdGlvblNoZWxsRFRPEjAKCXJlZmVyZW5jZRgEIAMoCzId",
+            "LkZTUi5HUlBDLkxpYi5WMy5SZWZlcmVuY2VEVE8iYwomUG9zdEFzc2V0QWRt",
+            "aW5pc3RyYXRpb25TaGVsbFJwY1JlcXVlc3QSOQoDYWFzGAEgASgLMiwuRlNS",
+            "LkdSUEMuTGliLlYzLkFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbERUTyJ4CidQ",
+            "b3N0QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsUnBjUmVzcG9uc2USEgoKc3Rh",
+            "dHVzQ29kZRgBIAEoBRI5CgNhYXMYAiABKAsyLC5GU1IuR1JQQy5MaWIuVjMu",
+            "QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsRFRPImYKKVB1dEFzc2V0QWRtaW5p",
+            "c3RyYXRpb25TaGVsbEJ5SWRScGNSZXF1ZXN0EjkKA2FhcxgBIAEoCzIsLkZT",
+            "Ui5HUlBDLkxpYi5WMy5Bc3NldEFkbWluaXN0cmF0aW9uU2hlbGxEVE8iewoq",
+            "UHV0QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJwY1Jlc3BvbnNlEhIK",
+            "CnN0YXR1c0NvZGUYASABKAUSOQoDYWFzGAIgASgLMiwuRlNSLkdSUEMuTGli",
+            "LlYzLkFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbERUTyI6CixEZWxldGVBc3Nl",
+            "dEFkbWluaXN0cmF0aW9uU2hlbGxCeUlkUnBjUmVxdWVzdBIKCgJpZBgBIAEo",
+            "CSJDCi1EZWxldGVBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxCeUlkUnBjUmVz",
+            "cG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBTKsCQopQXNzZXRBZG1pbmlzdHJh",
+            "dGlvblNoZWxsUmVwb3NpdG9yeVNlcnZpY2USmgEKH0dldEFsbEFzc2V0QWRt",
+            "aW5pc3RyYXRpb25TaGVsbHMSOi5GU1IuR1JQQy5MaWIuVjMuR2V0QWxsQXNz",
+            "ZXRBZG1pbmlzdHJhdGlvblNoZWxsc1JwY1JlcXVlc3QaOy5GU1IuR1JQQy5M",
+            "aWIuVjMuR2V0QWxsQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc1JwY1Jlc3Bv",
+            "bnNlEpoBCh9HZXRBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxCeUlkEjouRlNS",
+            "LkdSUEMuTGliLlYzLkdldEFzc2V0QWRtaW5pc3RyYXRpb25TaGVsbEJ5SWRS",
+            "cGNSZXF1ZXN0GjsuRlNSLkdSUEMuTGliLlYzLkdldEFzc2V0QWRtaW5pc3Ry",
+            "YXRpb25TaGVsbEJ5SWRScGNSZXNwb25zZRK1AQooR2V0QWxsQXNzZXRBZG1p",
+            "bmlzdHJhdGlvblNoZWxsc0J5QXNzZXRJZBJDLkZTUi5HUlBDLkxpYi5WMy5H",
+            "ZXRBbGxBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxzQnlBc3NldElkUnBjUmVx",
+            "dWVzdBpELkZTUi5HUlBDLkxpYi5WMy5HZXRBbGxBc3NldEFkbWluaXN0cmF0",
+            "aW9uU2hlbGxzQnlBc3NldElkUnBjUmVzcG9uc2UStQEKKEdldEFsbEFzc2V0",
+            "QWRtaW5pc3RyYXRpb25TaGVsbHNCeUlkU2hvcnQSQy5GU1IuR1JQQy5MaWIu",
+            "VjMuR2V0QWxsQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsc0J5SWRTaG9ydFJw",
+            "Y1JlcXVlc3QaRC5GU1IuR1JQQy5MaWIuVjMuR2V0QWxsQXNzZXRBZG1pbmlz",
+            "dHJhdGlvblNoZWxsc0J5SWRTaG9ydFJwY1Jlc3BvbnNlEpEBChxQb3N0QXNz",
+            "ZXRBZG1pbmlzdHJhdGlvblNoZWxsEjcuRlNSLkdSUEMuTGliLlYzLlBvc3RB",
+            "c3NldEFkbWluaXN0cmF0aW9uU2hlbGxScGNSZXF1ZXN0GjguRlNSLkdSUEMu",
+            "TGliLlYzLlBvc3RBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxScGNSZXNwb25z",
+            "ZRKaAQofUHV0QXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZBI6LkZTUi5H",
+            "UlBDLkxpYi5WMy5QdXRBc3NldEFkbWluaXN0cmF0aW9uU2hlbGxCeUlkUnBj",
+            "UmVxdWVzdBo7LkZTUi5HUlBDLkxpYi5WMy5QdXRBc3NldEFkbWluaXN0cmF0",
+            "aW9uU2hlbGxCeUlkUnBjUmVzcG9uc2USowEKIkRlbGV0ZUFzc2V0QWRtaW5p",
+            "c3RyYXRpb25TaGVsbEJ5SWQSPS5GU1IuR1JQQy5MaWIuVjMuRGVsZXRlQXNz",
+            "ZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJwY1JlcXVlc3QaPi5GU1IuR1JQ",
+            "Qy5MaWIuVjMuRGVsZXRlQXNzZXRBZG1pbmlzdHJhdGlvblNoZWxsQnlJZFJw",
+            "Y1Jlc3BvbnNlQj6qAjtGU1IuR1JQQy5MaWIuVjMuU2VydmljZXMuQXNzZXRB",
+            "ZG1pbmlzdHJhdGlvblNoZWxsUmVwb3NpdG9yeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::FSR.GRPC.V3.AasModelsV3Reflection.Descriptor, global::FSR.GRPC.V3.Services.AasApiModelsV3Reflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::FSR.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSR.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest.Parser, new[]{ "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Reference" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest.Parser, new[]{ "Id", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Reference" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest.Parser, new[]{ "Key", "KeyIdentifier", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Reference" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest.Parser, new[]{ "IdShort", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Reference" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest.Parser, new[]{ "Aas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse.Parser, new[]{ "StatusCode", "Aas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest.Parser, new[]{ "Aas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse.Parser, new[]{ "StatusCode", "Aas" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest.Parser, new[]{ "Id" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest.Parser, new[]{ "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest.Parser, new[]{ "Id", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest.Parser, new[]{ "Key", "KeyIdentifier", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest.Parser, new[]{ "IdShort", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest.Parser, new[]{ "Aas" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse.Parser, new[]{ "StatusCode", "Aas" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest.Parser, new[]{ "Aas" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse.Parser, new[]{ "StatusCode", "Aas" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null)
           }));
     }
     #endregion
@@ -129,7 +131,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -157,9 +159,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 1;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -228,7 +230,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -245,7 +247,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
             break;
           case 10: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -264,7 +266,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -306,9 +308,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "pagingMetaData" field.</summary>
     public const int PagingMetaDataFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.PagedResultPagingMetadata pagingMetaData_;
+    private global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata pagingMetaData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.PagedResultPagingMetadata PagingMetaData {
+    public global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata PagingMetaData {
       get { return pagingMetaData_; }
       set {
         pagingMetaData_ = value;
@@ -317,21 +319,21 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.AssetAdministrationShellModel> _repeated_payload_codec
-        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.V3.AssetAdministrationShellModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel> payload_ = new pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> _repeated_payload_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> payload_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel> Payload {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> Payload {
       get { return payload_; }
     }
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.ReferenceModel> _repeated_reference_codec
-        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.V3.ReferenceModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> reference_ = new pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.ReferenceDTO> _repeated_reference_codec
+        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.Lib.V3.ReferenceDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> reference_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> Reference {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> Reference {
       get { return reference_; }
     }
 
@@ -417,7 +419,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.pagingMetaData_ != null) {
         if (pagingMetaData_ == null) {
-          PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+          PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
         }
         PagingMetaData.MergeFrom(other.PagingMetaData);
       }
@@ -440,7 +442,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (pagingMetaData_ == null) {
-              PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+              PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
             }
             input.ReadMessage(PagingMetaData);
             break;
@@ -467,7 +469,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -507,9 +509,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -590,7 +592,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -611,7 +613,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -630,7 +632,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -671,9 +673,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::FSR.GRPC.V3.AssetAdministrationShellModel payload_;
+    private global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.AssetAdministrationShellModel Payload {
+    public global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -682,9 +684,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 3;
-    private global::FSR.GRPC.V3.ReferenceModel reference_;
+    private global::FSR.GRPC.Lib.V3.ReferenceDTO reference_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.ReferenceModel Reference {
+    public global::FSR.GRPC.Lib.V3.ReferenceDTO Reference {
       get { return reference_; }
       set {
         reference_ = value;
@@ -774,13 +776,13 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+          Payload = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
         }
         Payload.MergeFrom(other.Payload);
       }
       if (other.reference_ != null) {
         if (reference_ == null) {
-          Reference = new global::FSR.GRPC.V3.ReferenceModel();
+          Reference = new global::FSR.GRPC.Lib.V3.ReferenceDTO();
         }
         Reference.MergeFrom(other.Reference);
       }
@@ -801,14 +803,14 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+              Payload = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
             }
             input.ReadMessage(Payload);
             break;
           }
           case 26: {
             if (reference_ == null) {
-              Reference = new global::FSR.GRPC.V3.ReferenceModel();
+              Reference = new global::FSR.GRPC.Lib.V3.ReferenceDTO();
             }
             input.ReadMessage(Reference);
             break;
@@ -827,7 +829,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -879,9 +881,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 3;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -974,7 +976,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -999,7 +1001,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 26: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -1018,7 +1020,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1060,9 +1062,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "pagingMetaData" field.</summary>
     public const int PagingMetaDataFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.PagedResultPagingMetadata pagingMetaData_;
+    private global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata pagingMetaData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.PagedResultPagingMetadata PagingMetaData {
+    public global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata PagingMetaData {
       get { return pagingMetaData_; }
       set {
         pagingMetaData_ = value;
@@ -1071,21 +1073,21 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.AssetAdministrationShellModel> _repeated_payload_codec
-        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.V3.AssetAdministrationShellModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel> payload_ = new pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> _repeated_payload_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> payload_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel> Payload {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> Payload {
       get { return payload_; }
     }
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.ReferenceModel> _repeated_reference_codec
-        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.V3.ReferenceModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> reference_ = new pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.ReferenceDTO> _repeated_reference_codec
+        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.Lib.V3.ReferenceDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> reference_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> Reference {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> Reference {
       get { return reference_; }
     }
 
@@ -1171,7 +1173,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.pagingMetaData_ != null) {
         if (pagingMetaData_ == null) {
-          PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+          PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
         }
         PagingMetaData.MergeFrom(other.PagingMetaData);
       }
@@ -1194,7 +1196,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (pagingMetaData_ == null) {
-              PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+              PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
             }
             input.ReadMessage(PagingMetaData);
             break;
@@ -1221,7 +1223,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1261,9 +1263,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -1344,7 +1346,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -1365,7 +1367,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -1384,7 +1386,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1426,9 +1428,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "pagingMetaData" field.</summary>
     public const int PagingMetaDataFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.PagedResultPagingMetadata pagingMetaData_;
+    private global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata pagingMetaData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.PagedResultPagingMetadata PagingMetaData {
+    public global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata PagingMetaData {
       get { return pagingMetaData_; }
       set {
         pagingMetaData_ = value;
@@ -1437,21 +1439,21 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.AssetAdministrationShellModel> _repeated_payload_codec
-        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.V3.AssetAdministrationShellModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel> payload_ = new pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> _repeated_payload_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> payload_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.AssetAdministrationShellModel> Payload {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO> Payload {
       get { return payload_; }
     }
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.ReferenceModel> _repeated_reference_codec
-        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.V3.ReferenceModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> reference_ = new pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.ReferenceDTO> _repeated_reference_codec
+        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.Lib.V3.ReferenceDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> reference_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> Reference {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> Reference {
       get { return reference_; }
     }
 
@@ -1537,7 +1539,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.pagingMetaData_ != null) {
         if (pagingMetaData_ == null) {
-          PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+          PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
         }
         PagingMetaData.MergeFrom(other.PagingMetaData);
       }
@@ -1560,7 +1562,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (pagingMetaData_ == null) {
-              PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+              PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
             }
             input.ReadMessage(PagingMetaData);
             break;
@@ -1587,7 +1589,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1615,9 +1617,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "aas" field.</summary>
     public const int AasFieldNumber = 1;
-    private global::FSR.GRPC.V3.AssetAdministrationShellModel aas_;
+    private global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO aas_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.AssetAdministrationShellModel Aas {
+    public global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO Aas {
       get { return aas_; }
       set {
         aas_ = value;
@@ -1686,7 +1688,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.aas_ != null) {
         if (aas_ == null) {
-          Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+          Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
         }
         Aas.MergeFrom(other.Aas);
       }
@@ -1703,7 +1705,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
             break;
           case 10: {
             if (aas_ == null) {
-              Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+              Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
             }
             input.ReadMessage(Aas);
             break;
@@ -1722,7 +1724,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1762,9 +1764,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "aas" field.</summary>
     public const int AasFieldNumber = 2;
-    private global::FSR.GRPC.V3.AssetAdministrationShellModel aas_;
+    private global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO aas_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.AssetAdministrationShellModel Aas {
+    public global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO Aas {
       get { return aas_; }
       set {
         aas_ = value;
@@ -1845,7 +1847,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.aas_ != null) {
         if (aas_ == null) {
-          Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+          Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
         }
         Aas.MergeFrom(other.Aas);
       }
@@ -1866,7 +1868,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (aas_ == null) {
-              Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+              Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
             }
             input.ReadMessage(Aas);
             break;
@@ -1885,7 +1887,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1913,9 +1915,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "aas" field.</summary>
     public const int AasFieldNumber = 1;
-    private global::FSR.GRPC.V3.AssetAdministrationShellModel aas_;
+    private global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO aas_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.AssetAdministrationShellModel Aas {
+    public global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO Aas {
       get { return aas_; }
       set {
         aas_ = value;
@@ -1984,7 +1986,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.aas_ != null) {
         if (aas_ == null) {
-          Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+          Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
         }
         Aas.MergeFrom(other.Aas);
       }
@@ -2001,7 +2003,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
             break;
           case 10: {
             if (aas_ == null) {
-              Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+              Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
             }
             input.ReadMessage(Aas);
             break;
@@ -2020,7 +2022,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2060,9 +2062,9 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     /// <summary>Field number for the "aas" field.</summary>
     public const int AasFieldNumber = 2;
-    private global::FSR.GRPC.V3.AssetAdministrationShellModel aas_;
+    private global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO aas_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.AssetAdministrationShellModel Aas {
+    public global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO Aas {
       get { return aas_; }
       set {
         aas_ = value;
@@ -2143,7 +2145,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       }
       if (other.aas_ != null) {
         if (aas_ == null) {
-          Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+          Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
         }
         Aas.MergeFrom(other.Aas);
       }
@@ -2164,7 +2166,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
           }
           case 18: {
             if (aas_ == null) {
-              Aas = new global::FSR.GRPC.V3.AssetAdministrationShellModel();
+              Aas = new global::FSR.GRPC.Lib.V3.AssetAdministrationShellDTO();
             }
             input.ReadMessage(Aas);
             break;
@@ -2183,7 +2185,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2312,7 +2314,7 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1,4 +1,4 @@
-namespace FSR.GRPC.V3.Common.Utils;
+namespace FSR.GRPC.Lib.V3.Common.Utils;
 
 public class TypeSwitch {
     private readonly object? _obj;

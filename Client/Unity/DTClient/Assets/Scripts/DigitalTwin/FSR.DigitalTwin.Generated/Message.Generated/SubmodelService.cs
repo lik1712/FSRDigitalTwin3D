@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace FSR.GRPC.V3.Services.SubmodelService {
+namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
 
   /// <summary>Holder for reflection information generated from Protos/Services/SubmodelService.proto</summary>
   public static partial class SubmodelServiceReflection {
@@ -24,105 +24,108 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
     static SubmodelServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiVQcm90b3MvU2VydmljZXMvU3VibW9kZWxTZXJ2aWNlLnByb3RvEgtGU1Iu",
-            "R1JQQy5WMxoZUHJvdG9zL0Fhc01vZGVscy5WMy5wcm90bxocUHJvdG9zL0Fh",
-            "c0FwaU1vZGVscy5WMy5wcm90byJgChVHZXRTdWJtb2RlbFJwY1JlcXVlc3QS",
-            "EgoKc3VibW9kZWxJZBgBIAEoCRIzCg5vdXRwdXRNb2RpZmllchgCIAEoCzIb",
-            "LkZTUi5HUlBDLlYzLk91dHB1dE1vZGlmaWVyIokBChZHZXRTdWJtb2RlbFJw",
-            "Y1Jlc3BvbnNlEhIKCnN0YXR1c0NvZGUYASABKAUSKwoHcGF5bG9hZBgCIAEo",
-            "CzIaLkZTUi5HUlBDLlYzLlN1Ym1vZGVsTW9kZWwSLgoJcmVmZXJlbmNlGAMg",
-            "ASgLMhsuRlNSLkdSUEMuVjMuUmVmZXJlbmNlTW9kZWwiawogR2V0QWxsU3Vi",
-            "bW9kZWxFbGVtZW50c1JwY1JlcXVlc3QSEgoKc3VibW9kZWxJZBgBIAEoCRIz",
-            "Cg5vdXRwdXRNb2RpZmllchgCIAEoCzIbLkZTUi5HUlBDLlYzLk91dHB1dE1v",
-            "ZGlmaWVyIvgBCiFHZXRBbGxTdWJtb2RlbEVsZW1lbnRzUnBjUmVzcG9uc2US",
-            "EgoKc3RhdHVzQ29kZRgBIAEoBRI+Cg5wYWdpbmdNZXRhRGF0YRgCIAEoCzIm",
-            "LkZTUi5HUlBDLlYzLlBhZ2VkUmVzdWx0UGFnaW5nTWV0YWRhdGESMgoHcGF5",
-            "bG9hZBgDIAMoCzIhLkZTUi5HUlBDLlYzLlN1Ym1vZGVsRWxlbWVudE1vZGVs",
-            "Eg0KBXZhbHVlGAQgAygJEi4KCXJlZmVyZW5jZRgFIAMoCzIbLkZTUi5HUlBD",
-            "LlYzLlJlZmVyZW5jZU1vZGVsEgwKBHBhdGgYBiADKAkikgEKIkdldFN1Ym1v",
-            "ZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QSEgoKc3VibW9kZWxJZBgBIAEo",
-            "CRIjCgRwYXRoGAIgAygLMhUuRlNSLkdSUEMuVjMuS2V5TW9kZWwSMwoOb3V0",
-            "cHV0TW9kaWZpZXIYAyABKAsyGy5GU1IuR1JQQy5WMy5PdXRwdXRNb2RpZmll",
-            "ciK6AQojR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USEgoK",
-            "c3RhdHVzQ29kZRgBIAEoBRIyCgdwYXlsb2FkGAIgASgLMiEuRlNSLkdSUEMu",
-            "VjMuU3VibW9kZWxFbGVtZW50TW9kZWwSDQoFdmFsdWUYAyABKAkSLgoJcmVm",
-            "ZXJlbmNlGAQgASgLMhsuRlNSLkdSUEMuVjMuUmVmZXJlbmNlTW9kZWwSDAoE",
-            "cGF0aBgFIAEoCSJZChVQdXRTdWJtb2RlbFJwY1JlcXVlc3QSEgoKc3VibW9k",
-            "ZWxJZBgBIAEoCRIsCghzdWJtb2RlbBgCIAEoCzIaLkZTUi5HUlBDLlYzLlN1",
-            "Ym1vZGVsTW9kZWwiWgoWUHV0U3VibW9kZWxScGNSZXNwb25zZRISCgpzdGF0",
-            "dXNDb2RlGAEgASgFEiwKCHN1Ym1vZGVsGAIgASgLMhouRlNSLkdSUEMuVjMu",
-            "U3VibW9kZWxNb2RlbCJvCh1Qb3N0U3VibW9kZWxFbGVtZW50UnBjUmVxdWVz",
-            "dBISCgpzdWJtb2RlbElkGAEgASgJEjoKD3N1Ym1vZGVsRWxlbWVudBgCIAEo",
-            "CzIhLkZTUi5HUlBDLlYzLlN1Ym1vZGVsRWxlbWVudE1vZGVsInAKHlBvc3RT",
-            "dWJtb2RlbEVsZW1lbnRScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgF",
-            "EjoKD3N1Ym1vZGVsRWxlbWVudBgCIAEoCzIhLkZTUi5HUlBDLlYzLlN1Ym1v",
-            "ZGVsRWxlbWVudE1vZGVsIpoBCiNQb3N0U3VibW9kZWxFbGVtZW50QnlQYXRo",
-            "UnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEiMKBHBhdGgYAiADKAsy",
-            "FS5GU1IuR1JQQy5WMy5LZXlNb2RlbBI6Cg9zdWJtb2RlbEVsZW1lbnQYAyAB",
-            "KAsyIS5GU1IuR1JQQy5WMy5TdWJtb2RlbEVsZW1lbnRNb2RlbCJ2CiRQb3N0",
-            "U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29k",
-            "ZRgBIAEoBRI6Cg9zdWJtb2RlbEVsZW1lbnQYAiABKAsyIS5GU1IuR1JQQy5W",
-            "My5TdWJtb2RlbEVsZW1lbnRNb2RlbCKZAQoiUHV0U3VibW9kZWxFbGVtZW50",
-            "QnlQYXRoUnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEiMKBHBhdGgY",
-            "AiADKAsyFS5GU1IuR1JQQy5WMy5LZXlNb2RlbBI6Cg9zdWJtb2RlbEVsZW1l",
-            "bnQYAyABKAsyIS5GU1IuR1JQQy5WMy5TdWJtb2RlbEVsZW1lbnRNb2RlbCJ1",
-            "CiNQdXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRISCgpzdGF0",
-            "dXNDb2RlGAEgASgFEjoKD3N1Ym1vZGVsRWxlbWVudBgCIAEoCzIhLkZTUi5H",
-            "UlBDLlYzLlN1Ym1vZGVsRWxlbWVudE1vZGVsInEKJ1NldFN1Ym1vZGVsRWxl",
-            "bWVudFZhbHVlQnlQYXRoUnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJ",
-            "EiMKBHBhdGgYAiADKAsyFS5GU1IuR1JQQy5WMy5LZXlNb2RlbBINCgV2YWx1",
-            "ZRgDIAEoCSI+CihTZXRTdWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJwY1Jl",
-            "c3BvbnNlEhIKCnN0YXR1c0NvZGUYASABKAUiYAolRGVsZXRlU3VibW9kZWxF",
-            "bGVtZW50QnlQYXRoUnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEiMK",
-            "BHBhdGgYAiADKAsyFS5GU1IuR1JQQy5WMy5LZXlNb2RlbCI8CiZEZWxldGVT",
-            "dWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRISCgpzdGF0dXNDb2Rl",
-            "GAEgASgFMsMICg9TdWJtb2RlbFNlcnZpY2USVgoLR2V0U3VibW9kZWwSIi5G",
-            "U1IuR1JQQy5WMy5HZXRTdWJtb2RlbFJwY1JlcXVlc3QaIy5GU1IuR1JQQy5W",
-            "My5HZXRTdWJtb2RlbFJwY1Jlc3BvbnNlEncKFkdldEFsbFN1Ym1vZGVsRWxl",
-            "bWVudHMSLS5GU1IuR1JQQy5WMy5HZXRBbGxTdWJtb2RlbEVsZW1lbnRzUnBj",
-            "UmVxdWVzdBouLkZTUi5HUlBDLlYzLkdldEFsbFN1Ym1vZGVsRWxlbWVudHNS",
-            "cGNSZXNwb25zZRJ9ChhHZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGgSLy5GU1Iu",
-            "R1JQQy5WMy5HZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0GjAu",
-            "RlNSLkdSUEMuVjMuR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9u",
-            "c2USVgoLUHV0U3VibW9kZWwSIi5GU1IuR1JQQy5WMy5QdXRTdWJtb2RlbFJw",
-            "Y1JlcXVlc3QaIy5GU1IuR1JQQy5WMy5QdXRTdWJtb2RlbFJwY1Jlc3BvbnNl",
-            "Em4KE1Bvc3RTdWJtb2RlbEVsZW1lbnQSKi5GU1IuR1JQQy5WMy5Qb3N0U3Vi",
-            "bW9kZWxFbGVtZW50UnBjUmVxdWVzdBorLkZTUi5HUlBDLlYzLlBvc3RTdWJt",
-            "b2RlbEVsZW1lbnRScGNSZXNwb25zZRKAAQoZUG9zdFN1Ym1vZGVsRWxlbWVu",
-            "dEJ5UGF0aBIwLkZTUi5HUlBDLlYzLlBvc3RTdWJtb2RlbEVsZW1lbnRCeVBh",
-            "dGhScGNSZXF1ZXN0GjEuRlNSLkdSUEMuVjMuUG9zdFN1Ym1vZGVsRWxlbWVu",
-            "dEJ5UGF0aFJwY1Jlc3BvbnNlEn0KGFB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0",
-            "aBIvLkZTUi5HUlBDLlYzLlB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jl",
-            "cXVlc3QaMC5GU1IuR1JQQy5WMy5QdXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhS",
-            "cGNSZXNwb25zZRKMAQodU2V0U3VibW9kZWxFbGVtZW50VmFsdWVCeVBhdGgS",
-            "NC5GU1IuR1JQQy5WMy5TZXRTdWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJw",
-            "Y1JlcXVlc3QaNS5GU1IuR1JQQy5WMy5TZXRTdWJtb2RlbEVsZW1lbnRWYWx1",
-            "ZUJ5UGF0aFJwY1Jlc3BvbnNlEoYBChtEZWxldGVTdWJtb2RlbEVsZW1lbnRC",
-            "eVBhdGgSMi5GU1IuR1JQQy5WMy5EZWxldGVTdWJtb2RlbEVsZW1lbnRCeVBh",
-            "dGhScGNSZXF1ZXN0GjMuRlNSLkdSUEMuVjMuRGVsZXRlU3VibW9kZWxFbGVt",
-            "ZW50QnlQYXRoUnBjUmVzcG9uc2VCJ6oCJEZTUi5HUlBDLlYzLlNlcnZpY2Vz",
-            "LlN1Ym1vZGVsU2VydmljZWIGcHJvdG8z"));
+            "CiVQcm90b3MvU2VydmljZXMvU3VibW9kZWxTZXJ2aWNlLnByb3RvEg9GU1Iu",
+            "R1JQQy5MaWIuVjMaGVByb3Rvcy9BYXNNb2RlbHMuVjMucHJvdG8aHFByb3Rv",
+            "cy9BYXNBcGlNb2RlbHMuVjMucHJvdG8iZAoVR2V0U3VibW9kZWxScGNSZXF1",
+            "ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkSNwoOb3V0cHV0TW9kaWZpZXIYAiAB",
+            "KAsyHy5GU1IuR1JQQy5MaWIuVjMuT3V0cHV0TW9kaWZpZXIijQEKFkdldFN1",
+            "Ym1vZGVsUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRItCgdwYXls",
+            "b2FkGAIgASgLMhwuRlNSLkdSUEMuTGliLlYzLlN1Ym1vZGVsRFRPEjAKCXJl",
+            "ZmVyZW5jZRgDIAEoCzIdLkZTUi5HUlBDLkxpYi5WMy5SZWZlcmVuY2VEVE8i",
+            "bwogR2V0QWxsU3VibW9kZWxFbGVtZW50c1JwY1JlcXVlc3QSEgoKc3VibW9k",
+            "ZWxJZBgBIAEoCRI3Cg5vdXRwdXRNb2RpZmllchgCIAEoCzIfLkZTUi5HUlBD",
+            "LkxpYi5WMy5PdXRwdXRNb2RpZmllciKAAgohR2V0QWxsU3VibW9kZWxFbGVt",
+            "ZW50c1JwY1Jlc3BvbnNlEhIKCnN0YXR1c0NvZGUYASABKAUSQgoOcGFnaW5n",
+            "TWV0YURhdGEYAiABKAsyKi5GU1IuR1JQQy5MaWIuVjMuUGFnZWRSZXN1bHRQ",
+            "YWdpbmdNZXRhZGF0YRI0CgdwYXlsb2FkGAMgAygLMiMuRlNSLkdSUEMuTGli",
+            "LlYzLlN1Ym1vZGVsRWxlbWVudERUTxINCgV2YWx1ZRgEIAMoCRIwCglyZWZl",
+            "cmVuY2UYBSADKAsyHS5GU1IuR1JQQy5MaWIuVjMuUmVmZXJlbmNlRFRPEgwK",
+            "BHBhdGgYBiADKAkimAEKIkdldFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jl",
+            "cXVlc3QSEgoKc3VibW9kZWxJZBgBIAEoCRIlCgRwYXRoGAIgAygLMhcuRlNS",
+            "LkdSUEMuTGliLlYzLktleURUTxI3Cg5vdXRwdXRNb2RpZmllchgDIAEoCzIf",
+            "LkZTUi5HUlBDLkxpYi5WMy5PdXRwdXRNb2RpZmllciK+AQojR2V0U3VibW9k",
+            "ZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEo",
+            "BRI0CgdwYXlsb2FkGAIgASgLMiMuRlNSLkdSUEMuTGliLlYzLlN1Ym1vZGVs",
+            "RWxlbWVudERUTxINCgV2YWx1ZRgDIAEoCRIwCglyZWZlcmVuY2UYBCABKAsy",
+            "HS5GU1IuR1JQQy5MaWIuVjMuUmVmZXJlbmNlRFRPEgwKBHBhdGgYBSABKAki",
+            "WwoVUHV0U3VibW9kZWxScGNSZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkS",
+            "LgoIc3VibW9kZWwYAiABKAsyHC5GU1IuR1JQQy5MaWIuVjMuU3VibW9kZWxE",
+            "VE8iXAoWUHV0U3VibW9kZWxScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEg",
+            "ASgFEi4KCHN1Ym1vZGVsGAIgASgLMhwuRlNSLkdSUEMuTGliLlYzLlN1Ym1v",
+            "ZGVsRFRPInEKHVBvc3RTdWJtb2RlbEVsZW1lbnRScGNSZXF1ZXN0EhIKCnN1",
+            "Ym1vZGVsSWQYASABKAkSPAoPc3VibW9kZWxFbGVtZW50GAIgASgLMiMuRlNS",
+            "LkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTyJyCh5Qb3N0U3VibW9k",
+            "ZWxFbGVtZW50UnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRI8Cg9z",
+            "dWJtb2RlbEVsZW1lbnQYAiABKAsyIy5GU1IuR1JQQy5MaWIuVjMuU3VibW9k",
+            "ZWxFbGVtZW50RFRPIp4BCiNQb3N0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBj",
+            "UmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEiUKBHBhdGgYAiADKAsyFy5G",
+            "U1IuR1JQQy5MaWIuVjMuS2V5RFRPEjwKD3N1Ym1vZGVsRWxlbWVudBgDIAEo",
+            "CzIjLkZTUi5HUlBDLkxpYi5WMy5TdWJtb2RlbEVsZW1lbnREVE8ieAokUG9z",
+            "dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jlc3BvbnNlEhIKCnN0YXR1c0Nv",
+            "ZGUYASABKAUSPAoPc3VibW9kZWxFbGVtZW50GAIgASgLMiMuRlNSLkdSUEMu",
+            "TGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTyKdAQoiUHV0U3VibW9kZWxFbGVt",
+            "ZW50QnlQYXRoUnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEiUKBHBh",
+            "dGgYAiADKAsyFy5GU1IuR1JQQy5MaWIuVjMuS2V5RFRPEjwKD3N1Ym1vZGVs",
+            "RWxlbWVudBgDIAEoCzIjLkZTUi5HUlBDLkxpYi5WMy5TdWJtb2RlbEVsZW1l",
+            "bnREVE8idwojUHV0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2US",
+            "EgoKc3RhdHVzQ29kZRgBIAEoBRI8Cg9zdWJtb2RlbEVsZW1lbnQYAiABKAsy",
+            "Iy5GU1IuR1JQQy5MaWIuVjMuU3VibW9kZWxFbGVtZW50RFRPInMKJ1NldFN1",
+            "Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRoUnBjUmVxdWVzdBISCgpzdWJtb2Rl",
+            "bElkGAEgASgJEiUKBHBhdGgYAiADKAsyFy5GU1IuR1JQQy5MaWIuVjMuS2V5",
+            "RFRPEg0KBXZhbHVlGAMgASgJIj4KKFNldFN1Ym1vZGVsRWxlbWVudFZhbHVl",
+            "QnlQYXRoUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBSJiCiVEZWxl",
+            "dGVTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0EhIKCnN1Ym1vZGVs",
+            "SWQYASABKAkSJQoEcGF0aBgCIAMoCzIXLkZTUi5HUlBDLkxpYi5WMy5LZXlE",
+            "VE8iPAomRGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2US",
+            "EgoKc3RhdHVzQ29kZRgBIAEoBTKNCQoPU3VibW9kZWxTZXJ2aWNlEl4KC0dl",
+            "dFN1Ym1vZGVsEiYuRlNSLkdSUEMuTGliLlYzLkdldFN1Ym1vZGVsUnBjUmVx",
+            "dWVzdBonLkZTUi5HUlBDLkxpYi5WMy5HZXRTdWJtb2RlbFJwY1Jlc3BvbnNl",
+            "En8KFkdldEFsbFN1Ym1vZGVsRWxlbWVudHMSMS5GU1IuR1JQQy5MaWIuVjMu",
+            "R2V0QWxsU3VibW9kZWxFbGVtZW50c1JwY1JlcXVlc3QaMi5GU1IuR1JQQy5M",
+            "aWIuVjMuR2V0QWxsU3VibW9kZWxFbGVtZW50c1JwY1Jlc3BvbnNlEoUBChhH",
+            "ZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGgSMy5GU1IuR1JQQy5MaWIuVjMuR2V0",
+            "U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBo0LkZTUi5HUlBDLkxp",
+            "Yi5WMy5HZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRJeCgtQ",
+            "dXRTdWJtb2RlbBImLkZTUi5HUlBDLkxpYi5WMy5QdXRTdWJtb2RlbFJwY1Jl",
+            "cXVlc3QaJy5GU1IuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxScGNSZXNwb25z",
+            "ZRJ2ChNQb3N0U3VibW9kZWxFbGVtZW50Ei4uRlNSLkdSUEMuTGliLlYzLlBv",
+            "c3RTdWJtb2RlbEVsZW1lbnRScGNSZXF1ZXN0Gi8uRlNSLkdSUEMuTGliLlYz",
+            "LlBvc3RTdWJtb2RlbEVsZW1lbnRScGNSZXNwb25zZRKIAQoZUG9zdFN1Ym1v",
+            "ZGVsRWxlbWVudEJ5UGF0aBI0LkZTUi5HUlBDLkxpYi5WMy5Qb3N0U3VibW9k",
+            "ZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBo1LkZTUi5HUlBDLkxpYi5WMy5Q",
+            "b3N0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2UShQEKGFB1dFN1",
+            "Ym1vZGVsRWxlbWVudEJ5UGF0aBIzLkZTUi5HUlBDLkxpYi5WMy5QdXRTdWJt",
+            "b2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0GjQuRlNSLkdSUEMuTGliLlYz",
+            "LlB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jlc3BvbnNlEpQBCh1TZXRT",
+            "dWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aBI4LkZTUi5HUlBDLkxpYi5WMy5T",
+            "ZXRTdWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJwY1JlcXVlc3QaOS5GU1Iu",
+            "R1JQQy5MaWIuVjMuU2V0U3VibW9kZWxFbGVtZW50VmFsdWVCeVBhdGhScGNS",
+            "ZXNwb25zZRKOAQobRGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRoEjYuRlNS",
+            "LkdSUEMuTGliLlYzLkRlbGV0ZVN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jl",
+            "cXVlc3QaNy5GU1IuR1JQQy5MaWIuVjMuRGVsZXRlU3VibW9kZWxFbGVtZW50",
+            "QnlQYXRoUnBjUmVzcG9uc2VCK6oCKEZTUi5HUlBDLkxpYi5WMy5TZXJ2aWNl",
+            "cy5TdWJtb2RlbFNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::FSR.GRPC.V3.AasModelsV3Reflection.Descriptor, global::FSR.GRPC.V3.Services.AasApiModelsV3Reflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::FSR.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSR.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Reference" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Value", "Reference", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Value", "Reference", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "Submodel" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Submodel" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementRpcRequest.Parser, new[]{ "SubmodelId", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest), global::FSR.GRPC.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSR.GRPC.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Value", "Reference", "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Value", "Reference", "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "Submodel" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Submodel" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcRequest.Parser, new[]{ "SubmodelId", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null)
           }));
     }
     #endregion
@@ -137,7 +140,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,9 +180,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -260,7 +263,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -281,7 +284,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -300,7 +303,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -341,9 +344,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelModel payload_;
+    private global::FSR.GRPC.Lib.V3.SubmodelDTO payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelModel Payload {
+    public global::FSR.GRPC.Lib.V3.SubmodelDTO Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -352,9 +355,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 3;
-    private global::FSR.GRPC.V3.ReferenceModel reference_;
+    private global::FSR.GRPC.Lib.V3.ReferenceDTO reference_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.ReferenceModel Reference {
+    public global::FSR.GRPC.Lib.V3.ReferenceDTO Reference {
       get { return reference_; }
       set {
         reference_ = value;
@@ -444,13 +447,13 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::FSR.GRPC.V3.SubmodelModel();
+          Payload = new global::FSR.GRPC.Lib.V3.SubmodelDTO();
         }
         Payload.MergeFrom(other.Payload);
       }
       if (other.reference_ != null) {
         if (reference_ == null) {
-          Reference = new global::FSR.GRPC.V3.ReferenceModel();
+          Reference = new global::FSR.GRPC.Lib.V3.ReferenceDTO();
         }
         Reference.MergeFrom(other.Reference);
       }
@@ -471,14 +474,14 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::FSR.GRPC.V3.SubmodelModel();
+              Payload = new global::FSR.GRPC.Lib.V3.SubmodelDTO();
             }
             input.ReadMessage(Payload);
             break;
           }
           case 26: {
             if (reference_ == null) {
-              Reference = new global::FSR.GRPC.V3.ReferenceModel();
+              Reference = new global::FSR.GRPC.Lib.V3.ReferenceDTO();
             }
             input.ReadMessage(Reference);
             break;
@@ -497,7 +500,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -537,9 +540,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -620,7 +623,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -641,7 +644,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -660,7 +663,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -704,9 +707,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "pagingMetaData" field.</summary>
     public const int PagingMetaDataFieldNumber = 2;
-    private global::FSR.GRPC.V3.Services.PagedResultPagingMetadata pagingMetaData_;
+    private global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata pagingMetaData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.PagedResultPagingMetadata PagingMetaData {
+    public global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata PagingMetaData {
       get { return pagingMetaData_; }
       set {
         pagingMetaData_ = value;
@@ -715,11 +718,11 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.SubmodelElementModel> _repeated_payload_codec
-        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.V3.SubmodelElementModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.SubmodelElementModel> payload_ = new pbc::RepeatedField<global::FSR.GRPC.V3.SubmodelElementModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.SubmodelElementDTO> _repeated_payload_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.Lib.V3.SubmodelElementDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.SubmodelElementDTO> payload_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.SubmodelElementDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.SubmodelElementModel> Payload {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.SubmodelElementDTO> Payload {
       get { return payload_; }
     }
 
@@ -735,11 +738,11 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.ReferenceModel> _repeated_reference_codec
-        = pb::FieldCodec.ForMessage(42, global::FSR.GRPC.V3.ReferenceModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> reference_ = new pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.ReferenceDTO> _repeated_reference_codec
+        = pb::FieldCodec.ForMessage(42, global::FSR.GRPC.Lib.V3.ReferenceDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> reference_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.ReferenceModel> Reference {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.ReferenceDTO> Reference {
       get { return reference_; }
     }
 
@@ -843,7 +846,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.pagingMetaData_ != null) {
         if (pagingMetaData_ == null) {
-          PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+          PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
         }
         PagingMetaData.MergeFrom(other.PagingMetaData);
       }
@@ -868,7 +871,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (pagingMetaData_ == null) {
-              PagingMetaData = new global::FSR.GRPC.V3.Services.PagedResultPagingMetadata();
+              PagingMetaData = new global::FSR.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
             }
             input.ReadMessage(PagingMetaData);
             break;
@@ -903,7 +906,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -944,19 +947,19 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.KeyModel> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.V3.KeyModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> path_ = new pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> Path {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 3;
-    private global::FSR.GRPC.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -1042,7 +1045,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       path_.Add(other.path_);
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -1067,7 +1070,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 26: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSR.GRPC.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -1086,7 +1089,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1129,9 +1132,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelElementModel payload_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel Payload {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -1151,9 +1154,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 4;
-    private global::FSR.GRPC.V3.ReferenceModel reference_;
+    private global::FSR.GRPC.Lib.V3.ReferenceDTO reference_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.ReferenceModel Reference {
+    public global::FSR.GRPC.Lib.V3.ReferenceDTO Reference {
       get { return reference_; }
       set {
         reference_ = value;
@@ -1272,7 +1275,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::FSR.GRPC.V3.SubmodelElementModel();
+          Payload = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         Payload.MergeFrom(other.Payload);
       }
@@ -1281,7 +1284,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.reference_ != null) {
         if (reference_ == null) {
-          Reference = new global::FSR.GRPC.V3.ReferenceModel();
+          Reference = new global::FSR.GRPC.Lib.V3.ReferenceDTO();
         }
         Reference.MergeFrom(other.Reference);
       }
@@ -1305,7 +1308,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::FSR.GRPC.V3.SubmodelElementModel();
+              Payload = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(Payload);
             break;
@@ -1316,7 +1319,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 34: {
             if (reference_ == null) {
-              Reference = new global::FSR.GRPC.V3.ReferenceModel();
+              Reference = new global::FSR.GRPC.Lib.V3.ReferenceDTO();
             }
             input.ReadMessage(Reference);
             break;
@@ -1339,7 +1342,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1379,9 +1382,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodel" field.</summary>
     public const int SubmodelFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelModel submodel_;
+    private global::FSR.GRPC.Lib.V3.SubmodelDTO submodel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelModel Submodel {
+    public global::FSR.GRPC.Lib.V3.SubmodelDTO Submodel {
       get { return submodel_; }
       set {
         submodel_ = value;
@@ -1462,7 +1465,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.submodel_ != null) {
         if (submodel_ == null) {
-          Submodel = new global::FSR.GRPC.V3.SubmodelModel();
+          Submodel = new global::FSR.GRPC.Lib.V3.SubmodelDTO();
         }
         Submodel.MergeFrom(other.Submodel);
       }
@@ -1483,7 +1486,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodel_ == null) {
-              Submodel = new global::FSR.GRPC.V3.SubmodelModel();
+              Submodel = new global::FSR.GRPC.Lib.V3.SubmodelDTO();
             }
             input.ReadMessage(Submodel);
             break;
@@ -1502,7 +1505,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1542,9 +1545,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodel" field.</summary>
     public const int SubmodelFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelModel submodel_;
+    private global::FSR.GRPC.Lib.V3.SubmodelDTO submodel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelModel Submodel {
+    public global::FSR.GRPC.Lib.V3.SubmodelDTO Submodel {
       get { return submodel_; }
       set {
         submodel_ = value;
@@ -1625,7 +1628,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.submodel_ != null) {
         if (submodel_ == null) {
-          Submodel = new global::FSR.GRPC.V3.SubmodelModel();
+          Submodel = new global::FSR.GRPC.Lib.V3.SubmodelDTO();
         }
         Submodel.MergeFrom(other.Submodel);
       }
@@ -1646,7 +1649,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodel_ == null) {
-              Submodel = new global::FSR.GRPC.V3.SubmodelModel();
+              Submodel = new global::FSR.GRPC.Lib.V3.SubmodelDTO();
             }
             input.ReadMessage(Submodel);
             break;
@@ -1665,7 +1668,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1705,9 +1708,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelElementModel submodelElement_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel SubmodelElement {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -1788,7 +1791,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+          SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -1809,7 +1812,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+              SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -1828,7 +1831,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1868,9 +1871,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelElementModel submodelElement_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel SubmodelElement {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -1951,7 +1954,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+          SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -1972,7 +1975,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+              SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -1991,7 +1994,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2032,19 +2035,19 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.KeyModel> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.V3.KeyModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> path_ = new pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> Path {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 3;
-    private global::FSR.GRPC.V3.SubmodelElementModel submodelElement_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel SubmodelElement {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2130,7 +2133,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       path_.Add(other.path_);
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+          SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2155,7 +2158,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 26: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+              SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2174,7 +2177,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2214,9 +2217,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelElementModel submodelElement_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel SubmodelElement {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2297,7 +2300,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+          SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2318,7 +2321,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+              SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2337,7 +2340,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2378,19 +2381,19 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.KeyModel> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.V3.KeyModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> path_ = new pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> Path {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 3;
-    private global::FSR.GRPC.V3.SubmodelElementModel submodelElement_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel SubmodelElement {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2476,7 +2479,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       path_.Add(other.path_);
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+          SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2501,7 +2504,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 26: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+              SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2520,7 +2523,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2560,9 +2563,9 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSR.GRPC.V3.SubmodelElementModel submodelElement_;
+    private global::FSR.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSR.GRPC.V3.SubmodelElementModel SubmodelElement {
+    public global::FSR.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2643,7 +2646,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+          SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2664,7 +2667,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSR.GRPC.V3.SubmodelElementModel();
+              SubmodelElement = new global::FSR.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2683,7 +2686,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2724,11 +2727,11 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.KeyModel> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.V3.KeyModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> path_ = new pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> Path {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
@@ -2860,7 +2863,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2989,7 +2992,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3029,11 +3032,11 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSR.GRPC.V3.KeyModel> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.V3.KeyModel.Parser);
-    private readonly pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> path_ = new pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel>();
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSR.GRPC.V3.KeyModel> Path {
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
@@ -3138,7 +3141,7 @@ namespace FSR.GRPC.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.GRPC.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

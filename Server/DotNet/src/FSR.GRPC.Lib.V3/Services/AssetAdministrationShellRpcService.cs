@@ -4,14 +4,14 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AdminShellNS.Exceptions;
 using AutoMapper;
-using FSR.GRPC.V3.Services.AssetAdministrationShellService;
+using FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService;
 using Grpc.Core;
 using IO.Swagger.Lib.V3.Interfaces;
 using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
 using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace FSR.GRPC.V3.Services;
+namespace FSR.GRPC.Lib.V3.Services;
 
 public class AssetAdministrationShellRpcService : AssetAdministrationShellService.AssetAdministrationShellService.AssetAdministrationShellServiceBase {
     private readonly IAppLogger<AssetAdministrationShellRpcService> _logger;
@@ -52,11 +52,11 @@ public class AssetAdministrationShellRpcService : AssetAdministrationShellServic
             var aas = _aasService.GetAssetAdministrationShellById(decodedAasIdentifier);
             response.StatusCode = 200;
             if (request.OutputModifier.Content == OutputContent.Normal) {
-                response.Payload = _mapper.Map<AssetAdministrationShellModel>(aas);
+                response.Payload = _mapper.Map<AssetAdministrationShellDTO>(aas);
             }
             else if (request.OutputModifier.Content == OutputContent.Reference) {
                 var reference = _referenceModifierService.GetReferenceResult(aas);
-                response.Reference = _mapper.Map<ReferenceModel>(reference);
+                response.Reference = _mapper.Map<ReferenceDTO>(reference);
             }
             else {
                 response.StatusCode = 400;
@@ -78,7 +78,7 @@ public class AssetAdministrationShellRpcService : AssetAdministrationShellServic
         try {
             _aasService.ReplaceAssetAdministrationShellById(decodedAasIdentifier, aas);
             response.StatusCode = 200;
-            response.Aas = _mapper.Map<AssetAdministrationShellModel>(request.Aas);
+            response.Aas = _mapper.Map<AssetAdministrationShellDTO>(request.Aas);
         }
         catch (NotFoundException) {
             response.StatusCode = 404;
@@ -103,7 +103,7 @@ public class AssetAdministrationShellRpcService : AssetAdministrationShellServic
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -123,7 +123,7 @@ public class AssetAdministrationShellRpcService : AssetAdministrationShellServic
         try {
             var reference = _aasService.CreateSubmodelReferenceInAAS(body, decodedAasIdentifier);
             response.StatusCode = 201;
-            response.SubmodelRef = _mapper.Map<ReferenceModel>(reference);
+            response.SubmodelRef = _mapper.Map<ReferenceDTO>(reference);
         }
         catch(DuplicateException) {
             response.StatusCode = 401;
@@ -163,7 +163,7 @@ public class AssetAdministrationShellRpcService : AssetAdministrationShellServic
         try {
             var assetInfo = _aasService.GetAssetInformation(decodedAasIdentifier);
             response.StatusCode = 200;
-            response.AssetInformation = _mapper.Map<AssetInformationModel>(assetInfo);
+            response.AssetInformation = _mapper.Map<AssetInformationDTO>(assetInfo);
         }
         catch (NotFoundException) {
             response.StatusCode = 404;

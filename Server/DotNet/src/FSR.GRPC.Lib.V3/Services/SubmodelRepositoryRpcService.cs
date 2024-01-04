@@ -6,7 +6,7 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AdminShellNS.Exceptions;
 using AutoMapper;
-using FSR.GRPC.V3.Services.SubmodelRepository;
+using FSR.GRPC.Lib.V3.Services.SubmodelRepository;
 using Grpc.Core;
 using IO.Swagger.Lib.V3.Interfaces;
 using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
@@ -15,7 +15,7 @@ using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace FSR.GRPC.V3.Services;
+namespace FSR.GRPC.Lib.V3.Services;
 
 public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRepositoryServiceBase {
 
@@ -59,11 +59,11 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<SubmodelModel>(x)) ?? []);
+            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<SubmodelDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(submodelPaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -103,11 +103,11 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
         ISubmodel result = (ISubmodel) output;
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload = _mapper.Map<SubmodelModel>(submodel);
+            response.Payload = _mapper.Map<SubmodelDTO>(submodel);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var reference = _referenceModifierService.GetReferenceResult(submodel);
-            response.Reference = _mapper.Map<ReferenceModel>(reference);
+            response.Reference = _mapper.Map<ReferenceDTO>(reference);
         }
         else {
             response.StatusCode = 400;
@@ -131,11 +131,11 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<SubmodelModel>(x)) ?? []);
+            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<SubmodelDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(submodelPaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -157,11 +157,11 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<SubmodelModel>(x)) ?? []);
+            response.Payload.AddRange(submodelPaginatedList.result.Select(x => _mapper.Map<SubmodelDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(submodelPaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -183,7 +183,7 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
         try {
             var output = _submodelService.CreateSubmodel(submodel, decodedAasIdentifier);
             response.StatusCode = 201;
-            response.Submodel = _mapper.Map<SubmodelModel>(output);
+            response.Submodel = _mapper.Map<SubmodelDTO>(output);
         }
         catch (DuplicateException) {
             response.StatusCode = 400;
@@ -202,7 +202,7 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
         try {
             _submodelService.ReplaceSubmodelById(decodedSubmodelIdentifier, submodel);
             response.StatusCode = 200;
-            response.Submodel = _mapper.Map<SubmodelModel>(request.Submodel);
+            response.Submodel = _mapper.Map<SubmodelDTO>(request.Submodel);
         }
         catch (NotFoundException) {
             response.StatusCode = 404;

@@ -43,7 +43,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSR.DigitalTwin.Infra", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSR.DigitalTwin.API", "src\FSR.DigitalTwin.API\FSR.DigitalTwin.API.csproj", "{18B0AD06-FB29-415B-A365-730B7D6AFDC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSR.GRPC.V3", "src\FSR.GRPC.V3\FSR.GRPC.V3.csproj", "{71A99EA8-DEB2-476C-8B99-ECD1D02D0C75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSR.GRPC.Lib.V3", "src\FSR.GRPC.Lib.V3\FSR.GRPC.Lib.V3.csproj", "{71A99EA8-DEB2-476C-8B99-ECD1D02D0C75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

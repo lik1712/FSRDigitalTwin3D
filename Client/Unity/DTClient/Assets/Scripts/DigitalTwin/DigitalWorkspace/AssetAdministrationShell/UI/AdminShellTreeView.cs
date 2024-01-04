@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FSR.GRPC.V3;
-using FSR.GRPC.V3.Services;
-using FSR.GRPC.V3.Services.AssetAdministrationShellRepository;
-using FSR.GRPC.V3.Services.SubmodelRepository;
+using FSR.GRPC.Lib.V3;
+using FSR.GRPC.Lib.V3.Services;
+using FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
+using FSR.GRPC.Lib.V3.Services.SubmodelRepository;
 using Grpc.Core;
 using UnityEngine;
 
@@ -31,7 +31,7 @@ public class AdminShellTreeView : MonoBehaviour {
     }
 
     private class SubmodelElementModelCollection {
-        public SubmodelElementModel[] value { get; set; }
+        public SubmodelElementDTO[] value { get; set; }
     }
 
     private async Task OnUpdateTreeViewAsync() {
@@ -41,13 +41,13 @@ public class AdminShellTreeView : MonoBehaviour {
 
         GetAllAssetAdministrationShellsRpcRequest request1 = new() { OutputModifier = Default };
         var response = await aasClient.AdminShellRepo.GetAllAssetAdministrationShellsAsync(request1);
-        List<AssetAdministrationShellModel> shellModels = response.Payload.ToList();
+        List<AssetAdministrationShellDTO> shellModels = response.Payload.ToList();
 
         GetAllSubmodelsRpcRequest request2 = new() { OutputModifier = Default };
         var subModelsRes = await aasClient.SubmodelRepo.GetAllSubmodelsAsync(request2);
-        List<SubmodelModel> submodelModels = subModelsRes.Payload.ToList();
+        List<SubmodelDTO> submodelModels = subModelsRes.Payload.ToList();
 
-        Action<SubmodelElementModel, Node> submodelElementNodeTree = (e, node) => {};
+        Action<SubmodelElementDTO, Node> submodelElementNodeTree = (e, node) => {};
         submodelElementNodeTree = (e, node) => {
             var elemNode = node.AddChild(e.IdShort, ReturnedNode.Created);
             // TODO Make prettier!
@@ -62,13 +62,13 @@ public class AdminShellTreeView : MonoBehaviour {
                 }
             }
         };
-        Action<SubmodelModel, Node> submodelNodeTree = (sm, node) => {
+        Action<SubmodelDTO, Node> submodelNodeTree = (sm, node) => {
             var smNode = node.AddChild(sm.IdShort, ReturnedNode.Created);
             foreach (var elem in sm.SubmodelElements) {
                 submodelElementNodeTree(elem, smNode);
             }
         };
-        Action<AssetAdministrationShellModel, Node> aasNodeTree = (aas, node) => {
+        Action<AssetAdministrationShellDTO, Node> aasNodeTree = (aas, node) => {
             var aasNode = node.AddChild(aas.IdShort, ReturnedNode.Created);
             var submodelIds = aas.Submodels.Select(x => x.Keys.First().Value);
             var refSubmodelModels = submodelModels.Where(x => submodelIds.Contains(x.Id));

@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.V3.Services.SubmodelRepository";
+option csharp_namespace = "FSR.GRPC.Lib.V3.Services.SubmodelRepository";
 
 import "Protos/AasModels.V3.proto";
 import "Protos/AasApiModels.V3.proto";
 
-package FSR.GRPC.V3;
+package FSR.GRPC.Lib.V3;
 
 /* SubmodelRepositoryService */
 
@@ -15,8 +15,8 @@ message GetAllSubmodelsRpcRequest {
 message GetAllSubmodelsRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated SubmodelModel payload = 3;
-    repeated ReferenceModel reference = 4;
+    repeated SubmodelDTO payload = 3;
+    repeated ReferenceDTO reference = 4;
 }
 
 message GetSubmodelByIdRpcRequest {
@@ -25,19 +25,19 @@ message GetSubmodelByIdRpcRequest {
 }
 message GetSubmodelByIdRpcResponse {
     int32 statusCode = 1;
-    SubmodelModel payload = 2;
-    ReferenceModel reference = 3;
+    SubmodelDTO payload = 2;
+    ReferenceDTO reference = 3;
 }
 
 message GetAllSubmodelsBySemanticIdRpcRequest {
-    ReferenceModel semanticId = 1;
+    ReferenceDTO semanticId = 1;
     OutputModifier outputModifier = 2;
 }
 message GetAllSubmodelsBySemanticIdRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated SubmodelModel payload = 3;
-    repeated ReferenceModel reference = 4;
+    repeated SubmodelDTO payload = 3;
+    repeated ReferenceDTO reference = 4;
 }
 
 message GetAllSubmodelsByIdShortRpcRequest {
@@ -47,25 +47,25 @@ message GetAllSubmodelsByIdShortRpcRequest {
 message GetAllSubmodelsByIdShortRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated SubmodelModel payload = 3;
-    repeated ReferenceModel reference = 4;
+    repeated SubmodelDTO payload = 3;
+    repeated ReferenceDTO reference = 4;
 }
 
 message PostSubmodelRpcRequest {
-    SubmodelModel submodel = 1;
+    SubmodelDTO submodel = 1;
     string aasIdentifier = 2;
 }
 message PostSubmodelRpcResponse {
     int32 statusCode = 1;
-    SubmodelModel submodel = 2;
+    SubmodelDTO submodel = 2;
 }
 
 message PutSubmodelByIdRpcRequest {
-    SubmodelModel submodel = 1;
+    SubmodelDTO submodel = 1;
 }
 message PutSubmodelByIdRpcResponse {
     int32 statusCode = 1;
-    SubmodelModel submodel = 2;
+    SubmodelDTO submodel = 2;
 }
 
 message DeleteSubmodelByIdRpcRequest {

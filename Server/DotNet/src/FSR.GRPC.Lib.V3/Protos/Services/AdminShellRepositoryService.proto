@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.V3.Services.AssetAdministrationShellRepository";
+option csharp_namespace = "FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository";
 
 import "Protos/AasModels.V3.proto";
 import "Protos/AasApiModels.V3.proto";
 
-package FSR.GRPC.V3;
+package FSR.GRPC.Lib.V3;
 
 /* AssetAdministrationShellRepositoryService */
 
@@ -15,8 +15,8 @@ message GetAllAssetAdministrationShellsRpcRequest {
 message GetAllAssetAdministrationShellsRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated AssetAdministrationShellModel payload = 3;
-    repeated ReferenceModel reference = 4;
+    repeated AssetAdministrationShellDTO payload = 3;
+    repeated ReferenceDTO reference = 4;
 }
 
 message GetAssetAdministrationShellByIdRpcRequest {
@@ -25,8 +25,8 @@ message GetAssetAdministrationShellByIdRpcRequest {
 }
 message GetAssetAdministrationShellByIdRpcResponse {
     int32 statusCode = 1;
-    AssetAdministrationShellModel payload = 2;
-    ReferenceModel reference = 3;
+    AssetAdministrationShellDTO payload = 2;
+    ReferenceDTO reference = 3;
 }
 
 message GetAllAssetAdministrationShellsByAssetIdRpcRequest {
@@ -37,8 +37,8 @@ message GetAllAssetAdministrationShellsByAssetIdRpcRequest {
 message GetAllAssetAdministrationShellsByAssetIdRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated AssetAdministrationShellModel payload = 3;
-    repeated ReferenceModel reference = 4;
+    repeated AssetAdministrationShellDTO payload = 3;
+    repeated ReferenceDTO reference = 4;
 }
 
 message GetAllAssetAdministrationShellsByIdShortRpcRequest {
@@ -48,24 +48,24 @@ message GetAllAssetAdministrationShellsByIdShortRpcRequest {
 message GetAllAssetAdministrationShellsByIdShortRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2; 
-    repeated AssetAdministrationShellModel payload = 3;
-    repeated ReferenceModel reference = 4;
+    repeated AssetAdministrationShellDTO payload = 3;
+    repeated ReferenceDTO reference = 4;
 }
 
 message PostAssetAdministrationShellRpcRequest {
-    AssetAdministrationShellModel aas = 1;
+    AssetAdministrationShellDTO aas = 1;
 }
 message PostAssetAdministrationShellRpcResponse {
     int32 statusCode = 1;
-    AssetAdministrationShellModel aas = 2;
+    AssetAdministrationShellDTO aas = 2;
 }
 
 message PutAssetAdministrationShellByIdRpcRequest {
-    AssetAdministrationShellModel aas = 1;
+    AssetAdministrationShellDTO aas = 1;
 }
 message PutAssetAdministrationShellByIdRpcResponse {
     int32 statusCode = 1;
-    AssetAdministrationShellModel aas = 2;
+    AssetAdministrationShellDTO aas = 2;
 }
 
 message DeleteAssetAdministrationShellByIdRpcRequest {

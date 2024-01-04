@@ -4,14 +4,14 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AdminShellNS.Exceptions;
 using AutoMapper;
-using FSR.GRPC.V3.Services.AssetAdministrationShellRepository;
+using FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
 using Grpc.Core;
 using IO.Swagger.Lib.V3.Interfaces;
 using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
 using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace FSR.GRPC.V3.Services;
+namespace FSR.GRPC.Lib.V3.Services;
 
 public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationShellRepositoryService.AssetAdministrationShellRepositoryServiceBase {
     
@@ -54,11 +54,11 @@ public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationS
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(aasPaginatedList.result.Select(x => _mapper.Map<AssetAdministrationShellModel>(x)) ?? []);
+            response.Payload.AddRange(aasPaginatedList.result.Select(x => _mapper.Map<AssetAdministrationShellDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(aasPaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -79,11 +79,11 @@ public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationS
             var aas = _aasService.GetAssetAdministrationShellById(decodedAasIdentifier);
             response.StatusCode = 200;
             if (request.OutputModifier.Content == OutputContent.Normal) {
-                response.Payload = _mapper.Map<AssetAdministrationShellModel>(aas);
+                response.Payload = _mapper.Map<AssetAdministrationShellDTO>(aas);
             }
             else if (request.OutputModifier.Content == OutputContent.Reference) {
                 var reference = _referenceModifierService.GetReferenceResult(aas);
-                response.Reference = _mapper.Map<ReferenceModel>(reference);
+                response.Reference = _mapper.Map<ReferenceDTO>(reference);
             }
             else {
                 response.StatusCode = 400;
@@ -110,11 +110,11 @@ public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationS
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(aasPaginatedList.result.Select(x => _mapper.Map<AssetAdministrationShellModel>(x)) ?? []);
+            response.Payload.AddRange(aasPaginatedList.result.Select(x => _mapper.Map<AssetAdministrationShellDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(aasPaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -136,11 +136,11 @@ public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationS
         };
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload.AddRange(aasPaginatedList.result.Select(x => _mapper.Map<AssetAdministrationShellModel>(x)) ?? []);
+            response.Payload.AddRange(aasPaginatedList.result.Select(x => _mapper.Map<AssetAdministrationShellDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(aasPaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else {
             response.StatusCode = 400;
@@ -158,7 +158,7 @@ public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationS
         try {
             var output = _aasService.CreateAssetAdministrationShell(aas);
             response.StatusCode = 201;
-            response.Aas = _mapper.Map<AssetAdministrationShellModel>(output);
+            response.Aas = _mapper.Map<AssetAdministrationShellDTO>(output);
         }
         catch (DuplicateException) {
             response.StatusCode = 400;
@@ -177,7 +177,7 @@ public class AssetAdministrationShellRepositoryRpcService : AssetAdministrationS
         try {
             _aasService.ReplaceAssetAdministrationShellById(decodedAasIdentifier, aas);
             response.StatusCode = 200;
-            response.Aas = _mapper.Map<AssetAdministrationShellModel>(request.Aas);
+            response.Aas = _mapper.Map<AssetAdministrationShellDTO>(request.Aas);
         }
         catch (NotFoundException) {
             response.StatusCode = 404;

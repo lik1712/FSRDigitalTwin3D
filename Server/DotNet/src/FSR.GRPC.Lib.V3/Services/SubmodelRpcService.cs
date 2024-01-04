@@ -6,8 +6,8 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AdminShellNS.Exceptions;
 using AutoMapper;
-using FSR.GRPC.V3.Services;
-using FSR.GRPC.V3.Services.SubmodelService;
+using FSR.GRPC.Lib.V3.Services;
+using FSR.GRPC.Lib.V3.Services.SubmodelService;
 using Grpc.Core;
 using IO.Swagger.Lib.V3.Interfaces;
 using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
@@ -15,7 +15,7 @@ using IO.Swagger.Lib.V3.Services;
 using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace FSR.GRPC.V3;
+namespace FSR.GRPC.Lib.V3;
 
 public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
 
@@ -77,11 +77,11 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         ISubmodel result = (ISubmodel) output;
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
-            response.Payload = _mapper.Map<SubmodelModel>(submodel);
+            response.Payload = _mapper.Map<SubmodelDTO>(submodel);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var reference = _referenceModifierService.GetReferenceResult(submodel);
-            response.Reference = _mapper.Map<ReferenceModel>(reference);
+            response.Reference = _mapper.Map<ReferenceDTO>(reference);
         }
         else {
             response.StatusCode = 400;
@@ -116,11 +116,11 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
             var smeLevelExtent = _levelExtentModifierService.ApplyLevelExtent(smePaginatedList.result, (LevelEnum)request.OutputModifier.Level, (ExtentEnum)request.OutputModifier.Extent);
-            response.Payload.AddRange(smeLevelExtent.Select(x => _mapper.Map<SubmodelElementModel>((ISubmodelElement) x)) ?? []);
+            response.Payload.AddRange(smeLevelExtent.Select(x => _mapper.Map<SubmodelElementDTO>((ISubmodelElement) x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var references = _referenceModifierService.GetReferenceResult(smePaginatedList.result.ConvertAll(a => (IReferable)a));
-            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceModel>(x)) ?? []);
+            response.Reference.AddRange(references.Select(x => _mapper.Map<ReferenceDTO>(x)) ?? []);
         }
         else if (request.OutputModifier.Content == OutputContent.Path) {
             var paths = _pathModifierService.ToIdShortPath(submodelElements);
@@ -182,11 +182,11 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
 
         if (request.OutputModifier.Content == OutputContent.Normal) {
             var submodelElementLevel = _levelExtentModifierService.ApplyLevelExtent(submodelElement, (LevelEnum)request.OutputModifier.Level);
-            response.Payload = _mapper.Map<SubmodelElementModel>((ISubmodelElement) submodelElementLevel);
+            response.Payload = _mapper.Map<SubmodelElementDTO>((ISubmodelElement) submodelElementLevel);
         }
         else if (request.OutputModifier.Content == OutputContent.Reference) {
             var reference = _referenceModifierService.GetReferenceResult(submodelElement);
-            response.Reference = _mapper.Map<ReferenceModel>(reference);
+            response.Reference = _mapper.Map<ReferenceDTO>(reference);
         }
         else if (request.OutputModifier.Content == OutputContent.Path) {
             var path = _pathModifierService.ToIdShortPath(submodelElement);
@@ -214,7 +214,7 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         try {
             _submodelService.ReplaceSubmodelById(decodedSubmodelIdentifier, submodel);
             response.StatusCode = 200;
-            response.Submodel = _mapper.Map<SubmodelModel>(request.Submodel);
+            response.Submodel = _mapper.Map<SubmodelDTO>(request.Submodel);
         }
         catch (NotFoundException) {
             response.StatusCode = 404;
@@ -255,7 +255,7 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         try {
             var res = _submodelService.CreateSubmodelElement(decodedSubmodelIdentifier, body, true);
             response.StatusCode = 201;
-            response.SubmodelElement = _mapper.Map<SubmodelElementModel>(res);
+            response.SubmodelElement = _mapper.Map<SubmodelElementDTO>(res);
         }
         catch (DuplicateException) {
             response.StatusCode = 403;
@@ -296,7 +296,7 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         try {
             var res = _submodelService.CreateSubmodelElementByPath(decodedSubmodelIdentifier, idShortPath, true, body);
             response.StatusCode = 201;
-            response.SubmodelElement = _mapper.Map<SubmodelElementModel>(res);
+            response.SubmodelElement = _mapper.Map<SubmodelElementDTO>(res);
         }
         catch (DuplicateException) {
             response.StatusCode = 401;
@@ -337,7 +337,7 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         try {
             _submodelService.ReplaceSubmodelElementByPath(decodedSubmodelIdentifier, idShortPath, body);
             response.StatusCode = 200;
-            response.SubmodelElement = _mapper.Map<SubmodelElementModel>(request.SubmodelElement);
+            response.SubmodelElement = _mapper.Map<SubmodelElementDTO>(request.SubmodelElement);
         }
         catch (NotFoundException) {
             response.StatusCode = 404;

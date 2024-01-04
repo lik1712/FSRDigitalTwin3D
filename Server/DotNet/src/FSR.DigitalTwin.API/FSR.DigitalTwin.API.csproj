@@ -19,9 +19,6 @@
     <ProjectReference Include="../FSR.DigitalTwin.Domain/FSR.DigitalTwin.Domain.csproj" />
     <ProjectReference Include="../FSR.DigitalTwin.App/FSR.DigitalTwin.App.csproj" />
     <ProjectReference Include="../FSR.DigitalTwin.Infra/FSR.DigitalTwin.Infra.csproj" />
-    <ProjectReference Include="../FSR.GRPC.V3/FSR.GRPC.V3.csproj" />
-    <ProjectReference Include="../../aasx/src/IO.Swagger.Lib.V3/IO.Swagger.Lib.V3.csproj" />
-    <ProjectReference Include="../../aasx/src/IO.Swagger.Registry.Lib.V3/IO.Swagger.registry.Lib.V3.csproj" />
   </ItemGroup>
 
 </Project>

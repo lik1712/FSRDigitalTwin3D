@@ -7,7 +7,8 @@ using AasxServerStandardBib.Extensions;
 using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AasxServerStandardBib.Services;
-using FSR.GRPC.V3.Common;
+using FSR.GRPC.Lib.V3.Common;
+using FSR.GRPC.Lib.V3.Common.Utils;
 using IO.Swagger.Controllers;
 using IO.Swagger.Lib.V3.Formatters;
 using IO.Swagger.Lib.V3.Interfaces;
@@ -169,7 +170,9 @@ internal class Startup
             });
         });
 
-        GrpcService.AddTo(services);
+        services.AddAutoMapper(RpcAssembly.GetAssembly());
+        services.AddGrpc();
+
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -207,7 +210,7 @@ internal class Startup
         {
             endpoints.MapControllers();
             endpoints.MapGet("/", () => "*** Welcome to FORSocialRobots Digital Twin Framework! ***");
-            GrpcService.MapServices(endpoints);
+            endpoints.MapGrpcServices();
         });
 
 

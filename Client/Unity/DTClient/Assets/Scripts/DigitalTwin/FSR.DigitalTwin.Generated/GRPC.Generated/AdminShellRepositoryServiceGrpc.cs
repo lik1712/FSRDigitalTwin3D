@@ -7,116 +7,116 @@
 
 using grpc = global::Grpc.Core;
 
-namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
+namespace FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository {
   public static partial class AssetAdministrationShellRepositoryService
   {
-    static readonly string __ServiceName = "FSR.GRPC.V3.AssetAdministrationShellRepositoryService";
+    static readonly string __ServiceName = "FSR.GRPC.Lib.V3.AssetAdministrationShellRepositoryService";
 
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest> __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest> __Marshaller_FSR_GRPC_V3_GetAssetAdministrationShellByIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> __Marshaller_FSR_GRPC_V3_GetAssetAdministrationShellByIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest> __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByAssetIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByAssetIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest> __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByIdShortRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByIdShortRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest> __Marshaller_FSR_GRPC_V3_PostAssetAdministrationShellRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> __Marshaller_FSR_GRPC_V3_PostAssetAdministrationShellRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest> __Marshaller_FSR_GRPC_V3_PutAssetAdministrationShellByIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> __Marshaller_FSR_GRPC_V3_PutAssetAdministrationShellByIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest> __Marshaller_FSR_GRPC_V3_DeleteAssetAdministrationShellByIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> __Marshaller_FSR_GRPC_V3_DeleteAssetAdministrationShellByIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellByIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellByIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByAssetIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByAssetIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByIdShortRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByIdShortRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_PostAssetAdministrationShellRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_PostAssetAdministrationShellRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellByIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellByIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_DeleteAssetAdministrationShellByIdRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_DeleteAssetAdministrationShellByIdRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> __Method_GetAllAssetAdministrationShells = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> __Method_GetAllAssetAdministrationShells = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllAssetAdministrationShells",
-        __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsRpcRequest,
-        __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> __Method_GetAssetAdministrationShellById = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> __Method_GetAssetAdministrationShellById = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAssetAdministrationShellById",
-        __Marshaller_FSR_GRPC_V3_GetAssetAdministrationShellByIdRpcRequest,
-        __Marshaller_FSR_GRPC_V3_GetAssetAdministrationShellByIdRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellByIdRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellByIdRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> __Method_GetAllAssetAdministrationShellsByAssetId = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> __Method_GetAllAssetAdministrationShellsByAssetId = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllAssetAdministrationShellsByAssetId",
-        __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByAssetIdRpcRequest,
-        __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByAssetIdRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByAssetIdRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByAssetIdRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> __Method_GetAllAssetAdministrationShellsByIdShort = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> __Method_GetAllAssetAdministrationShellsByIdShort = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllAssetAdministrationShellsByIdShort",
-        __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByIdShortRpcRequest,
-        __Marshaller_FSR_GRPC_V3_GetAllAssetAdministrationShellsByIdShortRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByIdShortRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_GetAllAssetAdministrationShellsByIdShortRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> __Method_PostAssetAdministrationShell = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> __Method_PostAssetAdministrationShell = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PostAssetAdministrationShell",
-        __Marshaller_FSR_GRPC_V3_PostAssetAdministrationShellRpcRequest,
-        __Marshaller_FSR_GRPC_V3_PostAssetAdministrationShellRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_PostAssetAdministrationShellRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_PostAssetAdministrationShellRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> __Method_PutAssetAdministrationShellById = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> __Method_PutAssetAdministrationShellById = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PutAssetAdministrationShellById",
-        __Marshaller_FSR_GRPC_V3_PutAssetAdministrationShellByIdRpcRequest,
-        __Marshaller_FSR_GRPC_V3_PutAssetAdministrationShellByIdRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellByIdRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellByIdRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> __Method_DeleteAssetAdministrationShellById = new grpc::Method<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse>(
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> __Method_DeleteAssetAdministrationShellById = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteAssetAdministrationShellById",
-        __Marshaller_FSR_GRPC_V3_DeleteAssetAdministrationShellByIdRpcRequest,
-        __Marshaller_FSR_GRPC_V3_DeleteAssetAdministrationShellByIdRpcResponse);
+        __Marshaller_FSR_GRPC_Lib_V3_DeleteAssetAdministrationShellByIdRpcRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_DeleteAssetAdministrationShellByIdRpcResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.Services[0]; }
+      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.AdminShellRepositoryServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of AssetAdministrationShellRepositoryService</summary>
     [grpc::BindServiceMethod(typeof(AssetAdministrationShellRepositoryService), "BindService")]
     public abstract partial class AssetAdministrationShellRepositoryServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> GetAllAssetAdministrationShells(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> GetAllAssetAdministrationShells(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> GetAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> GetAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> GetAllAssetAdministrationShellsByAssetId(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> GetAllAssetAdministrationShellsByAssetId(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> GetAllAssetAdministrationShellsByIdShort(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> GetAllAssetAdministrationShellsByIdShort(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> PostAssetAdministrationShell(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> PostAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> PutAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> PutAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> DeleteAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> DeleteAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -146,115 +146,115 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
       {
       }
 
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse GetAllAssetAdministrationShells(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse GetAllAssetAdministrationShells(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAssetAdministrationShells(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse GetAllAssetAdministrationShells(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse GetAllAssetAdministrationShells(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllAssetAdministrationShells, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> GetAllAssetAdministrationShellsAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> GetAllAssetAdministrationShellsAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAssetAdministrationShellsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> GetAllAssetAdministrationShellsAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse> GetAllAssetAdministrationShellsAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllAssetAdministrationShells, null, options, request);
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse GetAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse GetAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAssetAdministrationShellById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse GetAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse GetAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAssetAdministrationShellById, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> GetAssetAdministrationShellByIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> GetAssetAdministrationShellByIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAssetAdministrationShellByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> GetAssetAdministrationShellByIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse> GetAssetAdministrationShellByIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAssetAdministrationShellById, null, options, request);
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse GetAllAssetAdministrationShellsByAssetId(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse GetAllAssetAdministrationShellsByAssetId(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAssetAdministrationShellsByAssetId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse GetAllAssetAdministrationShellsByAssetId(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse GetAllAssetAdministrationShellsByAssetId(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllAssetAdministrationShellsByAssetId, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> GetAllAssetAdministrationShellsByAssetIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> GetAllAssetAdministrationShellsByAssetIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAssetAdministrationShellsByAssetIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> GetAllAssetAdministrationShellsByAssetIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse> GetAllAssetAdministrationShellsByAssetIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllAssetAdministrationShellsByAssetId, null, options, request);
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse GetAllAssetAdministrationShellsByIdShort(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse GetAllAssetAdministrationShellsByIdShort(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAssetAdministrationShellsByIdShort(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse GetAllAssetAdministrationShellsByIdShort(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse GetAllAssetAdministrationShellsByIdShort(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllAssetAdministrationShellsByIdShort, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> GetAllAssetAdministrationShellsByIdShortAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> GetAllAssetAdministrationShellsByIdShortAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAssetAdministrationShellsByIdShortAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> GetAllAssetAdministrationShellsByIdShortAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse> GetAllAssetAdministrationShellsByIdShortAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllAssetAdministrationShellsByIdShort, null, options, request);
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse PostAssetAdministrationShell(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse PostAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PostAssetAdministrationShell(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse PostAssetAdministrationShell(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse PostAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PostAssetAdministrationShell, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> PostAssetAdministrationShellAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> PostAssetAdministrationShellAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PostAssetAdministrationShellAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> PostAssetAdministrationShellAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse> PostAssetAdministrationShellAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PostAssetAdministrationShell, null, options, request);
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse PutAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse PutAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PutAssetAdministrationShellById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse PutAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse PutAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PutAssetAdministrationShellById, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> PutAssetAdministrationShellByIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> PutAssetAdministrationShellByIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PutAssetAdministrationShellByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> PutAssetAdministrationShellByIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse> PutAssetAdministrationShellByIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PutAssetAdministrationShellById, null, options, request);
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse DeleteAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse DeleteAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAssetAdministrationShellById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse DeleteAssetAdministrationShellById(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse DeleteAssetAdministrationShellById(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAssetAdministrationShellById, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> DeleteAssetAdministrationShellByIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> DeleteAssetAdministrationShellByIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAssetAdministrationShellByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> DeleteAssetAdministrationShellByIdAsync(global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse> DeleteAssetAdministrationShellByIdAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAssetAdministrationShellById, null, options, request);
       }
@@ -285,13 +285,13 @@ namespace FSR.GRPC.V3.Services.AssetAdministrationShellRepository {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AssetAdministrationShellRepositoryServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetAllAssetAdministrationShells, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse>(serviceImpl.GetAllAssetAdministrationShells));
-      serviceBinder.AddMethod(__Method_GetAssetAdministrationShellById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse>(serviceImpl.GetAssetAdministrationShellById));
-      serviceBinder.AddMethod(__Method_GetAllAssetAdministrationShellsByAssetId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse>(serviceImpl.GetAllAssetAdministrationShellsByAssetId));
-      serviceBinder.AddMethod(__Method_GetAllAssetAdministrationShellsByIdShort, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse>(serviceImpl.GetAllAssetAdministrationShellsByIdShort));
-      serviceBinder.AddMethod(__Method_PostAssetAdministrationShell, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse>(serviceImpl.PostAssetAdministrationShell));
-      serviceBinder.AddMethod(__Method_PutAssetAdministrationShellById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse>(serviceImpl.PutAssetAdministrationShellById));
-      serviceBinder.AddMethod(__Method_DeleteAssetAdministrationShellById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse>(serviceImpl.DeleteAssetAdministrationShellById));
+      serviceBinder.AddMethod(__Method_GetAllAssetAdministrationShells, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsRpcResponse>(serviceImpl.GetAllAssetAdministrationShells));
+      serviceBinder.AddMethod(__Method_GetAssetAdministrationShellById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAssetAdministrationShellByIdRpcResponse>(serviceImpl.GetAssetAdministrationShellById));
+      serviceBinder.AddMethod(__Method_GetAllAssetAdministrationShellsByAssetId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByAssetIdRpcResponse>(serviceImpl.GetAllAssetAdministrationShellsByAssetId));
+      serviceBinder.AddMethod(__Method_GetAllAssetAdministrationShellsByIdShort, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.GetAllAssetAdministrationShellsByIdShortRpcResponse>(serviceImpl.GetAllAssetAdministrationShellsByIdShort));
+      serviceBinder.AddMethod(__Method_PostAssetAdministrationShell, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PostAssetAdministrationShellRpcResponse>(serviceImpl.PostAssetAdministrationShell));
+      serviceBinder.AddMethod(__Method_PutAssetAdministrationShellById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.PutAssetAdministrationShellByIdRpcResponse>(serviceImpl.PutAssetAdministrationShellById));
+      serviceBinder.AddMethod(__Method_DeleteAssetAdministrationShellById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository.DeleteAssetAdministrationShellByIdRpcResponse>(serviceImpl.DeleteAssetAdministrationShellById));
     }
 
   }

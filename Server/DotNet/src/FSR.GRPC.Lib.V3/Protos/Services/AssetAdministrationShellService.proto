@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.V3.Services.AssetAdministrationShellService";
+option csharp_namespace = "FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService";
 
 import "Protos/AasModels.V3.proto";
 import "Protos/AasApiModels.V3.proto";
 
-package FSR.GRPC.V3;
+package FSR.GRPC.Lib.V3;
 
 /* AssetAdministrationShellService */
 
@@ -15,17 +15,17 @@ message GetAssetAdministrationShellRpcRequest {
 }
 message GetAssetAdministrationShellRpcResponse {
     int32 statusCode = 1;
-    AssetAdministrationShellModel payload = 2;
-    ReferenceModel reference = 3;
+    AssetAdministrationShellDTO payload = 2;
+    ReferenceDTO reference = 3;
 }
 
 message PutAssetAdministrationShellRpcRequest {
     string id = 1;
-    AssetAdministrationShellModel aas = 2;
+    AssetAdministrationShellDTO aas = 2;
 }
 message PutAssetAdministrationShellRpcResponse {
     int32 statusCode = 1;
-    AssetAdministrationShellModel aas = 2;
+    AssetAdministrationShellDTO aas = 2;
 }
 
 message GetAllSubmodelReferencesRpcRequest {
@@ -35,16 +35,16 @@ message GetAllSubmodelReferencesRpcRequest {
 message GetAllSubmodelReferencesRpcResponse {
     int32 statusCode = 1;
     PagedResultPagingMetadata pagingMetaData = 2;
-    repeated ReferenceModel payload = 3;
+    repeated ReferenceDTO payload = 3;
 }
 
 message PostSubmodelReferenceRpcRequest {
     string id = 1;
-    ReferenceModel submodelRef = 2;
+    ReferenceDTO submodelRef = 2;
 }
 message PostSubmodelReferenceRpcResponse {
     int32 statusCode = 1;
-    ReferenceModel submodelRef = 2;
+    ReferenceDTO submodelRef = 2;
 }
 
 message DeleteSubmodelReferenceRpcRequest {
@@ -60,16 +60,16 @@ message GetAssetInformationRpcRequest {
 }
 message GetAssetInformationRpcResponse {
     int32 statusCode = 1;
-    AssetInformationModel assetInformation = 2;
+    AssetInformationDTO assetInformation = 2;
 }
 
 message PutAssetInformationRpcRequest {
     string id = 1;
-    AssetInformationModel assetInformation = 2;
+    AssetInformationDTO assetInformation = 2;
 }
 message PutAssetInformationRpcResponse {
     int32 statusCode = 1;
-    AssetInformationModel assetInformation = 2;
+    AssetInformationDTO assetInformation = 2;
 }
 
 service AssetAdministrationShellService {
