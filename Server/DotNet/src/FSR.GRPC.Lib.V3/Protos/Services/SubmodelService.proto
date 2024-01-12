@@ -101,6 +101,33 @@ message DeleteSubmodelElementByPathRpcResponse {
     int32 statusCode = 1;
 }
 
+message InvokeOperationSyncRequest {
+    string submodelId = 1;
+}
+message InvokeOperationSyncResponse {
+    int32 statusCode = 1;
+}
+
+message InvokeOperationAsyncRequest {
+    string submodelId = 1;
+    repeated KeyDTO path = 2;
+    repeated OperationVariableDTO inputArguments = 3;
+    repeated OperationVariableDTO inoutputArguments = 4;
+    int32 timestamp = 5;
+    string requestId = 6;
+}
+message InvokeOperationAsyncResponse {
+    int32 statusCode = 1;
+    string payload = 2;
+}
+
+message GetOperationAsyncResultRequest {
+    string handleId = 1;
+}
+message GetOperationAsyncResultResponse {
+
+}
+
 service SubmodelService {
     rpc GetSubmodel (GetSubmodelRpcRequest) returns (GetSubmodelRpcResponse);
     rpc GetAllSubmodelElements (GetAllSubmodelElementsRpcRequest) returns (GetAllSubmodelElementsRpcResponse);
@@ -111,4 +138,7 @@ service SubmodelService {
     rpc PutSubmodelElementByPath (PutSubmodelElementByPathRpcRequest) returns (PutSubmodelElementByPathRpcResponse);
     rpc SetSubmodelElementValueByPath (SetSubmodelElementValueByPathRpcRequest) returns (SetSubmodelElementValueByPathRpcResponse);
     rpc DeleteSubmodelElementByPath (DeleteSubmodelElementByPathRpcRequest) returns (DeleteSubmodelElementByPathRpcResponse);
+    rpc InvokeOperationSync (InvokeOperationSyncRequest) returns (InvokeOperationSyncResponse);
+    rpc InvokeOperationAsync (InvokeOperationAsyncRequest) returns (InvokeOperationAsyncResponse);
+    rpc GetOperationAsyncResult (GetOperationAsyncResultRequest) returns (GetOperationAsyncResultResponse);
 }

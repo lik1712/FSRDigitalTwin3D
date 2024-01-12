@@ -77,34 +77,53 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
             "dGVTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0EhIKCnN1Ym1vZGVs",
             "SWQYASABKAkSJQoEcGF0aBgCIAMoCzIXLkZTUi5HUlBDLkxpYi5WMy5LZXlE",
             "VE8iPAomRGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2US",
-            "EgoKc3RhdHVzQ29kZRgBIAEoBTKNCQoPU3VibW9kZWxTZXJ2aWNlEl4KC0dl",
-            "dFN1Ym1vZGVsEiYuRlNSLkdSUEMuTGliLlYzLkdldFN1Ym1vZGVsUnBjUmVx",
-            "dWVzdBonLkZTUi5HUlBDLkxpYi5WMy5HZXRTdWJtb2RlbFJwY1Jlc3BvbnNl",
-            "En8KFkdldEFsbFN1Ym1vZGVsRWxlbWVudHMSMS5GU1IuR1JQQy5MaWIuVjMu",
-            "R2V0QWxsU3VibW9kZWxFbGVtZW50c1JwY1JlcXVlc3QaMi5GU1IuR1JQQy5M",
-            "aWIuVjMuR2V0QWxsU3VibW9kZWxFbGVtZW50c1JwY1Jlc3BvbnNlEoUBChhH",
-            "ZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGgSMy5GU1IuR1JQQy5MaWIuVjMuR2V0",
-            "U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBo0LkZTUi5HUlBDLkxp",
-            "Yi5WMy5HZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRJeCgtQ",
-            "dXRTdWJtb2RlbBImLkZTUi5HUlBDLkxpYi5WMy5QdXRTdWJtb2RlbFJwY1Jl",
-            "cXVlc3QaJy5GU1IuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxScGNSZXNwb25z",
-            "ZRJ2ChNQb3N0U3VibW9kZWxFbGVtZW50Ei4uRlNSLkdSUEMuTGliLlYzLlBv",
-            "c3RTdWJtb2RlbEVsZW1lbnRScGNSZXF1ZXN0Gi8uRlNSLkdSUEMuTGliLlYz",
-            "LlBvc3RTdWJtb2RlbEVsZW1lbnRScGNSZXNwb25zZRKIAQoZUG9zdFN1Ym1v",
-            "ZGVsRWxlbWVudEJ5UGF0aBI0LkZTUi5HUlBDLkxpYi5WMy5Qb3N0U3VibW9k",
-            "ZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBo1LkZTUi5HUlBDLkxpYi5WMy5Q",
-            "b3N0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2UShQEKGFB1dFN1",
-            "Ym1vZGVsRWxlbWVudEJ5UGF0aBIzLkZTUi5HUlBDLkxpYi5WMy5QdXRTdWJt",
-            "b2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0GjQuRlNSLkdSUEMuTGliLlYz",
-            "LlB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jlc3BvbnNlEpQBCh1TZXRT",
-            "dWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aBI4LkZTUi5HUlBDLkxpYi5WMy5T",
-            "ZXRTdWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJwY1JlcXVlc3QaOS5GU1Iu",
-            "R1JQQy5MaWIuVjMuU2V0U3VibW9kZWxFbGVtZW50VmFsdWVCeVBhdGhScGNS",
-            "ZXNwb25zZRKOAQobRGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRoEjYuRlNS",
-            "LkdSUEMuTGliLlYzLkRlbGV0ZVN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jl",
-            "cXVlc3QaNy5GU1IuR1JQQy5MaWIuVjMuRGVsZXRlU3VibW9kZWxFbGVtZW50",
-            "QnlQYXRoUnBjUmVzcG9uc2VCK6oCKEZTUi5HUlBDLkxpYi5WMy5TZXJ2aWNl",
-            "cy5TdWJtb2RlbFNlcnZpY2ViBnByb3RvMw=="));
+            "EgoKc3RhdHVzQ29kZRgBIAEoBSIwChpJbnZva2VPcGVyYXRpb25TeW5jUmVx",
+            "dWVzdBISCgpzdWJtb2RlbElkGAEgASgJIjEKG0ludm9rZU9wZXJhdGlvblN5",
+            "bmNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgFIv8BChtJbnZva2VPcGVy",
+            "YXRpb25Bc3luY1JlcXVlc3QSEgoKc3VibW9kZWxJZBgBIAEoCRIlCgRwYXRo",
+            "GAIgAygLMhcuRlNSLkdSUEMuTGliLlYzLktleURUTxI9Cg5pbnB1dEFyZ3Vt",
+            "ZW50cxgDIAMoCzIlLkZTUi5HUlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJs",
+            "ZURUTxJAChFpbm91dHB1dEFyZ3VtZW50cxgEIAMoCzIlLkZTUi5HUlBDLkxp",
+            "Yi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxIRCgl0aW1lc3RhbXAYBSABKAUS",
+            "EQoJcmVxdWVzdElkGAYgASgJIkMKHEludm9rZU9wZXJhdGlvbkFzeW5jUmVz",
+            "cG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRIPCgdwYXlsb2FkGAIgASgJIjIK",
+            "HkdldE9wZXJhdGlvbkFzeW5jUmVzdWx0UmVxdWVzdBIQCghoYW5kbGVJZBgB",
+            "IAEoCSIhCh9HZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlc3BvbnNlMvILCg9T",
+            "dWJtb2RlbFNlcnZpY2USXgoLR2V0U3VibW9kZWwSJi5GU1IuR1JQQy5MaWIu",
+            "VjMuR2V0U3VibW9kZWxScGNSZXF1ZXN0GicuRlNSLkdSUEMuTGliLlYzLkdl",
+            "dFN1Ym1vZGVsUnBjUmVzcG9uc2USfwoWR2V0QWxsU3VibW9kZWxFbGVtZW50",
+            "cxIxLkZTUi5HUlBDLkxpYi5WMy5HZXRBbGxTdWJtb2RlbEVsZW1lbnRzUnBj",
+            "UmVxdWVzdBoyLkZTUi5HUlBDLkxpYi5WMy5HZXRBbGxTdWJtb2RlbEVsZW1l",
+            "bnRzUnBjUmVzcG9uc2UShQEKGEdldFN1Ym1vZGVsRWxlbWVudEJ5UGF0aBIz",
+            "LkZTUi5HUlBDLkxpYi5WMy5HZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNS",
+            "ZXF1ZXN0GjQuRlNSLkdSUEMuTGliLlYzLkdldFN1Ym1vZGVsRWxlbWVudEJ5",
+            "UGF0aFJwY1Jlc3BvbnNlEl4KC1B1dFN1Ym1vZGVsEiYuRlNSLkdSUEMuTGli",
+            "LlYzLlB1dFN1Ym1vZGVsUnBjUmVxdWVzdBonLkZTUi5HUlBDLkxpYi5WMy5Q",
+            "dXRTdWJtb2RlbFJwY1Jlc3BvbnNlEnYKE1Bvc3RTdWJtb2RlbEVsZW1lbnQS",
+            "Li5GU1IuR1JQQy5MaWIuVjMuUG9zdFN1Ym1vZGVsRWxlbWVudFJwY1JlcXVl",
+            "c3QaLy5GU1IuR1JQQy5MaWIuVjMuUG9zdFN1Ym1vZGVsRWxlbWVudFJwY1Jl",
+            "c3BvbnNlEogBChlQb3N0U3VibW9kZWxFbGVtZW50QnlQYXRoEjQuRlNSLkdS",
+            "UEMuTGliLlYzLlBvc3RTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0",
+            "GjUuRlNSLkdSUEMuTGliLlYzLlBvc3RTdWJtb2RlbEVsZW1lbnRCeVBhdGhS",
+            "cGNSZXNwb25zZRKFAQoYUHV0U3VibW9kZWxFbGVtZW50QnlQYXRoEjMuRlNS",
+            "LkdSUEMuTGliLlYzLlB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVl",
+            "c3QaNC5GU1IuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxFbGVtZW50QnlQYXRo",
+            "UnBjUmVzcG9uc2USlAEKHVNldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRo",
+            "EjguRlNSLkdSUEMuTGliLlYzLlNldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQ",
+            "YXRoUnBjUmVxdWVzdBo5LkZTUi5HUlBDLkxpYi5WMy5TZXRTdWJtb2RlbEVs",
+            "ZW1lbnRWYWx1ZUJ5UGF0aFJwY1Jlc3BvbnNlEo4BChtEZWxldGVTdWJtb2Rl",
+            "bEVsZW1lbnRCeVBhdGgSNi5GU1IuR1JQQy5MaWIuVjMuRGVsZXRlU3VibW9k",
+            "ZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBo3LkZTUi5HUlBDLkxpYi5WMy5E",
+            "ZWxldGVTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRJwChNJbnZv",
+            "a2VPcGVyYXRpb25TeW5jEisuRlNSLkdSUEMuTGliLlYzLkludm9rZU9wZXJh",
+            "dGlvblN5bmNSZXF1ZXN0GiwuRlNSLkdSUEMuTGliLlYzLkludm9rZU9wZXJh",
+            "dGlvblN5bmNSZXNwb25zZRJzChRJbnZva2VPcGVyYXRpb25Bc3luYxIsLkZT",
+            "Ui5HUlBDLkxpYi5WMy5JbnZva2VPcGVyYXRpb25Bc3luY1JlcXVlc3QaLS5G",
+            "U1IuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uQXN5bmNSZXNwb25zZRJ8",
+            "ChdHZXRPcGVyYXRpb25Bc3luY1Jlc3VsdBIvLkZTUi5HUlBDLkxpYi5WMy5H",
+            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlcXVlc3QaMC5GU1IuR1JQQy5MaWIu",
+            "VjMuR2V0T3BlcmF0aW9uQXN5bmNSZXN1bHRSZXNwb25zZUIrqgIoRlNSLkdS",
+            "UEMuTGliLlYzLlNlcnZpY2VzLlN1Ym1vZGVsU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::FSR.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSR.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -125,7 +144,13 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
             new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest.Parser, new[]{ "SubmodelId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse.Parser, new[]{ "StatusCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest.Parser, new[]{ "HandleId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -3256,6 +3281,896 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
             StatusCode = input.ReadInt32();
             break;
           }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class InvokeOperationSyncRequest : pb::IMessage<InvokeOperationSyncRequest> {
+    private static readonly pb::MessageParser<InvokeOperationSyncRequest> _parser = new pb::MessageParser<InvokeOperationSyncRequest>(() => new InvokeOperationSyncRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InvokeOperationSyncRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationSyncRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationSyncRequest(InvokeOperationSyncRequest other) : this() {
+      submodelId_ = other.submodelId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationSyncRequest Clone() {
+      return new InvokeOperationSyncRequest(this);
+    }
+
+    /// <summary>Field number for the "submodelId" field.</summary>
+    public const int SubmodelIdFieldNumber = 1;
+    private string submodelId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SubmodelId {
+      get { return submodelId_; }
+      set {
+        submodelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InvokeOperationSyncRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InvokeOperationSyncRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SubmodelId != other.SubmodelId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SubmodelId.Length != 0) hash ^= SubmodelId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (SubmodelId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SubmodelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (SubmodelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SubmodelId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InvokeOperationSyncRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SubmodelId.Length != 0) {
+        SubmodelId = other.SubmodelId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SubmodelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class InvokeOperationSyncResponse : pb::IMessage<InvokeOperationSyncResponse> {
+    private static readonly pb::MessageParser<InvokeOperationSyncResponse> _parser = new pb::MessageParser<InvokeOperationSyncResponse>(() => new InvokeOperationSyncResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InvokeOperationSyncResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationSyncResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationSyncResponse(InvokeOperationSyncResponse other) : this() {
+      statusCode_ = other.statusCode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationSyncResponse Clone() {
+      return new InvokeOperationSyncResponse(this);
+    }
+
+    /// <summary>Field number for the "statusCode" field.</summary>
+    public const int StatusCodeFieldNumber = 1;
+    private int statusCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StatusCode {
+      get { return statusCode_; }
+      set {
+        statusCode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InvokeOperationSyncResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InvokeOperationSyncResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StatusCode != other.StatusCode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StatusCode != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(StatusCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StatusCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusCode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InvokeOperationSyncResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StatusCode != 0) {
+        StatusCode = other.StatusCode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StatusCode = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class InvokeOperationAsyncRequest : pb::IMessage<InvokeOperationAsyncRequest> {
+    private static readonly pb::MessageParser<InvokeOperationAsyncRequest> _parser = new pb::MessageParser<InvokeOperationAsyncRequest>(() => new InvokeOperationAsyncRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InvokeOperationAsyncRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationAsyncRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationAsyncRequest(InvokeOperationAsyncRequest other) : this() {
+      submodelId_ = other.submodelId_;
+      path_ = other.path_.Clone();
+      inputArguments_ = other.inputArguments_.Clone();
+      inoutputArguments_ = other.inoutputArguments_.Clone();
+      timestamp_ = other.timestamp_;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationAsyncRequest Clone() {
+      return new InvokeOperationAsyncRequest(this);
+    }
+
+    /// <summary>Field number for the "submodelId" field.</summary>
+    public const int SubmodelIdFieldNumber = 1;
+    private string submodelId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SubmodelId {
+      get { return submodelId_; }
+      set {
+        submodelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.KeyDTO> Path {
+      get { return path_; }
+    }
+
+    /// <summary>Field number for the "inputArguments" field.</summary>
+    public const int InputArgumentsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.OperationVariableDTO> _repeated_inputArguments_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.OperationVariableDTO> inputArguments_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.OperationVariableDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.OperationVariableDTO> InputArguments {
+      get { return inputArguments_; }
+    }
+
+    /// <summary>Field number for the "inoutputArguments" field.</summary>
+    public const int InoutputArgumentsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::FSR.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
+        = pb::FieldCodec.ForMessage(34, global::FSR.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSR.GRPC.Lib.V3.OperationVariableDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSR.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
+      get { return inoutputArguments_; }
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 5;
+    private int timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "requestId" field.</summary>
+    public const int RequestIdFieldNumber = 6;
+    private string requestId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InvokeOperationAsyncRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InvokeOperationAsyncRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SubmodelId != other.SubmodelId) return false;
+      if(!path_.Equals(other.path_)) return false;
+      if(!inputArguments_.Equals(other.inputArguments_)) return false;
+      if(!inoutputArguments_.Equals(other.inoutputArguments_)) return false;
+      if (Timestamp != other.Timestamp) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SubmodelId.Length != 0) hash ^= SubmodelId.GetHashCode();
+      hash ^= path_.GetHashCode();
+      hash ^= inputArguments_.GetHashCode();
+      hash ^= inoutputArguments_.GetHashCode();
+      if (Timestamp != 0) hash ^= Timestamp.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (SubmodelId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SubmodelId);
+      }
+      path_.WriteTo(output, _repeated_path_codec);
+      inputArguments_.WriteTo(output, _repeated_inputArguments_codec);
+      inoutputArguments_.WriteTo(output, _repeated_inoutputArguments_codec);
+      if (Timestamp != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Timestamp);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (SubmodelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SubmodelId);
+      }
+      size += path_.CalculateSize(_repeated_path_codec);
+      size += inputArguments_.CalculateSize(_repeated_inputArguments_codec);
+      size += inoutputArguments_.CalculateSize(_repeated_inoutputArguments_codec);
+      if (Timestamp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Timestamp);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InvokeOperationAsyncRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SubmodelId.Length != 0) {
+        SubmodelId = other.SubmodelId;
+      }
+      path_.Add(other.path_);
+      inputArguments_.Add(other.inputArguments_);
+      inoutputArguments_.Add(other.inoutputArguments_);
+      if (other.Timestamp != 0) {
+        Timestamp = other.Timestamp;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SubmodelId = input.ReadString();
+            break;
+          }
+          case 18: {
+            path_.AddEntriesFrom(input, _repeated_path_codec);
+            break;
+          }
+          case 26: {
+            inputArguments_.AddEntriesFrom(input, _repeated_inputArguments_codec);
+            break;
+          }
+          case 34: {
+            inoutputArguments_.AddEntriesFrom(input, _repeated_inoutputArguments_codec);
+            break;
+          }
+          case 40: {
+            Timestamp = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class InvokeOperationAsyncResponse : pb::IMessage<InvokeOperationAsyncResponse> {
+    private static readonly pb::MessageParser<InvokeOperationAsyncResponse> _parser = new pb::MessageParser<InvokeOperationAsyncResponse>(() => new InvokeOperationAsyncResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InvokeOperationAsyncResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationAsyncResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationAsyncResponse(InvokeOperationAsyncResponse other) : this() {
+      statusCode_ = other.statusCode_;
+      payload_ = other.payload_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InvokeOperationAsyncResponse Clone() {
+      return new InvokeOperationAsyncResponse(this);
+    }
+
+    /// <summary>Field number for the "statusCode" field.</summary>
+    public const int StatusCodeFieldNumber = 1;
+    private int statusCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StatusCode {
+      get { return statusCode_; }
+      set {
+        statusCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "payload" field.</summary>
+    public const int PayloadFieldNumber = 2;
+    private string payload_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Payload {
+      get { return payload_; }
+      set {
+        payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InvokeOperationAsyncResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InvokeOperationAsyncResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StatusCode != other.StatusCode) return false;
+      if (Payload != other.Payload) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
+      if (Payload.Length != 0) hash ^= Payload.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StatusCode != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(StatusCode);
+      }
+      if (Payload.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Payload);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StatusCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusCode);
+      }
+      if (Payload.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Payload);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InvokeOperationAsyncResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StatusCode != 0) {
+        StatusCode = other.StatusCode;
+      }
+      if (other.Payload.Length != 0) {
+        Payload = other.Payload;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            StatusCode = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Payload = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetOperationAsyncResultRequest : pb::IMessage<GetOperationAsyncResultRequest> {
+    private static readonly pb::MessageParser<GetOperationAsyncResultRequest> _parser = new pb::MessageParser<GetOperationAsyncResultRequest>(() => new GetOperationAsyncResultRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetOperationAsyncResultRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetOperationAsyncResultRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetOperationAsyncResultRequest(GetOperationAsyncResultRequest other) : this() {
+      handleId_ = other.handleId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetOperationAsyncResultRequest Clone() {
+      return new GetOperationAsyncResultRequest(this);
+    }
+
+    /// <summary>Field number for the "handleId" field.</summary>
+    public const int HandleIdFieldNumber = 1;
+    private string handleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string HandleId {
+      get { return handleId_; }
+      set {
+        handleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetOperationAsyncResultRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetOperationAsyncResultRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HandleId != other.HandleId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HandleId.Length != 0) hash ^= HandleId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (HandleId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(HandleId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (HandleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HandleId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetOperationAsyncResultRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HandleId.Length != 0) {
+        HandleId = other.HandleId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            HandleId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GetOperationAsyncResultResponse : pb::IMessage<GetOperationAsyncResultResponse> {
+    private static readonly pb::MessageParser<GetOperationAsyncResultResponse> _parser = new pb::MessageParser<GetOperationAsyncResultResponse>(() => new GetOperationAsyncResultResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetOperationAsyncResultResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetOperationAsyncResultResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetOperationAsyncResultResponse(GetOperationAsyncResultResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetOperationAsyncResultResponse Clone() {
+      return new GetOperationAsyncResultResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetOperationAsyncResultResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetOperationAsyncResultResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetOperationAsyncResultResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
         }
       }
     }

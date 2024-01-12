@@ -86,6 +86,27 @@ public class DigitalWorkspaceBridge : MonoBehaviour
             Debug.Log("Failed posting submodel element with status = " + postResponse.StatusCode);
         }
 
+        InvokeOperationAsyncRequest request5 = new() {
+            SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
+            Timestamp = 0,
+            RequestId = "MyRequestId::1",
+        };
+        request5.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
+        var invokeResponse = AasApiClient.Submodel.InvokeOperationAsync(request5);
+        if (invokeResponse.StatusCode == 200) {
+            Debug.Log("Successfully invoked operation asynchronously!");
+        }
+        else {
+            Debug.Log("Failed invocation = " + invokeResponse.StatusCode);
+            return;
+        }
+
+        GetOperationAsyncResultRequest request6 = new() {
+            HandleId = invokeResponse.Payload,
+        };
+        await Task.Delay(6000);
+        AasApiClient.Submodel.GetOperationAsyncResult(request6);
+
         // =========== END Example requests =========== //
     }
 

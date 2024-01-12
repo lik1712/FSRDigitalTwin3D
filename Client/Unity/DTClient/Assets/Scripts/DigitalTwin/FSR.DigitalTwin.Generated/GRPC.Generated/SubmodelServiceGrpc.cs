@@ -30,6 +30,12 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
     static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_SetSubmodelElementValueByPathRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelElementByPathRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelElementByPathRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest> __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationSyncRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse> __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationSyncResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest> __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationAsyncRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse> __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationAsyncResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest> __Marshaller_FSR_GRPC_Lib_V3_GetOperationAsyncResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse> __Marshaller_FSR_GRPC_Lib_V3_GetOperationAsyncResultResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse> __Method_GetSubmodel = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse>(
         grpc::MethodType.Unary,
@@ -94,6 +100,27 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
         __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelElementByPathRpcRequest,
         __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelElementByPathRpcResponse);
 
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse> __Method_InvokeOperationSync = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InvokeOperationSync",
+        __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationSyncRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationSyncResponse);
+
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse> __Method_InvokeOperationAsync = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InvokeOperationAsync",
+        __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationAsyncRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_InvokeOperationAsyncResponse);
+
+    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse> __Method_GetOperationAsyncResult = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetOperationAsyncResult",
+        __Marshaller_FSR_GRPC_Lib_V3_GetOperationAsyncResultRequest,
+        __Marshaller_FSR_GRPC_Lib_V3_GetOperationAsyncResultResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -145,6 +172,21 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse> DeleteSubmodelElementByPath(global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse> InvokeOperationSync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse> InvokeOperationAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse> GetOperationAsyncResult(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -318,6 +360,54 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSubmodelElementByPath, null, options, request);
       }
+      public virtual global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse InvokeOperationSync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InvokeOperationSync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse InvokeOperationSync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InvokeOperationSync, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse> InvokeOperationSyncAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InvokeOperationSyncAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse> InvokeOperationSyncAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InvokeOperationSync, null, options, request);
+      }
+      public virtual global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse InvokeOperationAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InvokeOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse InvokeOperationAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InvokeOperationAsync, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse> InvokeOperationAsyncAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InvokeOperationAsyncAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse> InvokeOperationAsyncAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InvokeOperationAsync, null, options, request);
+      }
+      public virtual global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse GetOperationAsyncResult(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOperationAsyncResult(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse GetOperationAsyncResult(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetOperationAsyncResult, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse> GetOperationAsyncResultAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOperationAsyncResultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse> GetOperationAsyncResultAsync(global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetOperationAsyncResult, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override SubmodelServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -338,7 +428,10 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
           .AddMethod(__Method_PostSubmodelElementByPath, serviceImpl.PostSubmodelElementByPath)
           .AddMethod(__Method_PutSubmodelElementByPath, serviceImpl.PutSubmodelElementByPath)
           .AddMethod(__Method_SetSubmodelElementValueByPath, serviceImpl.SetSubmodelElementValueByPath)
-          .AddMethod(__Method_DeleteSubmodelElementByPath, serviceImpl.DeleteSubmodelElementByPath).Build();
+          .AddMethod(__Method_DeleteSubmodelElementByPath, serviceImpl.DeleteSubmodelElementByPath)
+          .AddMethod(__Method_InvokeOperationSync, serviceImpl.InvokeOperationSync)
+          .AddMethod(__Method_InvokeOperationAsync, serviceImpl.InvokeOperationAsync)
+          .AddMethod(__Method_GetOperationAsyncResult, serviceImpl.GetOperationAsyncResult).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -356,6 +449,9 @@ namespace FSR.GRPC.Lib.V3.Services.SubmodelService {
       serviceBinder.AddMethod(__Method_PutSubmodelElementByPath, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse>(serviceImpl.PutSubmodelElementByPath));
       serviceBinder.AddMethod(__Method_SetSubmodelElementValueByPath, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse>(serviceImpl.SetSubmodelElementValueByPath));
       serviceBinder.AddMethod(__Method_DeleteSubmodelElementByPath, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse>(serviceImpl.DeleteSubmodelElementByPath));
+      serviceBinder.AddMethod(__Method_InvokeOperationSync, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse>(serviceImpl.InvokeOperationSync));
+      serviceBinder.AddMethod(__Method_InvokeOperationAsync, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse>(serviceImpl.InvokeOperationAsync));
+      serviceBinder.AddMethod(__Method_GetOperationAsyncResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest, global::FSR.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse>(serviceImpl.GetOperationAsyncResult));
     }
 
   }

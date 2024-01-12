@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using AasCore.Aas3_0;
+using AasOperationInvocation;
 using AasxServer;
 using AasxServerStandardBib.Exceptions;
 using AasxServerStandardBib.Interfaces;
@@ -14,6 +15,7 @@ using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
 using IO.Swagger.Lib.V3.Services;
 using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch.Operations;
 
 namespace FSR.GRPC.Lib.V3;
 
@@ -140,13 +142,13 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
 
     private string ToIdShortDotSeparatedPath(IEnumerable<string> path) {
         string res = "";
-        bool first = false;
+        bool first = true;
 
         foreach(string idShort in path) {
             if (!first) {
                 res += ".";
             }
-            first = true;
+            first = false;
             res += idShort;
         }
 
@@ -387,6 +389,58 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         catch (NotFoundException) {
             response.StatusCode = 404;
         }
+        return Task.FromResult(response);
+    }
+
+    public override Task<InvokeOperationAsyncResponse> InvokeOperationAsync(InvokeOperationAsyncRequest request, ServerCallContext context)
+    {
+        var decodedSubmodelIdentifier = _decoderService.Decode("submodelIdentifier", request.SubmodelId);
+        _logger.LogInformation($"Received request to invoke operation at {request.SubmodelId} from a submodel with id {decodedSubmodelIdentifier}");
+
+        InvokeOperationAsyncResponse response = new();
+
+        string idShortPath = ToIdShortDotSeparatedPath(request.Path.Select(x => x.Value));
+        if (!Program.noSecurity)
+        {
+            var submodel = _submodelService.GetSubmodelById(decodedSubmodelIdentifier);
+            context.GetHttpContext().User.Claims.ToList().Add(new Claim("idShortPath", submodel.IdShort + "." + idShortPath));
+            var claimsList = new List<Claim>(context.GetHttpContext().User.Claims)
+            {
+                new Claim("IdShortPath", submodel.IdShort + "." + idShortPath)
+            };
+            var identity = new ClaimsIdentity(claimsList, "AasSecurityAuth");
+            var principal = new System.Security.Principal.GenericPrincipal(identity, null);
+            var authResult = _authorizationService.AuthorizeAsync(principal, submodel, "SecurityPolicy").Result;
+            if (!authResult.Succeeded)
+            {
+                response.StatusCode = 403;
+                return Task.FromResult(response);
+            }
+        }
+
+        try {
+            List<OperationVariable> inputArguments = request.InputArguments.Select(x => _mapper.Map<OperationVariable>(x)).ToList();
+            List<OperationVariable> inoutputArguments = request.InoutputArguments.Select(x => _mapper.Map<OperationVariable>(x)).ToList();
+            var handle = _submodelService.InvokeOperationAsync(decodedSubmodelIdentifier, idShortPath, inputArguments, inoutputArguments, request.Timestamp, request.RequestId);
+            response.Payload = handle.HandleId;
+            response.StatusCode = 200;
+        }
+        catch (NotFoundException) {
+            response.StatusCode = 404;
+        }
+        
+        return Task.FromResult(response);
+    }
+
+    public override Task<GetOperationAsyncResultResponse> GetOperationAsyncResult(GetOperationAsyncResultRequest request, ServerCallContext context)
+    {
+        _logger.LogInformation($"Received request get status/result from invocation {request.HandleId}");
+
+        GetOperationAsyncResultResponse response = new();
+        var result = OperationInvoker.GetAsyncResult(request.HandleId);
+
+        _logger.LogInformation($"Invocation {request.HandleId} has current status {result.ExecutionState}");
+
         return Task.FromResult(response);
     }
 }
