@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace FSR.GRPC.Lib.V3.Common.Utils;
+namespace FSRAas.GRPC.Lib.V3.Common.Utils;
 
 public class RpcAssembly {
     public static Assembly GetAssembly() {

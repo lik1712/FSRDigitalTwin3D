@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.Lib.V3";
+option csharp_namespace = "FSRAas.GRPC.Lib.V3";
 
-package FSR.GRPC.Lib.V3;
+package FSRAas.GRPC.Lib.V3;
 
 /* Profbuf example */
 

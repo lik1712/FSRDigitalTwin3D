@@ -7,8 +7,8 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AdminShellNS.Exceptions;
 using AutoMapper;
-using FSR.GRPC.Lib.V3.Services;
-using FSR.GRPC.Lib.V3.Services.SubmodelService;
+using FSRAas.GRPC.Lib.V3.Services;
+using FSRAas.GRPC.Lib.V3.Services.SubmodelService;
 using Grpc.Core;
 using IO.Swagger.Lib.V3.Interfaces;
 using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
@@ -17,7 +17,7 @@ using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch.Operations;
 
-namespace FSR.GRPC.Lib.V3;
+namespace FSRAas.GRPC.Lib.V3;
 
 public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
 

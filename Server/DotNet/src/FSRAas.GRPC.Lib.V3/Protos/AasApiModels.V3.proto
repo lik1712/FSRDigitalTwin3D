@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.Lib.V3.Services";
+option csharp_namespace = "FSRAas.GRPC.Lib.V3.Services";
 
-package FSR.GRPC.Lib.V3;
+package FSRAas.GRPC.Lib.V3;
 
 /* AAS API Models V3 */
 

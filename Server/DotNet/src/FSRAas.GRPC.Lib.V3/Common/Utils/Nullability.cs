@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Reflection;
 
-namespace FSR.GRPC.Lib.V3.Common.Utils;
+namespace FSRAas.GRPC.Lib.V3.Common.Utils;
 
 public class Nullability {
     public static void SetEmptyPropertiesToNull<T>(T obj)

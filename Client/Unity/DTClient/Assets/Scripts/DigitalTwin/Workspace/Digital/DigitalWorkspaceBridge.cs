@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using FSR.GRPC.Lib.V3;
-using FSR.GRPC.Lib.V3.Services;
-using FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
-using FSR.GRPC.Lib.V3.Services.SubmodelRepository;
-using FSR.GRPC.Lib.V3.Services.SubmodelService;
+using FSRAas.GRPC.Lib.V3;
+using FSRAas.GRPC.Lib.V3.Services;
+using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
+using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
+using FSRAas.GRPC.Lib.V3.Services.SubmodelService;
 using FSR.Workspace.Digital.AAS;
 using Grpc.Core;
 using UnityEngine;

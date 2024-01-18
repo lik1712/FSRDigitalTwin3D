@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FSR.GRPC.Lib.V3;
-using FSR.GRPC.Lib.V3.Services;
-using FSR.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
-using FSR.GRPC.Lib.V3.Services.SubmodelRepository;
+using FSRAas.GRPC.Lib.V3;
+using FSRAas.GRPC.Lib.V3.Services;
+using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
+using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
 using Grpc.Core;
 using UnityEngine;
 

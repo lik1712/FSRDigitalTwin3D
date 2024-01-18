@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option csharp_namespace = "FSR.GRPC.Lib.V3.Services.SubmodelRepository";
+option csharp_namespace = "FSRAas.GRPC.Lib.V3.Services.SubmodelRepository";
 
 import "Protos/AasModels.V3.proto";
 import "Protos/AasApiModels.V3.proto";
 
-package FSR.GRPC.Lib.V3;
+package FSRAas.GRPC.Lib.V3;
 
 /* SubmodelRepositoryService */
 

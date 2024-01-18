@@ -7,116 +7,116 @@
 
 using grpc = global::Grpc.Core;
 
-namespace FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService {
+namespace FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService {
   public static partial class AssetAdministrationShellService
   {
-    static readonly string __ServiceName = "FSR.GRPC.Lib.V3.AssetAdministrationShellService";
+    static readonly string __ServiceName = "FSRAas.GRPC.Lib.V3.AssetAdministrationShellService";
 
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAllSubmodelReferencesRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAllSubmodelReferencesRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_PostSubmodelReferenceRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_PostSubmodelReferenceRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelReferenceRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelReferenceRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_GetAssetInformationRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_GetAssetInformationRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest> __Marshaller_FSR_GRPC_Lib_V3_PutAssetInformationRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> __Marshaller_FSR_GRPC_Lib_V3_PutAssetInformationRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetAdministrationShellRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetAdministrationShellRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetAdministrationShellRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetAdministrationShellRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_GetAllSubmodelReferencesRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_GetAllSubmodelReferencesRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_PostSubmodelReferenceRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_PostSubmodelReferenceRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_DeleteSubmodelReferenceRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_DeleteSubmodelReferenceRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetInformationRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetInformationRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest> __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetInformationRpcRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetInformationRpcResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> __Method_GetAssetAdministrationShell = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> __Method_GetAssetAdministrationShell = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAssetAdministrationShell",
-        __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_GetAssetAdministrationShellRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetAdministrationShellRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetAdministrationShellRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> __Method_PutAssetAdministrationShell = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> __Method_PutAssetAdministrationShell = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PutAssetAdministrationShell",
-        __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_PutAssetAdministrationShellRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetAdministrationShellRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetAdministrationShellRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> __Method_GetAllSubmodelReferences = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> __Method_GetAllSubmodelReferences = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllSubmodelReferences",
-        __Marshaller_FSR_GRPC_Lib_V3_GetAllSubmodelReferencesRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_GetAllSubmodelReferencesRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_GetAllSubmodelReferencesRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_GetAllSubmodelReferencesRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> __Method_PostSubmodelReference = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> __Method_PostSubmodelReference = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PostSubmodelReference",
-        __Marshaller_FSR_GRPC_Lib_V3_PostSubmodelReferenceRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_PostSubmodelReferenceRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_PostSubmodelReferenceRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_PostSubmodelReferenceRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> __Method_DeleteSubmodelReference = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> __Method_DeleteSubmodelReference = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSubmodelReference",
-        __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelReferenceRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_DeleteSubmodelReferenceRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_DeleteSubmodelReferenceRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_DeleteSubmodelReferenceRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> __Method_GetAssetInformation = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> __Method_GetAssetInformation = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAssetInformation",
-        __Marshaller_FSR_GRPC_Lib_V3_GetAssetInformationRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_GetAssetInformationRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetInformationRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_GetAssetInformationRpcResponse);
 
-    static readonly grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> __Method_PutAssetInformation = new grpc::Method<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> __Method_PutAssetInformation = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PutAssetInformation",
-        __Marshaller_FSR_GRPC_Lib_V3_PutAssetInformationRpcRequest,
-        __Marshaller_FSR_GRPC_Lib_V3_PutAssetInformationRpcResponse);
+        __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetInformationRpcRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_PutAssetInformationRpcResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.AssetAdministrationShellServiceReflection.Descriptor.Services[0]; }
+      get { return global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.AssetAdministrationShellServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of AssetAdministrationShellService</summary>
     [grpc::BindServiceMethod(typeof(AssetAdministrationShellService), "BindService")]
     public abstract partial class AssetAdministrationShellServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> GetAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> GetAssetAdministrationShell(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> PutAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> PutAssetAdministrationShell(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> GetAllSubmodelReferences(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> GetAllSubmodelReferences(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> PostSubmodelReference(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> PostSubmodelReference(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> DeleteSubmodelReference(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> DeleteSubmodelReference(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> GetAssetInformation(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> GetAssetInformation(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> PutAssetInformation(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> PutAssetInformation(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -146,115 +146,115 @@ namespace FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService {
       {
       }
 
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse GetAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse GetAssetAdministrationShell(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAssetAdministrationShell(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse GetAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse GetAssetAdministrationShell(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAssetAdministrationShell, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> GetAssetAdministrationShellAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> GetAssetAdministrationShellAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAssetAdministrationShellAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> GetAssetAdministrationShellAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse> GetAssetAdministrationShellAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAssetAdministrationShell, null, options, request);
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse PutAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse PutAssetAdministrationShell(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PutAssetAdministrationShell(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse PutAssetAdministrationShell(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse PutAssetAdministrationShell(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PutAssetAdministrationShell, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> PutAssetAdministrationShellAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> PutAssetAdministrationShellAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PutAssetAdministrationShellAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> PutAssetAdministrationShellAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse> PutAssetAdministrationShellAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PutAssetAdministrationShell, null, options, request);
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse GetAllSubmodelReferences(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse GetAllSubmodelReferences(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllSubmodelReferences(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse GetAllSubmodelReferences(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse GetAllSubmodelReferences(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllSubmodelReferences, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> GetAllSubmodelReferencesAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> GetAllSubmodelReferencesAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllSubmodelReferencesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> GetAllSubmodelReferencesAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse> GetAllSubmodelReferencesAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllSubmodelReferences, null, options, request);
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse PostSubmodelReference(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse PostSubmodelReference(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PostSubmodelReference(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse PostSubmodelReference(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse PostSubmodelReference(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PostSubmodelReference, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> PostSubmodelReferenceAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> PostSubmodelReferenceAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PostSubmodelReferenceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> PostSubmodelReferenceAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse> PostSubmodelReferenceAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PostSubmodelReference, null, options, request);
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse DeleteSubmodelReference(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse DeleteSubmodelReference(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSubmodelReference(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse DeleteSubmodelReference(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse DeleteSubmodelReference(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSubmodelReference, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> DeleteSubmodelReferenceAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> DeleteSubmodelReferenceAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSubmodelReferenceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> DeleteSubmodelReferenceAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse> DeleteSubmodelReferenceAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSubmodelReference, null, options, request);
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse GetAssetInformation(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse GetAssetInformation(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAssetInformation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse GetAssetInformation(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse GetAssetInformation(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAssetInformation, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> GetAssetInformationAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> GetAssetInformationAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAssetInformationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> GetAssetInformationAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse> GetAssetInformationAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAssetInformation, null, options, request);
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse PutAssetInformation(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse PutAssetInformation(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PutAssetInformation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse PutAssetInformation(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::CallOptions options)
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse PutAssetInformation(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PutAssetInformation, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> PutAssetInformationAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> PutAssetInformationAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PutAssetInformationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> PutAssetInformationAsync(global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse> PutAssetInformationAsync(global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PutAssetInformation, null, options, request);
       }
@@ -285,13 +285,13 @@ namespace FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AssetAdministrationShellServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetAssetAdministrationShell, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse>(serviceImpl.GetAssetAdministrationShell));
-      serviceBinder.AddMethod(__Method_PutAssetAdministrationShell, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse>(serviceImpl.PutAssetAdministrationShell));
-      serviceBinder.AddMethod(__Method_GetAllSubmodelReferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse>(serviceImpl.GetAllSubmodelReferences));
-      serviceBinder.AddMethod(__Method_PostSubmodelReference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse>(serviceImpl.PostSubmodelReference));
-      serviceBinder.AddMethod(__Method_DeleteSubmodelReference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse>(serviceImpl.DeleteSubmodelReference));
-      serviceBinder.AddMethod(__Method_GetAssetInformation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse>(serviceImpl.GetAssetInformation));
-      serviceBinder.AddMethod(__Method_PutAssetInformation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest, global::FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse>(serviceImpl.PutAssetInformation));
+      serviceBinder.AddMethod(__Method_GetAssetAdministrationShell, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetAdministrationShellRpcResponse>(serviceImpl.GetAssetAdministrationShell));
+      serviceBinder.AddMethod(__Method_PutAssetAdministrationShell, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetAdministrationShellRpcResponse>(serviceImpl.PutAssetAdministrationShell));
+      serviceBinder.AddMethod(__Method_GetAllSubmodelReferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAllSubmodelReferencesRpcResponse>(serviceImpl.GetAllSubmodelReferences));
+      serviceBinder.AddMethod(__Method_PostSubmodelReference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PostSubmodelReferenceRpcResponse>(serviceImpl.PostSubmodelReference));
+      serviceBinder.AddMethod(__Method_DeleteSubmodelReference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.DeleteSubmodelReferenceRpcResponse>(serviceImpl.DeleteSubmodelReference));
+      serviceBinder.AddMethod(__Method_GetAssetInformation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.GetAssetInformationRpcResponse>(serviceImpl.GetAssetInformation));
+      serviceBinder.AddMethod(__Method_PutAssetInformation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcRequest, global::FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService.PutAssetInformationRpcResponse>(serviceImpl.PutAssetInformation));
     }
 
   }

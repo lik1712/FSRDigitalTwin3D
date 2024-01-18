@@ -1,10 +1,10 @@
-namespace FSR.GRPC.Lib.V3.Profiles;
+namespace FSRAas.GRPC.Lib.V3.Profiles;
 
 using AasCore.Aas3_0;
 using AutoMapper;
-using FSR.GRPC.Lib.V3;
-using FSR.GRPC.Lib.V3.Common.Utils;
-using FSR.GRPC.Lib.V3.Services;
+using FSRAas.GRPC.Lib.V3;
+using FSRAas.GRPC.Lib.V3.Common.Utils;
+using FSRAas.GRPC.Lib.V3.Services;
 using Google.Protobuf;
 using Extension = AasCore.Aas3_0.Extension;
 

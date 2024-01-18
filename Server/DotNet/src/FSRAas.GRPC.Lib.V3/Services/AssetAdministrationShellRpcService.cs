@@ -4,14 +4,14 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AdminShellNS.Exceptions;
 using AutoMapper;
-using FSR.GRPC.Lib.V3.Services.AssetAdministrationShellService;
+using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService;
 using Grpc.Core;
 using IO.Swagger.Lib.V3.Interfaces;
 using IO.Swagger.Lib.V3.SerializationModifiers.Mappers;
 using IO.Swagger.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace FSR.GRPC.Lib.V3.Services;
+namespace FSRAas.GRPC.Lib.V3.Services;
 
 public class AssetAdministrationShellRpcService : AssetAdministrationShellService.AssetAdministrationShellService.AssetAdministrationShellServiceBase {
     private readonly IAppLogger<AssetAdministrationShellRpcService> _logger;
