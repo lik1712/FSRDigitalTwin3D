@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FSR.Workspace.Virtual.Actor {
+namespace FSR.Workspace.Virtual.Actors {
 
 public abstract class BaseActor : MonoBehaviour
 {

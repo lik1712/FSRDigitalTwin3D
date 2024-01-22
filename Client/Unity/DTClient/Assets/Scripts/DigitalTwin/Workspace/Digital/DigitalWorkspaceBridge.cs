@@ -6,7 +6,7 @@ using FSRAas.GRPC.Lib.V3.Services;
 using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
 using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
 using FSRAas.GRPC.Lib.V3.Services.SubmodelService;
-using FSR.Workspace.Digital.AAS;
+using FSR.Workspace.Digital.Services;
 using Grpc.Core;
 using UnityEngine;
 

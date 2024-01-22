@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FSR.Workspace.Digital.Services;
 using FSRAas.GRPC.Lib.V3;
 using FSRAas.GRPC.Lib.V3.Services;
 using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
 using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
-using Grpc.Core;
 using UnityEngine;
 
-namespace FSR.Workspace.Digital.AAS {
+namespace FSR.Workspace.Digital.UI {
 
 public class AdminShellTreeView : MonoBehaviour {
 
@@ -86,4 +86,4 @@ public class AdminShellTreeView : MonoBehaviour {
     }
 }
 
-} // END namespace FSR.Workspace.Digital.AAS
+} // END namespace FSR.Workspace.Digital.UI

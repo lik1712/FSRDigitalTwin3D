@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
-namespace FSR.Workspace.Virtual {
+namespace FSR.Workspace.Virtual.Sensors {
 
 /**
  * A sensor source within the Virtual Workspace.
