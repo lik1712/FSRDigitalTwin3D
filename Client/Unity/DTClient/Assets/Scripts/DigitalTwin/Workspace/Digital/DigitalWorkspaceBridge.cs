@@ -25,13 +25,18 @@ public class DigitalWorkspaceBridge : MonoBehaviour
         AasApiClient = new AdminShellApiServiceClient(RpcChannel);
     }
 
-
-    // =========== EXAMPLE REQUESTS =========== //
     async void Start() {
-        await RunExampleRequests__(RpcChannel);
+        await DigitalWorkspaceExampleRequests.RunExampleRequests(AasApiClient, RpcChannel);
     }
 
-    private async Task RunExampleRequests__(Channel channel) {
+}
+
+
+// ============================================================= //
+// Test Requests to AAS
+// ============================================================= //
+public class DigitalWorkspaceExampleRequests {
+    public static async Task RunExampleRequests(AdminShellApiServiceClient client, Channel channel) {
         OutputModifier defaultOutput = new OutputModifier() {
             Limit = 1000,
             Extent = OutputExtent.WithoutBlobValue,
@@ -42,7 +47,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
         GetAllAssetAdministrationShellsRpcRequest request1 = new() {
             OutputModifier = defaultOutput
         };
-        var shells = await AasApiClient.AdminShellRepo.GetAllAssetAdministrationShellsAsync(request1);
+        var shells = await client.AdminShellRepo.GetAllAssetAdministrationShellsAsync(request1);
         foreach(var aas in shells.Payload) {
             Debug.Log("Found AAS with unique id: " + aas.Id);
         }
@@ -50,7 +55,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
         GetAllSubmodelsRpcRequest request2 = new() {
             OutputModifier = defaultOutput
         };
-        var submodels = await AasApiClient.SubmodelRepo.GetAllSubmodelsAsync(request2);
+        var submodels = await client.SubmodelRepo.GetAllSubmodelsAsync(request2);
         foreach(var submodel in submodels.Payload) {
             Debug.Log("Found Submodel with unique id: " + submodel.Id);
         }
@@ -59,7 +64,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
             SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vMTExMF8zMTUwXzYwMzJfNzU4Mw",
             OutputModifier = defaultOutput
         };
-        var elements = await AasApiClient.Submodel.GetAllSubmodelElementsAsync(request3);
+        var elements = await client.Submodel.GetAllSubmodelElementsAsync(request3);
         foreach(var elem in elements.Payload) {
             Debug.Log("Found SubmodelElement with short id: " + elem.IdShort);
         }
@@ -78,7 +83,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
                 Max = "1.0"
             }
         };
-        var postResponse = await AasApiClient.Submodel.PostSubmodelElementAsync(request4);
+        var postResponse = await client.Submodel.PostSubmodelElementAsync(request4);
         if (postResponse.StatusCode == 201) {
             Debug.Log("Posted Submodel Element: " + postResponse.SubmodelElement.IdShort + " with type " + postResponse.SubmodelElement.SubmodelElementType);
         }
@@ -92,7 +97,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
             RequestId = "MyRequestId::1",
         };
         request5.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
-        var invokeResponse = AasApiClient.Submodel.InvokeOperationAsync(request5);
+        var invokeResponse = client.Submodel.InvokeOperationAsync(request5);
         if (invokeResponse.StatusCode == 200) {
             Debug.Log("Successfully invoked operation asynchronously!");
         }
@@ -105,11 +110,12 @@ public class DigitalWorkspaceBridge : MonoBehaviour
             HandleId = invokeResponse.Payload,
         };
         await Task.Delay(6000);
-        AasApiClient.Submodel.GetOperationAsyncResult(request6);
-
-        // =========== END Example requests =========== //
+        client.Submodel.GetOperationAsyncResult(request6);
     }
-
 }
+// ============================================================= //
+// END - Test Requests to AAS
+// ============================================================= //
+
 
 } // END namespace FSR.Workspace.Digital

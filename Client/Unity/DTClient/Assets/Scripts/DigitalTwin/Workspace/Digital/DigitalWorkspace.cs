@@ -6,7 +6,7 @@ public class DigitalWorkspace : Workspace
     private static DigitalWorkspace instance;
     public static DigitalWorkspace Instance {
         get {
-            return instance != null ? instance : FindAnyObjectByType<DigitalWorkspace>();
+            return instance ?? FindAnyObjectByType<DigitalWorkspace>();
         }
     }
 
