@@ -432,6 +432,45 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
         return Task.FromResult(response);
     }
 
+    public override Task<InvokeOperationSyncResponse> InvokeOperationSync(InvokeOperationSyncRequest request, ServerCallContext context)
+    {
+        var decodedSubmodelIdentifier = _decoderService.Decode("submodelIdentifier", request.SubmodelId);
+        _logger.LogInformation($"Received request to invoke operation at {request.SubmodelId} from a submodel with id {decodedSubmodelIdentifier}");
+
+        InvokeOperationSyncResponse response = new();
+
+        string idShortPath = ToIdShortDotSeparatedPath(request.Path.Select(x => x.Value));
+        if (!Program.noSecurity)
+        {
+            var submodel = _submodelService.GetSubmodelById(decodedSubmodelIdentifier);
+            context.GetHttpContext().User.Claims.ToList().Add(new Claim("idShortPath", submodel.IdShort + "." + idShortPath));
+            var claimsList = new List<Claim>(context.GetHttpContext().User.Claims)
+            {
+                new Claim("IdShortPath", submodel.IdShort + "." + idShortPath)
+            };
+            var identity = new ClaimsIdentity(claimsList, "AasSecurityAuth");
+            var principal = new System.Security.Principal.GenericPrincipal(identity, null);
+            var authResult = _authorizationService.AuthorizeAsync(principal, submodel, "SecurityPolicy").Result;
+            if (!authResult.Succeeded)
+            {
+                response.StatusCode = 403;
+                return Task.FromResult(response);
+            }
+        }
+
+        try {
+            List<OperationVariable> inputArguments = request.InputArguments.Select(x => _mapper.Map<OperationVariable>(x)).ToList();
+            List<OperationVariable> inoutputArguments = request.InoutputArguments.Select(x => _mapper.Map<OperationVariable>(x)).ToList();
+            var result = _submodelService.InvokeOperationSync(decodedSubmodelIdentifier, idShortPath, inputArguments, inoutputArguments, request.Timestamp, request.RequestId);
+            response.StatusCode = 200;
+        }
+        catch (NotFoundException) {
+            response.StatusCode = 404;
+        }
+        
+        return Task.FromResult(response);
+    }
+
     public override Task<GetOperationAsyncResultResponse> GetOperationAsyncResult(GetOperationAsyncResultRequest request, ServerCallContext context)
     {
         _logger.LogInformation($"Received request get status/result from invocation {request.HandleId}");

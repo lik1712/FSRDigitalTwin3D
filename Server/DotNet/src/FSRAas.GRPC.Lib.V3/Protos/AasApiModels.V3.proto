@@ -4,6 +4,8 @@ option csharp_namespace = "FSRAas.GRPC.Lib.V3.Services";
 
 package FSRAas.GRPC.Lib.V3;
 
+import "Protos/AasModels.V3.proto";
+
 /* AAS API Models V3 */
 
 enum OutputLevel {
@@ -33,4 +35,22 @@ message OutputModifier {
     OutputLevel level = 3;
     OutputContent content = 4;
     OutputExtent extent = 5;
+}
+
+enum ExecutionState {
+    EXECUTION_STATE_INITIATED = 0;
+    EXECUTION_STATE_RUNNING = 1;
+    EXECUTION_STATE_COMPLETED = 2;
+    EXECUTION_STATE_CANCELED = 3;
+    EXECUTION_STATE_FAILED = 4;
+    EXECUTION_STATE_TIMEOUT = 5;
+}
+
+message OperationResult {
+    string requestId = 1;
+    repeated OperationVariableDTO outputArguments = 2;
+    repeated OperationVariableDTO inoutputArguments = 3;
+    bool success = 4;
+    string message = 5;
+    ExecutionState executionState = 6;
 }

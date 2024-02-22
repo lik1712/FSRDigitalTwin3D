@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "FSRVirtual.GRPC.Lib.Operation";
+
+package FSRVirtual.GRPC.Lib;
+
+/* VirtualLayerOperationService */
+
+service YourService {
+    rpc OpenChannel(stream ServerRequest) returns (stream ServerResponse);
+}
+
+message ServerRequest {
+    string message = 1;
+}
+
+message ServerResponse {
+    string message = 1;
+}

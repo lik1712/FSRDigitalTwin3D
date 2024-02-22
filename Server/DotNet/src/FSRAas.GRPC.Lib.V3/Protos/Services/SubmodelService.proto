@@ -103,9 +103,15 @@ message DeleteSubmodelElementByPathRpcResponse {
 
 message InvokeOperationSyncRequest {
     string submodelId = 1;
+    repeated KeyDTO path = 2;
+    repeated OperationVariableDTO inputArguments = 3;
+    repeated OperationVariableDTO inoutputArguments = 4;
+    int32 timestamp = 5;
+    string requestId = 6;
 }
 message InvokeOperationSyncResponse {
     int32 statusCode = 1;
+    OperationResult payload = 2;
 }
 
 message InvokeOperationAsyncRequest {
@@ -125,7 +131,8 @@ message GetOperationAsyncResultRequest {
     string handleId = 1;
 }
 message GetOperationAsyncResultResponse {
-
+    int32 statusCode = 1;
+    OperationResult result = 2;
 }
 
 service SubmodelService {

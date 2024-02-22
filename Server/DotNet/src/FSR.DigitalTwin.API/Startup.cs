@@ -1,8 +1,6 @@
 ﻿//var builder = WebApplication.CreateBuilder(args);
 //var app = builder.Build();
 
-using AasCore.Aas3_0;
-using AasOperationInvocation;
 using AasSecurity;
 using AasxServer;
 using AasxServerStandardBib.Extensions;
@@ -10,8 +8,12 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AasxServerStandardBib.Services;
 using AdminShellNS;
+using FSR.DigitalTwin.App;
+using FSR.DigitalTwin.App.Common.Interfaces;
 using FSRAas.GRPC.Lib.V3.Common;
 using FSRAas.GRPC.Lib.V3.Common.Utils;
+using FSRVirtual.GRPC.Lib;
+using FSRVirtual.GRPC.Lib.Services;
 using IO.Swagger.Controllers;
 using IO.Swagger.Lib.V3.Formatters;
 using IO.Swagger.Lib.V3.Interfaces;
@@ -96,6 +98,7 @@ internal class Startup
         services.AddTransient<IAasRegistryService, AasRegistryService>();
         services.AddTransient<IAasDescriptorPaginationService, AasDescriptorPaginationService>();
         services.AddTransient<IOperationReceiver, OperationReceiver>();
+        services.AddTransient<IVirtualizationLayerBridge, VirtualLayerRpcBridge>();
 
         // Add GraphQL services
         services
@@ -215,6 +218,7 @@ internal class Startup
             endpoints.MapControllers();
             endpoints.MapGet("/", () => "*** Welcome to FORSocialRobots Digital Twin Framework! ***");
             endpoints.MapGrpcServices();
+            endpoints.MapGrpcService<VirtualLayerOperationRpcService>();
         });
 
 
