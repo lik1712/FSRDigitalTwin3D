@@ -79,9 +79,15 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
             "dGhScGNSZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkSKAoEcGF0aBgCIAMo",
             "CzIaLkZTUkFhcy5HUlBDLkxpYi5WMy5LZXlEVE8iPAomRGVsZXRlU3VibW9k",
             "ZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEo",
-            "BSIwChpJbnZva2VPcGVyYXRpb25TeW5jUmVxdWVzdBISCgpzdWJtb2RlbElk",
-            "GAEgASgJIjEKG0ludm9rZU9wZXJhdGlvblN5bmNSZXNwb25zZRISCgpzdGF0",
-            "dXNDb2RlGAEgASgFIogCChtJbnZva2VPcGVyYXRpb25Bc3luY1JlcXVlc3QS",
+            "BSKHAgoaSW52b2tlT3BlcmF0aW9uU3luY1JlcXVlc3QSEgoKc3VibW9kZWxJ",
+            "ZBgBIAEoCRIoCgRwYXRoGAIgAygLMhouRlNSQWFzLkdSUEMuTGliLlYzLktl",
+            "eURUTxJACg5pbnB1dEFyZ3VtZW50cxgDIAMoCzIoLkZTUkFhcy5HUlBDLkxp",
+            "Yi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJDChFpbm91dHB1dEFyZ3VtZW50",
+            "cxgEIAMoCzIoLkZTUkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJs",
+            "ZURUTxIRCgl0aW1lc3RhbXAYBSABKAUSEQoJcmVxdWVzdElkGAYgASgJImcK",
+            "G0ludm9rZU9wZXJhdGlvblN5bmNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEg",
+            "ASgFEjQKB3BheWxvYWQYAiABKAsyIy5GU1JBYXMuR1JQQy5MaWIuVjMuT3Bl",
+            "cmF0aW9uUmVzdWx0IogCChtJbnZva2VPcGVyYXRpb25Bc3luY1JlcXVlc3QS",
             "EgoKc3VibW9kZWxJZBgBIAEoCRIoCgRwYXRoGAIgAygLMhouRlNSQWFzLkdS",
             "UEMuTGliLlYzLktleURUTxJACg5pbnB1dEFyZ3VtZW50cxgDIAMoCzIoLkZT",
             "UkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJDChFpbm91",
@@ -89,45 +95,47 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
             "YXRpb25WYXJpYWJsZURUTxIRCgl0aW1lc3RhbXAYBSABKAUSEQoJcmVxdWVz",
             "dElkGAYgASgJIkMKHEludm9rZU9wZXJhdGlvbkFzeW5jUmVzcG9uc2USEgoK",
             "c3RhdHVzQ29kZRgBIAEoBRIPCgdwYXlsb2FkGAIgASgJIjIKHkdldE9wZXJh",
-            "dGlvbkFzeW5jUmVzdWx0UmVxdWVzdBIQCghoYW5kbGVJZBgBIAEoCSIhCh9H",
-            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlc3BvbnNlMrwMCg9TdWJtb2RlbFNl",
-            "cnZpY2USZAoLR2V0U3VibW9kZWwSKS5GU1JBYXMuR1JQQy5MaWIuVjMuR2V0",
-            "U3VibW9kZWxScGNSZXF1ZXN0GiouRlNSQWFzLkdSUEMuTGliLlYzLkdldFN1",
-            "Ym1vZGVsUnBjUmVzcG9uc2UShQEKFkdldEFsbFN1Ym1vZGVsRWxlbWVudHMS",
-            "NC5GU1JBYXMuR1JQQy5MaWIuVjMuR2V0QWxsU3VibW9kZWxFbGVtZW50c1Jw",
-            "Y1JlcXVlc3QaNS5GU1JBYXMuR1JQQy5MaWIuVjMuR2V0QWxsU3VibW9kZWxF",
-            "bGVtZW50c1JwY1Jlc3BvbnNlEosBChhHZXRTdWJtb2RlbEVsZW1lbnRCeVBh",
-            "dGgSNi5GU1JBYXMuR1JQQy5MaWIuVjMuR2V0U3VibW9kZWxFbGVtZW50QnlQ",
-            "YXRoUnBjUmVxdWVzdBo3LkZTUkFhcy5HUlBDLkxpYi5WMy5HZXRTdWJtb2Rl",
-            "bEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRJkCgtQdXRTdWJtb2RlbBIpLkZT",
-            "UkFhcy5HUlBDLkxpYi5WMy5QdXRTdWJtb2RlbFJwY1JlcXVlc3QaKi5GU1JB",
-            "YXMuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxScGNSZXNwb25zZRJ8ChNQb3N0",
-            "U3VibW9kZWxFbGVtZW50EjEuRlNSQWFzLkdSUEMuTGliLlYzLlBvc3RTdWJt",
-            "b2RlbEVsZW1lbnRScGNSZXF1ZXN0GjIuRlNSQWFzLkdSUEMuTGliLlYzLlBv",
-            "c3RTdWJtb2RlbEVsZW1lbnRScGNSZXNwb25zZRKOAQoZUG9zdFN1Ym1vZGVs",
-            "RWxlbWVudEJ5UGF0aBI3LkZTUkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9k",
-            "ZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBo4LkZTUkFhcy5HUlBDLkxpYi5W",
-            "My5Qb3N0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USiwEKGFB1",
-            "dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aBI2LkZTUkFhcy5HUlBDLkxpYi5WMy5Q",
-            "dXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0GjcuRlNSQWFzLkdS",
-            "UEMuTGliLlYzLlB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jlc3BvbnNl",
-            "EpoBCh1TZXRTdWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aBI7LkZTUkFhcy5H",
-            "UlBDLkxpYi5WMy5TZXRTdWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJwY1Jl",
-            "cXVlc3QaPC5GU1JBYXMuR1JQQy5MaWIuVjMuU2V0U3VibW9kZWxFbGVtZW50",
-            "VmFsdWVCeVBhdGhScGNSZXNwb25zZRKUAQobRGVsZXRlU3VibW9kZWxFbGVt",
-            "ZW50QnlQYXRoEjkuRlNSQWFzLkdSUEMuTGliLlYzLkRlbGV0ZVN1Ym1vZGVs",
-            "RWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QaOi5GU1JBYXMuR1JQQy5MaWIuVjMu",
-            "RGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USdgoTSW52",
-            "b2tlT3BlcmF0aW9uU3luYxIuLkZTUkFhcy5HUlBDLkxpYi5WMy5JbnZva2VP",
-            "cGVyYXRpb25TeW5jUmVxdWVzdBovLkZTUkFhcy5HUlBDLkxpYi5WMy5JbnZv",
-            "a2VPcGVyYXRpb25TeW5jUmVzcG9uc2USeQoUSW52b2tlT3BlcmF0aW9uQXN5",
-            "bmMSLy5GU1JBYXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uQXN5bmNS",
-            "ZXF1ZXN0GjAuRlNSQWFzLkdSUEMuTGliLlYzLkludm9rZU9wZXJhdGlvbkFz",
-            "eW5jUmVzcG9uc2USggEKF0dldE9wZXJhdGlvbkFzeW5jUmVzdWx0EjIuRlNS",
-            "QWFzLkdSUEMuTGliLlYzLkdldE9wZXJhdGlvbkFzeW5jUmVzdWx0UmVxdWVz",
-            "dBozLkZTUkFhcy5HUlBDLkxpYi5WMy5HZXRPcGVyYXRpb25Bc3luY1Jlc3Vs",
-            "dFJlc3BvbnNlQi6qAitGU1JBYXMuR1JQQy5MaWIuVjMuU2VydmljZXMuU3Vi",
-            "bW9kZWxTZXJ2aWNlYgZwcm90bzM="));
+            "dGlvbkFzeW5jUmVzdWx0UmVxdWVzdBIQCghoYW5kbGVJZBgBIAEoCSJqCh9H",
+            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlc3BvbnNlEhIKCnN0YXR1c0NvZGUY",
+            "ASABKAUSMwoGcmVzdWx0GAIgASgLMiMuRlNSQWFzLkdSUEMuTGliLlYzLk9w",
+            "ZXJhdGlvblJlc3VsdDK8DAoPU3VibW9kZWxTZXJ2aWNlEmQKC0dldFN1Ym1v",
+            "ZGVsEikuRlNSQWFzLkdSUEMuTGliLlYzLkdldFN1Ym1vZGVsUnBjUmVxdWVz",
+            "dBoqLkZTUkFhcy5HUlBDLkxpYi5WMy5HZXRTdWJtb2RlbFJwY1Jlc3BvbnNl",
+            "EoUBChZHZXRBbGxTdWJtb2RlbEVsZW1lbnRzEjQuRlNSQWFzLkdSUEMuTGli",
+            "LlYzLkdldEFsbFN1Ym1vZGVsRWxlbWVudHNScGNSZXF1ZXN0GjUuRlNSQWFz",
+            "LkdSUEMuTGliLlYzLkdldEFsbFN1Ym1vZGVsRWxlbWVudHNScGNSZXNwb25z",
+            "ZRKLAQoYR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoEjYuRlNSQWFzLkdSUEMu",
+            "TGliLlYzLkdldFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QaNy5G",
+            "U1JBYXMuR1JQQy5MaWIuVjMuR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBj",
+            "UmVzcG9uc2USZAoLUHV0U3VibW9kZWwSKS5GU1JBYXMuR1JQQy5MaWIuVjMu",
+            "UHV0U3VibW9kZWxScGNSZXF1ZXN0GiouRlNSQWFzLkdSUEMuTGliLlYzLlB1",
+            "dFN1Ym1vZGVsUnBjUmVzcG9uc2USfAoTUG9zdFN1Ym1vZGVsRWxlbWVudBIx",
+            "LkZTUkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9kZWxFbGVtZW50UnBjUmVx",
+            "dWVzdBoyLkZTUkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9kZWxFbGVtZW50",
+            "UnBjUmVzcG9uc2USjgEKGVBvc3RTdWJtb2RlbEVsZW1lbnRCeVBhdGgSNy5G",
+            "U1JBYXMuR1JQQy5MaWIuVjMuUG9zdFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJw",
+            "Y1JlcXVlc3QaOC5GU1JBYXMuR1JQQy5MaWIuVjMuUG9zdFN1Ym1vZGVsRWxl",
+            "bWVudEJ5UGF0aFJwY1Jlc3BvbnNlEosBChhQdXRTdWJtb2RlbEVsZW1lbnRC",
+            "eVBhdGgSNi5GU1JBYXMuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxFbGVtZW50",
+            "QnlQYXRoUnBjUmVxdWVzdBo3LkZTUkFhcy5HUlBDLkxpYi5WMy5QdXRTdWJt",
+            "b2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRKaAQodU2V0U3VibW9kZWxF",
+            "bGVtZW50VmFsdWVCeVBhdGgSOy5GU1JBYXMuR1JQQy5MaWIuVjMuU2V0U3Vi",
+            "bW9kZWxFbGVtZW50VmFsdWVCeVBhdGhScGNSZXF1ZXN0GjwuRlNSQWFzLkdS",
+            "UEMuTGliLlYzLlNldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRoUnBjUmVz",
+            "cG9uc2USlAEKG0RlbGV0ZVN1Ym1vZGVsRWxlbWVudEJ5UGF0aBI5LkZTUkFh",
+            "cy5HUlBDLkxpYi5WMy5EZWxldGVTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNS",
+            "ZXF1ZXN0GjouRlNSQWFzLkdSUEMuTGliLlYzLkRlbGV0ZVN1Ym1vZGVsRWxl",
+            "bWVudEJ5UGF0aFJwY1Jlc3BvbnNlEnYKE0ludm9rZU9wZXJhdGlvblN5bmMS",
+            "Li5GU1JBYXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uU3luY1JlcXVl",
+            "c3QaLy5GU1JBYXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uU3luY1Jl",
+            "c3BvbnNlEnkKFEludm9rZU9wZXJhdGlvbkFzeW5jEi8uRlNSQWFzLkdSUEMu",
+            "TGliLlYzLkludm9rZU9wZXJhdGlvbkFzeW5jUmVxdWVzdBowLkZTUkFhcy5H",
+            "UlBDLkxpYi5WMy5JbnZva2VPcGVyYXRpb25Bc3luY1Jlc3BvbnNlEoIBChdH",
+            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdBIyLkZTUkFhcy5HUlBDLkxpYi5WMy5H",
+            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlcXVlc3QaMy5GU1JBYXMuR1JQQy5M",
+            "aWIuVjMuR2V0T3BlcmF0aW9uQXN5bmNSZXN1bHRSZXNwb25zZUIuqgIrRlNS",
+            "QWFzLkdSUEMuTGliLlYzLlNlcnZpY2VzLlN1Ym1vZGVsU2VydmljZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::FSRAas.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSRAas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -149,12 +157,12 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest.Parser, new[]{ "SubmodelId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse.Parser, new[]{ "StatusCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest.Parser, new[]{ "HandleId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse.Parser, new[]{ "StatusCode", "Result" }, null, null, null)
           }));
     }
     #endregion
@@ -3317,6 +3325,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InvokeOperationSyncRequest(InvokeOperationSyncRequest other) : this() {
       submodelId_ = other.submodelId_;
+      path_ = other.path_.Clone();
+      inputArguments_ = other.inputArguments_.Clone();
+      inoutputArguments_ = other.inoutputArguments_.Clone();
+      timestamp_ = other.timestamp_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3336,6 +3349,58 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
     }
 
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+      get { return path_; }
+    }
+
+    /// <summary>Field number for the "inputArguments" field.</summary>
+    public const int InputArgumentsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inputArguments_codec
+        = pb::FieldCodec.ForMessage(26, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inputArguments_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InputArguments {
+      get { return inputArguments_; }
+    }
+
+    /// <summary>Field number for the "inoutputArguments" field.</summary>
+    public const int InoutputArgumentsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
+        = pb::FieldCodec.ForMessage(34, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
+      get { return inoutputArguments_; }
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 5;
+    private int timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "requestId" field.</summary>
+    public const int RequestIdFieldNumber = 6;
+    private string requestId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as InvokeOperationSyncRequest);
@@ -3350,6 +3415,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
         return true;
       }
       if (SubmodelId != other.SubmodelId) return false;
+      if(!path_.Equals(other.path_)) return false;
+      if(!inputArguments_.Equals(other.inputArguments_)) return false;
+      if(!inoutputArguments_.Equals(other.inoutputArguments_)) return false;
+      if (Timestamp != other.Timestamp) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3357,6 +3427,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     public override int GetHashCode() {
       int hash = 1;
       if (SubmodelId.Length != 0) hash ^= SubmodelId.GetHashCode();
+      hash ^= path_.GetHashCode();
+      hash ^= inputArguments_.GetHashCode();
+      hash ^= inoutputArguments_.GetHashCode();
+      if (Timestamp != 0) hash ^= Timestamp.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3374,6 +3449,17 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
         output.WriteRawTag(10);
         output.WriteString(SubmodelId);
       }
+      path_.WriteTo(output, _repeated_path_codec);
+      inputArguments_.WriteTo(output, _repeated_inputArguments_codec);
+      inoutputArguments_.WriteTo(output, _repeated_inoutputArguments_codec);
+      if (Timestamp != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Timestamp);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3384,6 +3470,15 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       int size = 0;
       if (SubmodelId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SubmodelId);
+      }
+      size += path_.CalculateSize(_repeated_path_codec);
+      size += inputArguments_.CalculateSize(_repeated_inputArguments_codec);
+      size += inoutputArguments_.CalculateSize(_repeated_inoutputArguments_codec);
+      if (Timestamp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Timestamp);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3399,6 +3494,15 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       if (other.SubmodelId.Length != 0) {
         SubmodelId = other.SubmodelId;
       }
+      path_.Add(other.path_);
+      inputArguments_.Add(other.inputArguments_);
+      inoutputArguments_.Add(other.inoutputArguments_);
+      if (other.Timestamp != 0) {
+        Timestamp = other.Timestamp;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3412,6 +3516,26 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
             break;
           case 10: {
             SubmodelId = input.ReadString();
+            break;
+          }
+          case 18: {
+            path_.AddEntriesFrom(input, _repeated_path_codec);
+            break;
+          }
+          case 26: {
+            inputArguments_.AddEntriesFrom(input, _repeated_inputArguments_codec);
+            break;
+          }
+          case 34: {
+            inoutputArguments_.AddEntriesFrom(input, _repeated_inoutputArguments_codec);
+            break;
+          }
+          case 40: {
+            Timestamp = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -3446,6 +3570,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InvokeOperationSyncResponse(InvokeOperationSyncResponse other) : this() {
       statusCode_ = other.statusCode_;
+      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3465,6 +3590,17 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
     }
 
+    /// <summary>Field number for the "payload" field.</summary>
+    public const int PayloadFieldNumber = 2;
+    private global::FSRAas.GRPC.Lib.V3.Services.OperationResult payload_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::FSRAas.GRPC.Lib.V3.Services.OperationResult Payload {
+      get { return payload_; }
+      set {
+        payload_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as InvokeOperationSyncResponse);
@@ -3479,6 +3615,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
         return true;
       }
       if (StatusCode != other.StatusCode) return false;
+      if (!object.Equals(Payload, other.Payload)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3486,6 +3623,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     public override int GetHashCode() {
       int hash = 1;
       if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
+      if (payload_ != null) hash ^= Payload.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3503,6 +3641,10 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
         output.WriteRawTag(8);
         output.WriteInt32(StatusCode);
       }
+      if (payload_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Payload);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3513,6 +3655,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       int size = 0;
       if (StatusCode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusCode);
+      }
+      if (payload_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3528,6 +3673,12 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       if (other.StatusCode != 0) {
         StatusCode = other.StatusCode;
       }
+      if (other.payload_ != null) {
+        if (payload_ == null) {
+          Payload = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+        }
+        Payload.MergeFrom(other.Payload);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3541,6 +3692,13 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
             break;
           case 8: {
             StatusCode = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (payload_ == null) {
+              Payload = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+            }
+            input.ReadMessage(Payload);
             break;
           }
         }
@@ -4105,12 +4263,36 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetOperationAsyncResultResponse(GetOperationAsyncResultResponse other) : this() {
+      statusCode_ = other.statusCode_;
+      result_ = other.result_ != null ? other.result_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetOperationAsyncResultResponse Clone() {
       return new GetOperationAsyncResultResponse(this);
+    }
+
+    /// <summary>Field number for the "statusCode" field.</summary>
+    public const int StatusCodeFieldNumber = 1;
+    private int statusCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StatusCode {
+      get { return statusCode_; }
+      set {
+        statusCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 2;
+    private global::FSRAas.GRPC.Lib.V3.Services.OperationResult result_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::FSRAas.GRPC.Lib.V3.Services.OperationResult Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4126,12 +4308,16 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (StatusCode != other.StatusCode) return false;
+      if (!object.Equals(Result, other.Result)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
+      if (result_ != null) hash ^= Result.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4145,6 +4331,14 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (StatusCode != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(StatusCode);
+      }
+      if (result_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Result);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4153,6 +4347,12 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (StatusCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusCode);
+      }
+      if (result_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Result);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4163,6 +4363,15 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     public void MergeFrom(GetOperationAsyncResultResponse other) {
       if (other == null) {
         return;
+      }
+      if (other.StatusCode != 0) {
+        StatusCode = other.StatusCode;
+      }
+      if (other.result_ != null) {
+        if (result_ == null) {
+          Result = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+        }
+        Result.MergeFrom(other.Result);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4175,6 +4384,17 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            StatusCode = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (result_ == null) {
+              Result = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
         }
       }
     }

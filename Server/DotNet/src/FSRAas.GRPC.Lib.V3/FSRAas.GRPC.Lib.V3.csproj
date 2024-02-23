@@ -25,6 +25,7 @@
     <Protobuf Include="Protos/Services/SubmodelRepositoryService.proto" GrpcServices="Server" />
     <Protobuf Include="Protos/Services/AssetAdministrationShellService.proto" GrpcServices="Server" />
     <Protobuf Include="Protos/Services/SubmodelService.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/VirtualLayerOperationService.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>

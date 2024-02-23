@@ -20,7 +20,6 @@
     <Exec Command="if not exist $(UnityOutputDir)Message.Generated\ mkdir $(UnityOutputDir)Message.Generated\" />
     <Exec Command="if not exist $(UnityOutputDir)GRPC.Generated\ mkdir $(UnityOutputDir)GRPC.Generated\" />
     <Exec Command="xcopy /E /Y $(SolutionDir)src\FSRAas.GRPC.Lib.V3\Protos\ $(ProjectDir)\Protos\" />
-    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSRVirtual.GRPC.Lib\Protos\ $(ProjectDir)\Protos\" />
     <!-- Protos here -->
     <Exec Command="$(Protoc) .\Protos\AasModels.V3.proto" />
     <Exec Command="$(Protoc) .\Protos\AasApiModels.V3.proto" />

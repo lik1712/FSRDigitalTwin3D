@@ -6,9 +6,11 @@ using FSRAas.GRPC.Lib.V3.Services;
 using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
 using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
 using FSRAas.GRPC.Lib.V3.Services.SubmodelService;
+using FSRAas.GRPC.Lib.V3.Services.Operational;
 using FSR.Workspace.Digital.Services;
 using Grpc.Core;
 using UnityEngine;
+using Unity.VisualScripting;
 
 namespace FSR.Workspace.Digital {
 
@@ -19,14 +21,18 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 
     public Channel RpcChannel { get; }
     public AdminShellApiServiceClient AasApiClient { get; }
+    public VirtualLayerOperationService.VirtualLayerOperationServiceClient Operational { get; }
 
     public DigitalWorkspaceBridge() {
         RpcChannel = new Channel(digitalWorkspaceAddr, digitalWorkspacePort, ChannelCredentials.Insecure);
         AasApiClient = new AdminShellApiServiceClient(RpcChannel);
+        Operational = new(RpcChannel);
     }
 
     async void Start() {
-        await DigitalWorkspaceExampleRequests.RunExampleRequests(AasApiClient, RpcChannel);
+        Debug.Log("Running data channel test...");
+        await DigitalWorkspaceExampleRequests.RunDataExchangeTest(AasApiClient, Operational, RpcChannel);
+        Debug.Log("Done!");
     }
 
 }
@@ -36,81 +42,30 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 // Test Requests to AAS
 // ============================================================= //
 public class DigitalWorkspaceExampleRequests {
-    public static async Task RunExampleRequests(AdminShellApiServiceClient client, Channel channel) {
-        OutputModifier defaultOutput = new OutputModifier() {
-            Limit = 1000,
-            Extent = OutputExtent.WithoutBlobValue,
-            Content = OutputContent.Normal,
-            Level = OutputLevel.Deep
-        };
+    public static async Task RunDataExchangeTest(AdminShellApiServiceClient client, VirtualLayerOperationService.VirtualLayerOperationServiceClient operational, Channel channel) {
+        var stream = operational.OpenOperationInvocationStream();
 
-        GetAllAssetAdministrationShellsRpcRequest request1 = new() {
-            OutputModifier = defaultOutput
-        };
-        var shells = await client.AdminShellRepo.GetAllAssetAdministrationShellsAsync(request1);
-        foreach(var aas in shells.Payload) {
-            Debug.Log("Found AAS with unique id: " + aas.Id);
-        }
+        // await stream.ResponseStream.MoveNext();
+        // var next = stream.ResponseStream.Current;
+        // Debug.Log("[From server]: " + next.RequestId);
+        
+        // await stream.RequestStream.WriteAsync(new OperationStatus() { RequestId = "Aloha!", ExecutionState = ExecutionState.Running });
+        await stream.RequestStream.CompleteAsync();
 
-        GetAllSubmodelsRpcRequest request2 = new() {
-            OutputModifier = defaultOutput
-        };
-        var submodels = await client.SubmodelRepo.GetAllSubmodelsAsync(request2);
-        foreach(var submodel in submodels.Payload) {
-            Debug.Log("Found Submodel with unique id: " + submodel.Id);
-        }
-
-        GetAllSubmodelElementsRpcRequest request3 = new() {
-            SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vMTExMF8zMTUwXzYwMzJfNzU4Mw",
-            OutputModifier = defaultOutput
-        };
-        var elements = await client.Submodel.GetAllSubmodelElementsAsync(request3);
-        foreach(var elem in elements.Payload) {
-            Debug.Log("Found SubmodelElement with short id: " + elem.IdShort);
-        }
-
-        PostSubmodelElementRpcRequest request4 = new() {
-            SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vMTExMF8zMTUwXzYwMzJfNzU4Mw",
-        };
-        request4.SubmodelElement = new SubmodelElementDTO
-        {
-            IdShort = "MyRange",
-            SubmodelElementType = SubmodelElementType.Range,
-            Range = new RangePayloadDTO
-            {
-                ValueType = DataTypeDefXsd.Float,
-                Min = "0.0",
-                Max = "1.0"
-            }
-        };
-        var postResponse = await client.Submodel.PostSubmodelElementAsync(request4);
-        if (postResponse.StatusCode == 201) {
-            Debug.Log("Posted Submodel Element: " + postResponse.SubmodelElement.IdShort + " with type " + postResponse.SubmodelElement.SubmodelElementType);
-        }
-        else {
-            Debug.Log("Failed posting submodel element with status = " + postResponse.StatusCode);
-        }
-
-        InvokeOperationAsyncRequest request5 = new() {
+        InvokeOperationSyncRequest invokeRequest = new() {
             SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
             Timestamp = 0,
             RequestId = "MyRequestId::1",
         };
-        request5.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
-        var invokeResponse = client.Submodel.InvokeOperationAsync(request5);
+        invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
+        var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
         if (invokeResponse.StatusCode == 200) {
-            Debug.Log("Successfully invoked operation asynchronously!");
+            Debug.Log("Successfully invoked operation synchronously!");
         }
         else {
             Debug.Log("Failed invocation = " + invokeResponse.StatusCode);
             return;
         }
-
-        GetOperationAsyncResultRequest request6 = new() {
-            HandleId = invokeResponse.Payload,
-        };
-        await Task.Delay(6000);
-        client.Submodel.GetOperationAsyncResult(request6);
     }
 }
 // ============================================================= //

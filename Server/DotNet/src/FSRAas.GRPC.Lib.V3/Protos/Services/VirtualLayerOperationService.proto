@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option csharp_namespace = "FSRAas.GRPC.Lib.V3.Services.Operational";
+
+import "Protos/AasModels.V3.proto";
+import "Protos/AasApiModels.V3.proto";
+
+package FSRAas.GRPC.Lib.V3.Operational;
+
+/* VirtualLayerOperationService */
+
+message OperationInvokeRequest {
+    string requestId = 1;
+    repeated OperationVariableDTO inputVariables = 2;
+    repeated OperationVariableDTO inoutVariables = 3;
+    int64 timestamp = 4;
+    bool isAsync = 5;
+    string handleId = 6;
+}
+
+message OperationRequest {
+    string requestId = 1;
+}
+
+message OperationStatus {
+    string requestId = 1;
+    ExecutionState executionState = 2;
+}
+
+service VirtualLayerOperationService {
+    rpc OpenOperationInvocationStream (stream OperationStatus) returns (stream OperationInvokeRequest);
+    rpc OpenOperationResultStream (stream OperationResult) returns (stream OperationRequest);
+    rpc OpenExecutionStateStream (stream OperationStatus) returns (stream OperationRequest);
+}
+
+
+// Just for testing....
+service YourService {
+    rpc OpenChannel(stream ServerRequest) returns (stream ServerResponse);
+}
+
+message ServerRequest {
+    string message = 1;
+}
+
+message ServerResponse {
+    string message = 1;
+}

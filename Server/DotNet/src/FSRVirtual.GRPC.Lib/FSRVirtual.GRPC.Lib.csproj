@@ -13,9 +13,5 @@
   <ItemGroup>
     <ProjectReference Include="../FSR.DigitalTwin.App/FSR.DigitalTwin.App.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="Protos/Services/VirtualLayerOperationService.proto" GrpcServices="Server" />
-  </ItemGroup>
-
+  
 </Project>
