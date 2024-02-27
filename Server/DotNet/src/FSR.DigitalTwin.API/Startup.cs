@@ -98,7 +98,7 @@ internal class Startup
         services.AddTransient<IAasRegistryService, AasRegistryService>();
         services.AddTransient<IAasDescriptorPaginationService, AasDescriptorPaginationService>();
         services.AddTransient<IOperationReceiver, OperationReceiver>();
-        services.AddTransient<IVirtualizationLayerBridge, VirtualLayerRpcBridge>();
+        services.AddSingleton<IVirtualizationLayerBridge, VirtualLayerRpcBridge>();
 
         // Add GraphQL services
         services

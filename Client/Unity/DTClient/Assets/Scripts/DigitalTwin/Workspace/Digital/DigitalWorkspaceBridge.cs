@@ -11,6 +11,9 @@ using FSR.Workspace.Digital.Services;
 using Grpc.Core;
 using UnityEngine;
 using Unity.VisualScripting;
+using System.IO;
+using UnityEngine.UIElements;
+using System.Threading;
 
 namespace FSR.Workspace.Digital {
 
@@ -43,14 +46,17 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 // ============================================================= //
 public class DigitalWorkspaceExampleRequests {
     public static async Task RunDataExchangeTest(AdminShellApiServiceClient client, VirtualLayerOperationService.VirtualLayerOperationServiceClient operational, Channel channel) {
-        var stream = operational.OpenOperationInvocationStream();
-
-        // await stream.ResponseStream.MoveNext();
-        // var next = stream.ResponseStream.Current;
-        // Debug.Log("[From server]: " + next.RequestId);
         
-        // await stream.RequestStream.WriteAsync(new OperationStatus() { RequestId = "Aloha!", ExecutionState = ExecutionState.Running });
-        await stream.RequestStream.CompleteAsync();
+        Thread operationRunner = new(async () => {
+            var stream = operational.OpenOperationInvocationStream();
+            while (await stream.ResponseStream.MoveNext()) {
+                Debug.Log("[From server]: " + stream.ResponseStream.Current.RequestId);
+                await Task.Delay(2000); // Do some work...
+                await stream.RequestStream.WriteAsync(new OperationStatus { ExecutionState = ExecutionState.Completed, RequestId = stream.ResponseStream.Current.RequestId });
+                await operational.CloseOperationInvocationStreamAsync(new CloseRequest());
+            }
+        });
+        operationRunner.Start();
 
         InvokeOperationSyncRequest invokeRequest = new() {
             SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
@@ -59,13 +65,9 @@ public class DigitalWorkspaceExampleRequests {
         };
         invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
         var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
-        if (invokeResponse.StatusCode == 200) {
-            Debug.Log("Successfully invoked operation synchronously!");
-        }
-        else {
-            Debug.Log("Failed invocation = " + invokeResponse.StatusCode);
-            return;
-        }
+        Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success);
+
+        operationRunner.Join();
     }
 }
 // ============================================================= //

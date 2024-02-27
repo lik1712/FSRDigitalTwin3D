@@ -36,39 +36,34 @@ public class VirtualLayerOperationRpcService : VirtualLayerOperationService.Virt
     public override async Task OpenOperationInvocationStream(IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationInvokeRequest> responseStream, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Opened invoke channel to client...");
-        var subscription = _virtualizationLayer.Outgoing.OperationInvokeRequests.Subscribe(async (request) => {
-            await responseStream.WriteAsync(request);
-        });
-        await foreach (var response in requestStream.ReadAllAsync())
-        {
-            _virtualizationLayer.Incoming.OnExecutionStateReceived(response.ExecutionState);
+        _virtualizationLayer.Outgoing.IsConnected = true;
+        _virtualizationLayer.Incoming.InvokeResponses = requestStream;
+        _virtualizationLayer.Outgoing.InvokeRequests = responseStream;
+
+        while (_virtualizationLayer.Outgoing.IsConnected) {
+            await Task.Delay(100);
         }
-        subscription.Dispose();
+
+        _virtualizationLayer.Incoming.InvokeResponses = null;
+        _virtualizationLayer.Outgoing.InvokeRequests = null;
+
+        Console.WriteLine("[Server]: Done!");
+    }
+
+    public override Task<CloseResponse> CloseOperationInvocationStream(CloseRequest request, ServerCallContext context)
+    {
+        Console.WriteLine("[Server]: Closing invoke channel to client...");
+        _virtualizationLayer.Outgoing.IsConnected = false;
+        return Task.FromResult(new CloseResponse());
     }
 
     public override async Task OpenOperationResultStream(IAsyncStreamReader<OperationResult> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Opened result channel to client...");
-        var subscription = _virtualizationLayer.Outgoing.OperationResultRequests.Subscribe(async (request) => {
-            await responseStream.WriteAsync(request);
-        });
-        await foreach (var response in requestStream.ReadAllAsync())
-        {
-            _virtualizationLayer.Incoming.OnOperationResultReceived(response);
-        }
-        subscription.Dispose();
     }
 
     public override async Task OpenExecutionStateStream(IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Opened operation execution status channel to client...");
-        var subscription = _virtualizationLayer.Outgoing.ExecutionStateRequests.Subscribe(async (request) => {
-            await responseStream.WriteAsync(request);
-        });
-        await foreach (var response in requestStream.ReadAllAsync())
-        {
-            _virtualizationLayer.Incoming.OnExecutionStateReceived(response.ExecutionState);
-        }
-        subscription.Dispose();
     }
 }

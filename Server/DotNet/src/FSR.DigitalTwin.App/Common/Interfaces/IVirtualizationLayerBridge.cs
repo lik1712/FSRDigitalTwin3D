@@ -1,29 +1,29 @@
 using FSRAas.GRPC.Lib.V3;
 using FSRAas.GRPC.Lib.V3.Services;
 using FSRAas.GRPC.Lib.V3.Services.Operational;
+using Grpc.Core;
 
 namespace FSR.DigitalTwin.App.Common.Interfaces;
 
 public interface IVirtualizationLayerOutgoing {
-    IObservable<OperationInvokeRequest> OperationInvokeRequests { get; }
-    IObservable<OperationRequest> OperationResultRequests { get; }
-    IObservable<OperationRequest> ExecutionStateRequests { get; }
-
-    Task<ExecutionState> InvokeOperationAsync(OperationPayloadDTO operation, int? timestamp, string requestId, string? handleId = null);
-    Task<OperationResult> GetOperationResultAsync(string requestId);
-    Task<ExecutionState> GetExecutionStateAsync(string requestId);
+    IAsyncStreamWriter<OperationInvokeRequest>? InvokeRequests { set; get; }
+    IAsyncStreamWriter<OperationRequest>? ResultRequests { set; get; }
+    IAsyncStreamWriter<OperationRequest>? StatusRequests { set; get; }
+    bool IsConnected { set; get; }
 }
 
 public interface IVirtualizationLayerIncoming {
-    IObservable<OperationResult> OperationResults { get; }
-    IObservable<ExecutionState> ExecutionStates { get; }
-
-    void OnOperationResultReceived(OperationResult result);
-    void OnExecutionStateReceived(ExecutionState state);
+    IAsyncStreamReader<OperationStatus>? InvokeResponses { set; get; }
+    IAsyncStreamReader<OperationResult>? ResultResponses { set; get; }
+    IAsyncStreamReader<OperationStatus>? StatusRequestStream { set; get; }
 }
 
 public interface IVirtualizationLayerBridge {
     IVirtualizationLayerOutgoing Outgoing { get; init; }
     IVirtualizationLayerIncoming Incoming { get; init; }
+
+    Task<OperationStatus> InvokeOperationAsync(OperationPayloadDTO operation, int? timestamp, string requestId, string? handleId = null);
+    Task<OperationResult> GetOperationResultAsync(string requestId);
+    Task<OperationStatus> GetExecutionStateAsync(string requestId);
 
 }

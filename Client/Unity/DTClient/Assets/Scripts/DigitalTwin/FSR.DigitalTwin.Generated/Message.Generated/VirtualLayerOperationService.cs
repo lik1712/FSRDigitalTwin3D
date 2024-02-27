@@ -27,33 +27,41 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
             "CjJQcm90b3MvU2VydmljZXMvVmlydHVhbExheWVyT3BlcmF0aW9uU2Vydmlj",
             "ZS5wcm90bxIeRlNSQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvbmFsGhlQcm90",
             "b3MvQWFzTW9kZWxzLlYzLnByb3RvGhxQcm90b3MvQWFzQXBpTW9kZWxzLlYz",
-            "LnByb3RvIuYBChZPcGVyYXRpb25JbnZva2VSZXF1ZXN0EhEKCXJlcXVlc3RJ",
+            "LnByb3RvIuUBChZPcGVyYXRpb25JbnZva2VSZXF1ZXN0EhEKCXJlcXVlc3RJ",
             "ZBgBIAEoCRJACg5pbnB1dFZhcmlhYmxlcxgCIAMoCzIoLkZTUkFhcy5HUlBD",
-            "LkxpYi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJBCg9vdXRwdXRWYXJpYWJs",
-            "ZXMYAyADKAsyKC5GU1JBYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uVmFyaWFi",
-            "bGVEVE8SEQoJdGltZXN0YW1wGAQgASgDEg8KB2lzQXN5bmMYBSABKAgSEAoI",
-            "aGFuZGxlSWQYBiABKAkiKwoWT3BlcmF0aW9uUmVzdWx0UmVxdWVzdBIRCgly",
-            "ZXF1ZXN0SWQYASABKAkiYAoPT3BlcmF0aW9uU3RhdHVzEhEKCXJlcXVlc3RJ",
-            "ZBgBIAEoCRI6Cg5leGVjdXRpb25TdGF0ZRgCIAEoDjIiLkZTUkFhcy5HUlBD",
-            "LkxpYi5WMy5FeGVjdXRpb25TdGF0ZSIgCg1TZXJ2ZXJSZXF1ZXN0Eg8KB21l",
-            "c3NhZ2UYASABKAkiIQoOU2VydmVyUmVzcG9uc2USDwoHbWVzc2FnZRgBIAEo",
-            "CTKrAgocVmlydHVhbExheWVyT3BlcmF0aW9uU2VydmljZRKMAQodT3Blbk9w",
-            "ZXJhdGlvbkludm9jYXRpb25TdHJlYW0SLy5GU1JBYXMuR1JQQy5MaWIuVjMu",
-            "T3BlcmF0aW9uYWwuT3BlcmF0aW9uU3RhdHVzGjYuRlNSQWFzLkdSUEMuTGli",
-            "LlYzLk9wZXJhdGlvbmFsLk9wZXJhdGlvbkludm9rZVJlcXVlc3QoATABEnwK",
-            "GU9wZW5PcGVyYXRpb25SZXN1bHRTdHJlYW0SIy5GU1JBYXMuR1JQQy5MaWIu",
-            "VjMuT3BlcmF0aW9uUmVzdWx0GjYuRlNSQWFzLkdSUEMuTGliLlYzLk9wZXJh",
-            "dGlvbmFsLk9wZXJhdGlvblJlc3VsdFJlcXVlc3QoATABMn8KC1lvdXJTZXJ2",
-            "aWNlEnAKC09wZW5DaGFubmVsEi0uRlNSQWFzLkdSUEMuTGliLlYzLk9wZXJh",
-            "dGlvbmFsLlNlcnZlclJlcXVlc3QaLi5GU1JBYXMuR1JQQy5MaWIuVjMuT3Bl",
-            "cmF0aW9uYWwuU2VydmVyUmVzcG9uc2UoATABQiqqAidGU1JBYXMuR1JQQy5M",
-            "aWIuVjMuU2VydmljZXMuT3BlcmF0aW9uYWxiBnByb3RvMw=="));
+            "LkxpYi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJACg5pbm91dFZhcmlhYmxl",
+            "cxgDIAMoCzIoLkZTUkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJs",
+            "ZURUTxIRCgl0aW1lc3RhbXAYBCABKAMSDwoHaXNBc3luYxgFIAEoCBIQCgho",
+            "YW5kbGVJZBgGIAEoCSIlChBPcGVyYXRpb25SZXF1ZXN0EhEKCXJlcXVlc3RJ",
+            "ZBgBIAEoCSJgCg9PcGVyYXRpb25TdGF0dXMSEQoJcmVxdWVzdElkGAEgASgJ",
+            "EjoKDmV4ZWN1dGlvblN0YXRlGAIgASgOMiIuRlNSQWFzLkdSUEMuTGliLlYz",
+            "LkV4ZWN1dGlvblN0YXRlIg4KDENsb3NlUmVxdWVzdCIPCg1DbG9zZVJlc3Bv",
+            "bnNlIiAKDVNlcnZlclJlcXVlc3QSDwoHbWVzc2FnZRgBIAEoCSIhCg5TZXJ2",
+            "ZXJSZXNwb25zZRIPCgdtZXNzYWdlGAEgASgJMqgEChxWaXJ0dWFsTGF5ZXJP",
+            "cGVyYXRpb25TZXJ2aWNlEowBCh1PcGVuT3BlcmF0aW9uSW52b2NhdGlvblN0",
+            "cmVhbRIvLkZTUkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25hbC5PcGVyYXRp",
+            "b25TdGF0dXMaNi5GU1JBYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uYWwuT3Bl",
+            "cmF0aW9uSW52b2tlUmVxdWVzdCgBMAESfQoeQ2xvc2VPcGVyYXRpb25JbnZv",
+            "Y2F0aW9uU3RyZWFtEiwuRlNSQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvbmFs",
+            "LkNsb3NlUmVxdWVzdBotLkZTUkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25h",
+            "bC5DbG9zZVJlc3BvbnNlEnYKGU9wZW5PcGVyYXRpb25SZXN1bHRTdHJlYW0S",
+            "Iy5GU1JBYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uUmVzdWx0GjAuRlNSQWFz",
+            "LkdSUEMuTGliLlYzLk9wZXJhdGlvbmFsLk9wZXJhdGlvblJlcXVlc3QoATAB",
+            "EoEBChhPcGVuRXhlY3V0aW9uU3RhdGVTdHJlYW0SLy5GU1JBYXMuR1JQQy5M",
+            "aWIuVjMuT3BlcmF0aW9uYWwuT3BlcmF0aW9uU3RhdHVzGjAuRlNSQWFzLkdS",
+            "UEMuTGliLlYzLk9wZXJhdGlvbmFsLk9wZXJhdGlvblJlcXVlc3QoATABMn8K",
+            "C1lvdXJTZXJ2aWNlEnAKC09wZW5DaGFubmVsEi0uRlNSQWFzLkdSUEMuTGli",
+            "LlYzLk9wZXJhdGlvbmFsLlNlcnZlclJlcXVlc3QaLi5GU1JBYXMuR1JQQy5M",
+            "aWIuVjMuT3BlcmF0aW9uYWwuU2VydmVyUmVzcG9uc2UoATABQiqqAidGU1JB",
+            "YXMuR1JQQy5MaWIuVjMuU2VydmljZXMuT3BlcmF0aW9uYWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::FSRAas.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSRAas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest.Parser, new[]{ "RequestId", "InputVariables", "OutputVariables", "Timestamp", "IsAsync", "HandleId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest.Parser, new[]{ "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest.Parser, new[]{ "RequestId", "InputVariables", "InoutVariables", "Timestamp", "IsAsync", "HandleId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest.Parser, new[]{ "RequestId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus.Parser, new[]{ "RequestId", "ExecutionState" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest), global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse), global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.ServerRequest), global::FSRAas.GRPC.Lib.V3.Services.Operational.ServerRequest.Parser, new[]{ "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.Operational.ServerResponse), global::FSRAas.GRPC.Lib.V3.Services.Operational.ServerResponse.Parser, new[]{ "Message" }, null, null, null)
           }));
@@ -89,7 +97,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
     public OperationInvokeRequest(OperationInvokeRequest other) : this() {
       requestId_ = other.requestId_;
       inputVariables_ = other.inputVariables_.Clone();
-      outputVariables_ = other.outputVariables_.Clone();
+      inoutVariables_ = other.inoutVariables_.Clone();
       timestamp_ = other.timestamp_;
       isAsync_ = other.isAsync_;
       handleId_ = other.handleId_;
@@ -122,14 +130,14 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
       get { return inputVariables_; }
     }
 
-    /// <summary>Field number for the "outputVariables" field.</summary>
-    public const int OutputVariablesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_outputVariables_codec
+    /// <summary>Field number for the "inoutVariables" field.</summary>
+    public const int InoutVariablesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutVariables_codec
         = pb::FieldCodec.ForMessage(26, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> outputVariables_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inoutVariables_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> OutputVariables {
-      get { return outputVariables_; }
+    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InoutVariables {
+      get { return inoutVariables_; }
     }
 
     /// <summary>Field number for the "timestamp" field.</summary>
@@ -180,7 +188,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
       }
       if (RequestId != other.RequestId) return false;
       if(!inputVariables_.Equals(other.inputVariables_)) return false;
-      if(!outputVariables_.Equals(other.outputVariables_)) return false;
+      if(!inoutVariables_.Equals(other.inoutVariables_)) return false;
       if (Timestamp != other.Timestamp) return false;
       if (IsAsync != other.IsAsync) return false;
       if (HandleId != other.HandleId) return false;
@@ -192,7 +200,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
       int hash = 1;
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       hash ^= inputVariables_.GetHashCode();
-      hash ^= outputVariables_.GetHashCode();
+      hash ^= inoutVariables_.GetHashCode();
       if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
       if (IsAsync != false) hash ^= IsAsync.GetHashCode();
       if (HandleId.Length != 0) hash ^= HandleId.GetHashCode();
@@ -214,7 +222,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
         output.WriteString(RequestId);
       }
       inputVariables_.WriteTo(output, _repeated_inputVariables_codec);
-      outputVariables_.WriteTo(output, _repeated_outputVariables_codec);
+      inoutVariables_.WriteTo(output, _repeated_inoutVariables_codec);
       if (Timestamp != 0L) {
         output.WriteRawTag(32);
         output.WriteInt64(Timestamp);
@@ -239,7 +247,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       size += inputVariables_.CalculateSize(_repeated_inputVariables_codec);
-      size += outputVariables_.CalculateSize(_repeated_outputVariables_codec);
+      size += inoutVariables_.CalculateSize(_repeated_inoutVariables_codec);
       if (Timestamp != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
       }
@@ -264,7 +272,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
         RequestId = other.RequestId;
       }
       inputVariables_.Add(other.inputVariables_);
-      outputVariables_.Add(other.outputVariables_);
+      inoutVariables_.Add(other.inoutVariables_);
       if (other.Timestamp != 0L) {
         Timestamp = other.Timestamp;
       }
@@ -294,7 +302,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
             break;
           }
           case 26: {
-            outputVariables_.AddEntriesFrom(input, _repeated_outputVariables_codec);
+            inoutVariables_.AddEntriesFrom(input, _repeated_inoutVariables_codec);
             break;
           }
           case 32: {
@@ -315,11 +323,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
 
   }
 
-  public sealed partial class OperationResultRequest : pb::IMessage<OperationResultRequest> {
-    private static readonly pb::MessageParser<OperationResultRequest> _parser = new pb::MessageParser<OperationResultRequest>(() => new OperationResultRequest());
+  public sealed partial class OperationRequest : pb::IMessage<OperationRequest> {
+    private static readonly pb::MessageParser<OperationRequest> _parser = new pb::MessageParser<OperationRequest>(() => new OperationRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<OperationResultRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<OperationRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -332,21 +340,21 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public OperationResultRequest() {
+    public OperationRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public OperationResultRequest(OperationResultRequest other) : this() {
+    public OperationRequest(OperationRequest other) : this() {
       requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public OperationResultRequest Clone() {
-      return new OperationResultRequest(this);
+    public OperationRequest Clone() {
+      return new OperationRequest(this);
     }
 
     /// <summary>Field number for the "requestId" field.</summary>
@@ -362,11 +370,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as OperationResultRequest);
+      return Equals(other as OperationRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(OperationResultRequest other) {
+    public bool Equals(OperationRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -416,7 +424,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(OperationResultRequest other) {
+    public void MergeFrom(OperationRequest other) {
       if (other == null) {
         return;
       }
@@ -601,6 +609,208 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
 
   }
 
+  public sealed partial class CloseRequest : pb::IMessage<CloseRequest> {
+    private static readonly pb::MessageParser<CloseRequest> _parser = new pb::MessageParser<CloseRequest>(() => new CloseRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CloseRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSRAas.GRPC.Lib.V3.Services.Operational.VirtualLayerOperationServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloseRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloseRequest(CloseRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloseRequest Clone() {
+      return new CloseRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CloseRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CloseRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CloseRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CloseResponse : pb::IMessage<CloseResponse> {
+    private static readonly pb::MessageParser<CloseResponse> _parser = new pb::MessageParser<CloseResponse>(() => new CloseResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CloseResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSRAas.GRPC.Lib.V3.Services.Operational.VirtualLayerOperationServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloseResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloseResponse(CloseResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CloseResponse Clone() {
+      return new CloseResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CloseResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CloseResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CloseResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ServerRequest : pb::IMessage<ServerRequest> {
     private static readonly pb::MessageParser<ServerRequest> _parser = new pb::MessageParser<ServerRequest>(() => new ServerRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -609,7 +819,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.Operational.VirtualLayerOperationServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::FSRAas.GRPC.Lib.V3.Services.Operational.VirtualLayerOperationServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -738,7 +948,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.Operational.VirtualLayerOperationServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::FSRAas.GRPC.Lib.V3.Services.Operational.VirtualLayerOperationServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -27,8 +27,17 @@ message OperationStatus {
     ExecutionState executionState = 2;
 }
 
+message CloseRequest {
+
+}
+message CloseResponse {
+    
+}
+
 service VirtualLayerOperationService {
     rpc OpenOperationInvocationStream (stream OperationStatus) returns (stream OperationInvokeRequest);
+    rpc CloseOperationInvocationStream (CloseRequest) returns (CloseResponse);
+
     rpc OpenOperationResultStream (stream OperationResult) returns (stream OperationRequest);
     rpc OpenExecutionStateStream (stream OperationStatus) returns (stream OperationRequest);
 }

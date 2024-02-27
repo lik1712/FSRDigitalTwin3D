@@ -463,6 +463,15 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
             List<OperationVariable> inoutputArguments = request.InoutputArguments.Select(x => _mapper.Map<OperationVariable>(x)).ToList();
             var result = _submodelService.InvokeOperationSync(decodedSubmodelIdentifier, idShortPath, inputArguments, inoutputArguments, request.Timestamp, request.RequestId);
             response.StatusCode = 200;
+            Services.OperationResult operationResult = new() {
+                RequestId = result.RequestId,
+                Success = result.Success,
+                Message = result.Message,
+                ExecutionState = (Services.ExecutionState)result.ExecutionState
+            };
+            operationResult.InoutputArguments.AddRange(result.InoutputArguments?.Select(x => _mapper.Map<OperationVariableDTO>(x)) ?? []);
+            operationResult.OutputArguments.AddRange(result.OutputArguments?.Select(x => _mapper.Map<OperationVariableDTO>(x)) ?? []);
+            response.Payload = operationResult;
         }
         catch (NotFoundException) {
             response.StatusCode = 404;

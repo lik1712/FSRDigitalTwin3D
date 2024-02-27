@@ -20,14 +20,14 @@ public class OperationReceiver : IOperationReceiver
     public OperationResult OnOperationInvoke(IOperation operation, int? timestamp, string requestId)
     {
         var sme = _mapper.Map<SubmodelElementDTO>(operation);
-        _virtualLayer.Outgoing.InvokeOperationAsync(sme.Operation, timestamp, requestId).GetAwaiter().GetResult();
-        return new OperationResult() { Success = false };
+        _virtualLayer.InvokeOperationAsync(sme.Operation, timestamp, requestId).GetAwaiter().GetResult();
+        return new OperationResult() { RequestId = requestId, ExecutionState = ExecutionState.FailedEnum, Message = "Test Default", Success = false };
     }
 
     public async Task<OperationResult> OnOperationInvokeAsync(string handleId, IOperation operation, int? timestamp, string requestId)
     {
         var sme = _mapper.Map<SubmodelElementDTO>(operation);
-        await _virtualLayer.Outgoing.InvokeOperationAsync(sme.Operation, timestamp, requestId, handleId);
-        return new OperationResult() { Success = false };
+        await _virtualLayer.InvokeOperationAsync(sme.Operation, timestamp, requestId, handleId);
+        return new OperationResult() { RequestId = requestId, ExecutionState = ExecutionState.FailedEnum, Message = "Test Default", Success = false };
     }
 }

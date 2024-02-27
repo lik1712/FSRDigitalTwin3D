@@ -14,8 +14,10 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
 
     static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus> __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationStatus = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest> __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationInvokeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest> __Marshaller_FSRAas_GRPC_Lib_V3_Operational_CloseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse> __Marshaller_FSRAas_GRPC_Lib_V3_Operational_CloseResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.OperationResult> __Marshaller_FSRAas_GRPC_Lib_V3_OperationResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.OperationResult.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest> __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest> __Method_OpenOperationInvocationStream = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest>(
         grpc::MethodType.DuplexStreaming,
@@ -24,12 +26,26 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
         __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationStatus,
         __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationInvokeRequest);
 
-    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest> __Method_OpenOperationResultStream = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest>(
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest, global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse> __Method_CloseOperationInvocationStream = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest, global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CloseOperationInvocationStream",
+        __Marshaller_FSRAas_GRPC_Lib_V3_Operational_CloseRequest,
+        __Marshaller_FSRAas_GRPC_Lib_V3_Operational_CloseResponse);
+
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> __Method_OpenOperationResultStream = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
         "OpenOperationResultStream",
         __Marshaller_FSRAas_GRPC_Lib_V3_OperationResult,
-        __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationResultRequest);
+        __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationRequest);
+
+    static readonly grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> __Method_OpenExecutionStateStream = new grpc::Method<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "OpenExecutionStateStream",
+        __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationStatus,
+        __Marshaller_FSRAas_GRPC_Lib_V3_Operational_OperationRequest);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -46,7 +62,17 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task OpenOperationResultStream(grpc::IAsyncStreamReader<global::FSRAas.GRPC.Lib.V3.Services.OperationResult> requestStream, grpc::IServerStreamWriter<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse> CloseOperationInvocationStream(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task OpenOperationResultStream(grpc::IAsyncStreamReader<global::FSRAas.GRPC.Lib.V3.Services.OperationResult> requestStream, grpc::IServerStreamWriter<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task OpenExecutionStateStream(grpc::IAsyncStreamReader<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus> requestStream, grpc::IServerStreamWriter<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -84,13 +110,37 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenOperationInvocationStream, null, options);
       }
-      public virtual grpc::AsyncDuplexStreamingCall<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest> OpenOperationResultStream(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse CloseOperationInvocationStream(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloseOperationInvocationStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse CloseOperationInvocationStream(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CloseOperationInvocationStream, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse> CloseOperationInvocationStreamAsync(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloseOperationInvocationStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse> CloseOperationInvocationStreamAsync(global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CloseOperationInvocationStream, null, options, request);
+      }
+      public virtual grpc::AsyncDuplexStreamingCall<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> OpenOperationResultStream(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return OpenOperationResultStream(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncDuplexStreamingCall<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest> OpenOperationResultStream(grpc::CallOptions options)
+      public virtual grpc::AsyncDuplexStreamingCall<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> OpenOperationResultStream(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenOperationResultStream, null, options);
+      }
+      public virtual grpc::AsyncDuplexStreamingCall<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> OpenExecutionStateStream(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenExecutionStateStream(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncDuplexStreamingCall<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest> OpenExecutionStateStream(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenExecutionStateStream, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override VirtualLayerOperationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -105,7 +155,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_OpenOperationInvocationStream, serviceImpl.OpenOperationInvocationStream)
-          .AddMethod(__Method_OpenOperationResultStream, serviceImpl.OpenOperationResultStream).Build();
+          .AddMethod(__Method_CloseOperationInvocationStream, serviceImpl.CloseOperationInvocationStream)
+          .AddMethod(__Method_OpenOperationResultStream, serviceImpl.OpenOperationResultStream)
+          .AddMethod(__Method_OpenExecutionStateStream, serviceImpl.OpenExecutionStateStream).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -115,7 +167,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.Operational {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VirtualLayerOperationServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_OpenOperationInvocationStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest>(serviceImpl.OpenOperationInvocationStream));
-      serviceBinder.AddMethod(__Method_OpenOperationResultStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationResultRequest>(serviceImpl.OpenOperationResultStream));
+      serviceBinder.AddMethod(__Method_CloseOperationInvocationStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseRequest, global::FSRAas.GRPC.Lib.V3.Services.Operational.CloseResponse>(serviceImpl.CloseOperationInvocationStream));
+      serviceBinder.AddMethod(__Method_OpenOperationResultStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSRAas.GRPC.Lib.V3.Services.OperationResult, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest>(serviceImpl.OpenOperationResultStream));
+      serviceBinder.AddMethod(__Method_OpenExecutionStateStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSRAas.GRPC.Lib.V3.Services.Operational.OperationRequest>(serviceImpl.OpenExecutionStateStream));
     }
 
   }

@@ -11,8 +11,4 @@
     <ProjectReference Include="../FSRAas.GRPC.Lib.V3/FSRAas.GRPC.Lib.V3.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Reactive" Version="6.0.0" />
-  </ItemGroup>
-
 </Project>
