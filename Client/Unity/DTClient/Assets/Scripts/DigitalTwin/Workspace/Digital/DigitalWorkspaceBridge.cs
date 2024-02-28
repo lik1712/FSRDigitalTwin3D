@@ -34,7 +34,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 
     async void Start() {
         Debug.Log("Running data channel test...");
-        await DigitalWorkspaceExampleRequests.RunDataExchangeTest(AasApiClient, Operational, RpcChannel);
+        await DigitalWorkspaceExampleRequests.RunSyncInvokeRequest(AasApiClient, Operational, RpcChannel);
         Debug.Log("Done!");
     }
 
@@ -45,29 +45,30 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 // Test Requests to AAS
 // ============================================================= //
 public class DigitalWorkspaceExampleRequests {
-    public static async Task RunDataExchangeTest(AdminShellApiServiceClient client, VirtualLayerOperationService.VirtualLayerOperationServiceClient operational, Channel channel) {
-        
-        Thread operationRunner = new(async () => {
-            var stream = operational.OpenOperationInvocationStream();
-            while (await stream.ResponseStream.MoveNext()) {
-                Debug.Log("[From server]: " + stream.ResponseStream.Current.RequestId);
-                await Task.Delay(2000); // Do some work...
-                await stream.RequestStream.WriteAsync(new OperationStatus { ExecutionState = ExecutionState.Completed, RequestId = stream.ResponseStream.Current.RequestId });
-                await operational.CloseOperationInvocationStreamAsync(new CloseRequest());
-            }
+    public static async Task RunSyncInvokeRequest(AdminShellApiServiceClient client, VirtualLayerOperationService.VirtualLayerOperationServiceClient operational, Channel channel) {
+        Thread simulatedExternalRequest = new(() => {
+            InvokeOperationSyncRequest invokeRequest = new() {
+                SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
+                Timestamp = 0,
+                RequestId = "MyRequestId::1",
+            };
+            invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
+            var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
+            Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success + ", Message = " + invokeResponse.Payload.Message);
         });
-        operationRunner.Start();
 
-        InvokeOperationSyncRequest invokeRequest = new() {
-            SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
-            Timestamp = 0,
-            RequestId = "MyRequestId::1",
-        };
-        invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
-        var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
-        Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success);
+        var stream = operational.OpenOperationInvocationStream();
 
-        operationRunner.Join();
+        simulatedExternalRequest.Start();
+
+        while (await stream.ResponseStream.MoveNext()) {
+            Debug.Log("[From server]: " + stream.ResponseStream.Current.RequestId);
+            await Task.Delay(2000); // Do some work...
+            await stream.RequestStream.WriteAsync(new OperationStatus { ExecutionState = ExecutionState.Completed, RequestId = stream.ResponseStream.Current.RequestId });
+            await operational.CloseStreamsAndDisconnectAsync(new CloseRequest());
+        }
+
+        simulatedExternalRequest.Join();
     }
 }
 // ============================================================= //

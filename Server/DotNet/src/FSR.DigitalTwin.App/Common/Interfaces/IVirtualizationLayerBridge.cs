@@ -9,7 +9,6 @@ public interface IVirtualizationLayerOutgoing {
     IAsyncStreamWriter<OperationInvokeRequest>? InvokeRequests { set; get; }
     IAsyncStreamWriter<OperationRequest>? ResultRequests { set; get; }
     IAsyncStreamWriter<OperationRequest>? StatusRequests { set; get; }
-    bool IsConnected { set; get; }
 }
 
 public interface IVirtualizationLayerIncoming {
@@ -21,6 +20,7 @@ public interface IVirtualizationLayerIncoming {
 public interface IVirtualizationLayerBridge {
     IVirtualizationLayerOutgoing Outgoing { get; init; }
     IVirtualizationLayerIncoming Incoming { get; init; }
+    bool IsConnected { set; get; }
 
     Task<OperationStatus> InvokeOperationAsync(OperationPayloadDTO operation, int? timestamp, string requestId, string? handleId = null);
     Task<OperationResult> GetOperationResultAsync(string requestId);

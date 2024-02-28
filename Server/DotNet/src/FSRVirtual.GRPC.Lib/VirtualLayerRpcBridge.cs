@@ -11,7 +11,6 @@ public class VirtualLayerRpcOutgoing : IVirtualizationLayerOutgoing
     public IAsyncStreamWriter<OperationInvokeRequest>? InvokeRequests { get; set; }
     public IAsyncStreamWriter<OperationRequest>? ResultRequests { get; set; }
     public IAsyncStreamWriter<OperationRequest>? StatusRequests { get; set; }
-    public bool IsConnected { get; set; } = false;
 }
 
 public class VirtualLayerRpcIncoming : IVirtualizationLayerIncoming
@@ -25,6 +24,7 @@ public class VirtualLayerRpcBridge : IVirtualizationLayerBridge
 {
     public IVirtualizationLayerOutgoing Outgoing { get; init; }
     public IVirtualizationLayerIncoming Incoming { get; init; }
+    public bool IsConnected { get; set; } = false;
 
     public VirtualLayerRpcBridge() {
         Outgoing = new VirtualLayerRpcOutgoing();
