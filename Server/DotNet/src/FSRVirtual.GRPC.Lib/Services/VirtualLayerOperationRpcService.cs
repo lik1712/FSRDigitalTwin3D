@@ -13,7 +13,7 @@ public class YourAwesomeService : YourService.YourServiceBase {
         _virtualizationLayer = virtualizationLayer ?? throw new NullReferenceException();
     }
 
-    public override async Task OpenChannel(IAsyncStreamReader<ServerRequest> requestStream, IServerStreamWriter<ServerResponse> responseStream, ServerCallContext context)
+    public override async Task OpenChannel(Grpc.Core.IAsyncStreamReader<ServerRequest> requestStream, IServerStreamWriter<ServerResponse> responseStream, ServerCallContext context)
     {
         ServerResponse response = new () { Message = "Hello World" };
         await responseStream.WriteAsync(response);
@@ -33,29 +33,25 @@ public class VirtualLayerOperationRpcService : VirtualLayerOperationService.Virt
         _virtualizationLayer = virtualizationLayer ?? throw new NullReferenceException();
     }
 
-    public override async Task OpenOperationInvocationStream(IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationInvokeRequest> responseStream, ServerCallContext context)
+    public override async Task OpenOperationInvocationStream(Grpc.Core.IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationInvokeRequest> responseStream, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Opened invoke channel to client...");
-        _virtualizationLayer.IsConnected = true;
-        _virtualizationLayer.Incoming.InvokeResponses = requestStream;
-        _virtualizationLayer.Outgoing.InvokeRequests = responseStream;
+        var stream = new AsyncBidirectionRpcStream<OperationStatus, OperationInvokeRequest>(requestStream, responseStream);
+        _virtualizationLayer.Operational.InvokeRequestStream = stream;
 
         while (_virtualizationLayer.IsConnected) {
             await Task.Delay(100);
         }
 
-        _virtualizationLayer.Incoming.InvokeResponses = null;
-        _virtualizationLayer.Outgoing.InvokeRequests = null;
-
         Console.WriteLine("[Server]: Done!");
     }
 
-    public override async Task OpenOperationResultStream(IAsyncStreamReader<OperationResult> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
+    public override async Task OpenOperationResultStream(Grpc.Core.IAsyncStreamReader<OperationResult> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Opened result channel to client...");
     }
 
-    public override async Task OpenExecutionStateStream(IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
+    public override async Task OpenExecutionStateStream(Grpc.Core.IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Opened operation execution status channel to client...");
     }
@@ -63,7 +59,7 @@ public class VirtualLayerOperationRpcService : VirtualLayerOperationService.Virt
     public override Task<CloseResponse> CloseStreamsAndDisconnect(CloseRequest request, ServerCallContext context)
     {
         Console.WriteLine("[Server]: Closing connection to client...");
-        _virtualizationLayer.IsConnected = false;
+        _virtualizationLayer.Disconnect();
         return Task.FromResult(new CloseResponse());
     }
 }
