@@ -52,6 +52,15 @@ public class DigitalWorkspaceExampleRequests {
                 Timestamp = 0,
                 RequestId = "MyRequestId::1",
             };
+            SubmodelElementDTO inputVar = new() {
+                IdShort = "TestVar",
+                SubmodelElementType = SubmodelElementType.Property,
+                Property = new PropertyPayloadDTO() {
+                    ValueType = DataTypeDefXsd.Integer,
+                    Value = "42"
+                }
+            };
+            invokeRequest.InputArguments.Add(new OperationVariableDTO() { Value = inputVar });
             invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
             var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
             Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success + ", Message = " + invokeResponse.Payload.Message);
@@ -69,7 +78,9 @@ public class DigitalWorkspaceExampleRequests {
             
             await resultStream.ResponseStream.MoveNext();
             Debug.Log("[From server]: " + resultStream.ResponseStream.Current.RequestId);
-            
+            Debug.Log("[From server]: Number of input parameters is " + invokeStream.ResponseStream.Current.InputVariables.Count);
+            Debug.Log("[From server]: Number of in-output parameters is " + invokeStream.ResponseStream.Current.InoutVariables.Count);
+
             await Task.Delay(3000); // Do some work...
 
             await resultStream.RequestStream.WriteAsync(new OperationResult() {

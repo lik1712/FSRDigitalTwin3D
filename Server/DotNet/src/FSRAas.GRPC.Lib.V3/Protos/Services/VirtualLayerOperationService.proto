@@ -41,17 +41,3 @@ service VirtualLayerOperationService {
 
     rpc CloseStreamsAndDisconnect (CloseRequest) returns (CloseResponse);
 }
-
-
-// Just for testing....
-service YourService {
-    rpc OpenChannel(stream ServerRequest) returns (stream ServerResponse);
-}
-
-message ServerRequest {
-    string message = 1;
-}
-
-message ServerResponse {
-    string message = 1;
-}
