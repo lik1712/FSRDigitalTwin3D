@@ -1,6 +1,6 @@
-using AdminShellNS.Models;
 using FSR.DigitalTwin.App.Common.Interfaces;
 using FSRAas.GRPC.Lib.V3;
+using FSRAas.GRPC.Lib.V3.Services;
 using FSRAas.GRPC.Lib.V3.Services.Operational;
 using Grpc.Core;
 
@@ -33,14 +33,50 @@ public class VirtualLayerRpcOperational : IVirtualizationLayerOperational
         return Task.CompletedTask;
     }
 
-    public Task<OperationStatus> GetExecutionStateAsync(string requestId)
+    public async Task<OperationStatus> GetExecutionStateAsync(string requestId)
     {
-        throw new NotImplementedException();
+        OperationRequest request = new() { RequestId = requestId };
+
+        if (_statusRequestStream == null) {
+            throw new RpcException(Status.DefaultCancelled, "No connection");
+        }
+
+        OperationStatus status;
+        try {
+            await _statusRequestStream.WriteAsync(request);
+            await _statusRequestStream.MoveNext();
+            status = _statusRequestStream.Current;
+        }
+        catch (ObjectDisposedException) {
+            status = new OperationStatus() { 
+                ExecutionState = ExecutionState.Failed, 
+                RequestId = requestId
+            };
+        }
+        return status;
     }
 
-    public Task<OperationResult> GetResultAsync(string requestId)
+    public async Task<OperationResult> GetResultAsync(string requestId)
     {
-        throw new NotImplementedException();
+        OperationRequest request = new() { RequestId = requestId };
+
+        if (_resultRequestStream == null) {
+            throw new RpcException(Status.DefaultCancelled, "No connection");
+        }
+
+        OperationResult result;
+        try {
+            await _resultRequestStream.WriteAsync(request);
+            await _resultRequestStream.MoveNext();
+            result = _resultRequestStream.Current;
+        }
+        catch (ObjectDisposedException) {
+            result = new OperationResult() { 
+                Success = false,
+                Message = "Lost connection"
+            };
+        }
+        return result;
     }
 
     public async Task<OperationStatus> InvokeAsync(OperationPayloadDTO operation, int? timestamp, string requestId, string? handleId = null)
@@ -57,9 +93,20 @@ public class VirtualLayerRpcOperational : IVirtualizationLayerOperational
         if (_invokeRequestStream == null) {
             throw new RpcException(Status.DefaultCancelled, "No connection");
         }
-        await _invokeRequestStream.WriteAsync(request);
-        await _invokeRequestStream.MoveNext();
-        return _invokeRequestStream.Current;
+
+        OperationStatus status;
+        try {
+            await _invokeRequestStream.WriteAsync(request);
+            await _invokeRequestStream.MoveNext();
+            status = _invokeRequestStream.Current;
+        }
+        catch (ObjectDisposedException) {
+            status = new OperationStatus() { 
+                ExecutionState = ExecutionState.Failed, 
+                RequestId = requestId
+            };
+        }
+        return status;
     }
 
     public bool HasConnection()

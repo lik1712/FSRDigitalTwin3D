@@ -1,5 +1,5 @@
-using AdminShellNS.Models;
 using FSRAas.GRPC.Lib.V3;
+using FSRAas.GRPC.Lib.V3.Services;
 using FSRAas.GRPC.Lib.V3.Services.Operational;
 
 namespace FSR.DigitalTwin.App.Common.Interfaces;

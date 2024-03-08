@@ -7,6 +7,7 @@ using FSRAas.GRPC.Lib.V3.Common.Utils;
 using FSRAas.GRPC.Lib.V3.Services;
 using Google.Protobuf;
 using Extension = AasCore.Aas3_0.Extension;
+using OperationResult = Services.OperationResult;
 
 public class AssetAdministrationShellProfile : Profile {
     public AssetAdministrationShellProfile()
@@ -54,6 +55,7 @@ public class AssetAdministrationShellProfile : Profile {
         CreateMap<IDataSpecificationContent, DataSpecificationContentDTO>();
 
         CreateMap<IO.Swagger.Models.PagedResultPagingMetadata, PagedResultPagingMetadata>();
+        CreateMap<AdminShellNS.Models.OperationResult, OperationResult>();
     }
 
     private void CreateModelMappings() {
@@ -107,6 +109,9 @@ public class AssetAdministrationShellProfile : Profile {
         CreateMap<ValueListDTO, ValueList>()
             .AfterMap((x, y) => Nullability.SetEmptyPropertiesToNull(y));
         CreateMap<DataSpecificationContentDTO, DataSpecificationIec61360>()
+            .AfterMap((x, y) => Nullability.SetEmptyPropertiesToNull(y));
+        
+        CreateMap<OperationResult, AdminShellNS.Models.OperationResult>()
             .AfterMap((x, y) => Nullability.SetEmptyPropertiesToNull(y));
     }
 }

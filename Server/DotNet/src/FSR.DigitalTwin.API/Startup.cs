@@ -218,7 +218,6 @@ internal class Startup
             endpoints.MapControllers();
             endpoints.MapGet("/", () => "*** Welcome to FORSocialRobots Digital Twin Framework! ***");
             endpoints.MapGrpcServices();
-            endpoints.MapGrpcService<YourAwesomeService>();
             endpoints.MapGrpcService<VirtualLayerOperationRpcService>();
         });
 

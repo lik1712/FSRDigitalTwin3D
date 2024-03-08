@@ -57,14 +57,28 @@ public class DigitalWorkspaceExampleRequests {
             Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success + ", Message = " + invokeResponse.Payload.Message);
         });
 
-        var stream = operational.OpenOperationInvocationStream();
+        var invokeStream = operational.OpenOperationInvocationStream();
+        var resultStream = operational.OpenOperationResultStream();
+        // var statusStream = operational.OpenExecutionStateStream();
 
         simulatedExternalRequest.Start();
 
-        while (await stream.ResponseStream.MoveNext()) {
-            Debug.Log("[From server]: " + stream.ResponseStream.Current.RequestId);
-            await Task.Delay(2000); // Do some work...
-            await stream.RequestStream.WriteAsync(new OperationStatus { ExecutionState = ExecutionState.Completed, RequestId = stream.ResponseStream.Current.RequestId });
+        while (await invokeStream.ResponseStream.MoveNext()) {
+            Debug.Log("[From server]: " + invokeStream.ResponseStream.Current.RequestId);
+            await invokeStream.RequestStream.WriteAsync(new OperationStatus { ExecutionState = ExecutionState.Completed, RequestId = invokeStream.ResponseStream.Current.RequestId });
+            
+            await resultStream.ResponseStream.MoveNext();
+            Debug.Log("[From server]: " + resultStream.ResponseStream.Current.RequestId);
+            
+            await Task.Delay(3000); // Do some work...
+
+            await resultStream.RequestStream.WriteAsync(new OperationResult() {
+                Success = true,
+                RequestId = resultStream.ResponseStream.Current.RequestId,
+                ExecutionState = ExecutionState.Completed,
+                Message = "Test operation finished!"
+            });
+            
             await operational.CloseStreamsAndDisconnectAsync(new CloseRequest());
         }
 
