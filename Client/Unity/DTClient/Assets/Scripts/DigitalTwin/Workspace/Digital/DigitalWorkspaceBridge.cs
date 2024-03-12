@@ -46,24 +46,46 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 // ============================================================= //
 public class DigitalWorkspaceExampleRequests {
     public static async Task RunSyncInvokeRequest(AdminShellApiServiceClient client, VirtualLayerOperationService.VirtualLayerOperationServiceClient operational, Channel channel) {
-        Thread simulatedExternalRequest = new(() => {
-            InvokeOperationSyncRequest invokeRequest = new() {
+        // Thread simulatedExternalRequest = new(() => {
+        //     InvokeOperationSyncRequest invokeRequest = new() {
+        //         SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
+        //         Timestamp = 0,
+        //         RequestId = "MyRequestId::1",
+        //     };
+        //     SubmodelElementDTO inputVar = new() {
+        //         IdShort = "TestVar",
+        //         SubmodelElementType = SubmodelElementType.Property,
+        //         Property = new PropertyPayloadDTO() {
+        //             ValueType = DataTypeDefXsd.Integer,
+        //             Value = "42"
+        //         }
+        //     };
+        //     invokeRequest.InputArguments.Add(new OperationVariableDTO() { Value = inputVar });
+        //     invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
+        //     var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
+        //     Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success + ", Message = " + invokeResponse.Payload.Message);
+        // });
+
+        Thread simulatedExternalRequest = new(async () => {
+            InvokeOperationAsyncRequest invokeRequest = new() {
                 SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
                 Timestamp = 0,
                 RequestId = "MyRequestId::1",
             };
-            SubmodelElementDTO inputVar = new() {
-                IdShort = "TestVar",
-                SubmodelElementType = SubmodelElementType.Property,
-                Property = new PropertyPayloadDTO() {
-                    ValueType = DataTypeDefXsd.Integer,
-                    Value = "42"
-                }
-            };
-            invokeRequest.InputArguments.Add(new OperationVariableDTO() { Value = inputVar });
             invokeRequest.Path.Add(new KeyDTO() { Type = KeyTypes.Operation, Value = "pick_and_place" });
-            var invokeResponse = client.Submodel.InvokeOperationSync(invokeRequest);
-            Debug.Log("[From server]: Success = " + invokeResponse.Payload.Success + ", Message = " + invokeResponse.Payload.Message);
+            var invokeResponse = client.Submodel.InvokeOperationAsync(invokeRequest);
+            Debug.Log("[From server]: Async invoke request = " + invokeResponse.Payload);
+
+            GetOperationAsyncResultRequest resultRequest = new() {
+                HandleId = invokeResponse.Payload
+            };
+            var resultResponse = client.Submodel.GetOperationAsyncResult(resultRequest);
+            Debug.Log("[From server]: Execution State = " + resultResponse.Result.ExecutionState);
+
+            await Task.Delay(5000); // Wait for result
+
+            resultResponse = client.Submodel.GetOperationAsyncResult(resultRequest);
+            Debug.Log("[From server]: Execution State = " + resultResponse.Result.ExecutionState + ", Success = " + resultResponse.Result.Success);
         });
 
         var invokeStream = operational.OpenOperationInvocationStream();

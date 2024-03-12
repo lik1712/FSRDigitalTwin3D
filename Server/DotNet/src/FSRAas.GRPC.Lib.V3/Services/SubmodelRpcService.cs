@@ -486,6 +486,16 @@ public class SubmodelRpcService : SubmodelService.SubmodelServiceBase {
 
         GetOperationAsyncResultResponse response = new();
         var result = OperationInvoker.GetAsyncResult(request.HandleId);
+        response.StatusCode = 200;
+        Services.OperationResult operationResult = new() {
+            RequestId = result.RequestId,
+            Success = result.Success,
+            Message = result.Message,
+            ExecutionState = (Services.ExecutionState)result.ExecutionState
+        };
+        operationResult.InoutputArguments.AddRange(result.InoutputArguments?.Select(x => _mapper.Map<OperationVariableDTO>(x)) ?? []);
+        operationResult.OutputArguments.AddRange(result.OutputArguments?.Select(x => _mapper.Map<OperationVariableDTO>(x)) ?? []);
+        response.Result = operationResult;
 
         _logger.LogInformation($"Invocation {request.HandleId} has current status {result.ExecutionState}");
 
