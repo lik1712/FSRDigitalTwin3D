@@ -1,26 +1,25 @@
+using AasCore.Aas3_0;
+using AdminShellNS.Models;
 using FSR.DigitalTwin.App.Common.Interfaces;
-using FSRAas.GRPC.Lib.V3;
-using FSRAas.GRPC.Lib.V3.Services;
-using FSRAas.GRPC.Lib.V3.Services.Operational;
 using Grpc.Core;
 
 namespace FSRVirtual.GRPC.Lib;
 
 public class VirtualLayerRpcOperational : IVirtualizationLayerOperational
 {
-    private IAsyncBidirectionalStream<OperationStatus, OperationInvokeRequest>? _invokeRequestStream;
-    private IAsyncBidirectionalStream<OperationResult, OperationRequest>? _resultRequestStream;
-    private IAsyncBidirectionalStream<OperationStatus, OperationRequest>? _statusRequestStream;
+    private IAsyncBidirectionalStream<ExecutionState, OperationInvocation>? _invokeRequestStream;
+    private IAsyncBidirectionalStream<OperationResult, string>? _resultRequestStream;
+    private IAsyncBidirectionalStream<ExecutionState, string>? _statusRequestStream;
 
-    public IAsyncBidirectionalStream<OperationStatus, OperationInvokeRequest> InvokeRequestStream { 
+    public IAsyncBidirectionalStream<ExecutionState, OperationInvocation> InvokeRequestStream { 
         get => _invokeRequestStream ?? throw new RpcException(Status.DefaultCancelled, "No connection");
         set => _invokeRequestStream ??= value;
     }
-    public IAsyncBidirectionalStream<OperationResult, OperationRequest> ResultRequestStream { 
+    public IAsyncBidirectionalStream<OperationResult, string> ResultRequestStream { 
         get => _resultRequestStream ?? throw new RpcException(Status.DefaultCancelled, "No connection");
         set => _resultRequestStream ??= value;
     }
-    public IAsyncBidirectionalStream<OperationStatus, OperationRequest> StatusRequestStream { 
+    public IAsyncBidirectionalStream<ExecutionState, string> StatusRequestStream { 
         get => _statusRequestStream ?? throw new RpcException(Status.DefaultCancelled, "No connection");
         set => _statusRequestStream ??= value;
     }
@@ -33,40 +32,30 @@ public class VirtualLayerRpcOperational : IVirtualizationLayerOperational
         return Task.CompletedTask;
     }
 
-    public async Task<OperationStatus> GetExecutionStateAsync(string requestId)
+    public async Task<ExecutionState> GetExecutionStateAsync(string requestId)
     {
-        OperationRequest request = new() { RequestId = requestId };
-
         if (_statusRequestStream == null) {
             throw new RpcException(Status.DefaultCancelled, "No connection");
         }
-
-        OperationStatus status;
         try {
-            await _statusRequestStream.WriteAsync(request);
+            await _statusRequestStream.WriteAsync(requestId);
             await _statusRequestStream.MoveNext();
-            status = _statusRequestStream.Current;
+            return _statusRequestStream.Current;
         }
         catch (ObjectDisposedException) {
-            status = new OperationStatus() { 
-                ExecutionState = ExecutionState.Failed, 
-                RequestId = requestId
-            };
+            return ExecutionState.FailedEnum;
         }
-        return status;
     }
 
     public async Task<OperationResult> GetResultAsync(string requestId)
     {
-        OperationRequest request = new() { RequestId = requestId };
-
         if (_resultRequestStream == null) {
             throw new RpcException(Status.DefaultCancelled, "No connection");
         }
 
         OperationResult result;
         try {
-            await _resultRequestStream.WriteAsync(request);
+            await _resultRequestStream.WriteAsync(requestId);
             await _resultRequestStream.MoveNext();
             result = _resultRequestStream.Current;
         }
@@ -79,34 +68,27 @@ public class VirtualLayerRpcOperational : IVirtualizationLayerOperational
         return result;
     }
 
-    public async Task<OperationStatus> InvokeAsync(OperationPayloadDTO operation, int? timestamp, string requestId, string? handleId = null)
+    public async Task<ExecutionState> InvokeAsync(IOperation operation, int? timestamp, string requestId, string? handleId = null)
     {
-        OperationInvokeRequest request = new() {
+        OperationInvocation invocation = new OperationInvocation() {
             RequestId = requestId,
-            Timestamp = timestamp ?? int.MaxValue,
+            InputVariables = operation.InputVariables,
+            InoutputVariables = operation.InoutputVariables,
+            Timestamp = timestamp,
             IsAsync = handleId != null,
-            HandleId = handleId ?? ""
+            HandleId = handleId
         };
-        request.InputVariables.AddRange(operation.InputVariables);
-        request.InoutVariables.AddRange(operation.InoutVariables);
-
         if (_invokeRequestStream == null) {
             throw new RpcException(Status.DefaultCancelled, "No connection");
         }
-
-        OperationStatus status;
         try {
-            await _invokeRequestStream.WriteAsync(request);
+            await _invokeRequestStream.WriteAsync(invocation);
             await _invokeRequestStream.MoveNext();
-            status = _invokeRequestStream.Current;
+            return _invokeRequestStream.Current;
         }
         catch (ObjectDisposedException) {
-            status = new OperationStatus() { 
-                ExecutionState = ExecutionState.Failed, 
-                RequestId = requestId
-            };
+            return ExecutionState.FailedEnum;
         }
-        return status;
     }
 
     public bool HasConnection()

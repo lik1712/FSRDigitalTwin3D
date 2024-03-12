@@ -110,9 +110,6 @@ public class AssetAdministrationShellProfile : Profile {
             .AfterMap((x, y) => Nullability.SetEmptyPropertiesToNull(y));
         CreateMap<DataSpecificationContentDTO, DataSpecificationIec61360>()
             .AfterMap((x, y) => Nullability.SetEmptyPropertiesToNull(y));
-        
-        CreateMap<OperationResult, AdminShellNS.Models.OperationResult>()
-            .AfterMap((x, y) => Nullability.SetEmptyPropertiesToNull(y));
     }
 }
 

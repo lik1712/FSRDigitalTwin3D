@@ -1,18 +1,17 @@
-using FSRAas.GRPC.Lib.V3;
-using FSRAas.GRPC.Lib.V3.Services;
-using FSRAas.GRPC.Lib.V3.Services.Operational;
+using AasCore.Aas3_0;
+using AdminShellNS.Models;
 
 namespace FSR.DigitalTwin.App.Common.Interfaces;
 
 public interface IVirtualizationLayerOperational {
-    IAsyncBidirectionalStream<OperationStatus, OperationInvokeRequest> InvokeRequestStream { set; get; }
-    IAsyncBidirectionalStream<OperationResult, OperationRequest> ResultRequestStream { set; get; }
-    IAsyncBidirectionalStream<OperationStatus, OperationRequest> StatusRequestStream { set; get; }
+    IAsyncBidirectionalStream<ExecutionState, OperationInvocation> InvokeRequestStream { set; get; }
+    IAsyncBidirectionalStream<OperationResult, string> ResultRequestStream { set; get; }
+    IAsyncBidirectionalStream<ExecutionState, string> StatusRequestStream { set; get; }
 
     Task OnDisconnect();
     bool HasConnection();
 
-    Task<OperationStatus> InvokeAsync(OperationPayloadDTO operation, int? timestamp, string requestId, string? handleId = null);
+    Task<ExecutionState> InvokeAsync(IOperation operation, int? timestamp, string requestId, string? handleId = null);
     Task<OperationResult> GetResultAsync(string requestId);
-    Task<OperationStatus> GetExecutionStateAsync(string requestId);
+    Task<ExecutionState> GetExecutionStateAsync(string requestId);
 }

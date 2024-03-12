@@ -1,38 +1,43 @@
+using AutoMapper;
 using FSR.DigitalTwin.App.Common.Interfaces;
 
 namespace FSRVirtual.GRPC.Lib;
 
-public class AsyncRpcStreamWriter<T> : IAsyncStreamWriter<T>
+public class AsyncRpcStreamWriter<T, MappedT> : IAsyncStreamWriter<T>
 {
-    private Grpc.Core.IServerStreamWriter<T> _streamWriter;
+    private readonly Grpc.Core.IServerStreamWriter<MappedT> _streamWriter;
+    private readonly IMapper _mapper;
 
-    public AsyncRpcStreamWriter(Grpc.Core.IServerStreamWriter<T> streamWriter) {
+    public AsyncRpcStreamWriter(IMapper mapper, Grpc.Core.IServerStreamWriter<MappedT> streamWriter) {
+        _mapper = mapper ?? throw new NotImplementedException();
         _streamWriter = streamWriter;
     }
 
-    public Task WriteAsync(T message) => _streamWriter.WriteAsync(message);
+    public Task WriteAsync(T message) => _streamWriter.WriteAsync(_mapper.Map<MappedT>(message));
 }
 
-public class AsyncRpcStreamReader<T> : IAsyncStreamReader<T>
+public class AsyncRpcStreamReader<T, MappedT> : IAsyncStreamReader<T>
 {
-    private Grpc.Core.IAsyncStreamReader<T> _streamReader;
+    private readonly Grpc.Core.IAsyncStreamReader<MappedT> _streamReader;
+    private readonly IMapper _mapper;
 
-    public AsyncRpcStreamReader(Grpc.Core.IAsyncStreamReader<T> streamReader) {
+    public AsyncRpcStreamReader(IMapper mapper, Grpc.Core.IAsyncStreamReader<MappedT> streamReader) {
+        _mapper = mapper ?? throw new NotImplementedException();
         _streamReader = streamReader;
     }
 
-    public T Current => _streamReader.Current;
+    public T Current => _mapper.Map<T>(_streamReader.Current);
 
     public Task<bool> MoveNext(CancellationToken cancellationToken) => _streamReader.MoveNext(cancellationToken);
 }
 
-public class AsyncBidirectionRpcStream<IncomingT, OutgoingT> : IAsyncBidirectionalStream<IncomingT, OutgoingT>
+public class AsyncBidirectionRpcStream<InT, InMappedT, OutT, OutMappedT> : IAsyncBidirectionalStream<InT, OutT>
 {
-    public IAsyncStreamReader<IncomingT> Incoming { get; init; }
-    public IAsyncStreamWriter<OutgoingT> Outgoing { get; init; }
-
-    public AsyncBidirectionRpcStream(Grpc.Core.IAsyncStreamReader<IncomingT> streamReader, Grpc.Core.IServerStreamWriter<OutgoingT> streamWriter) {
-        Incoming = new AsyncRpcStreamReader<IncomingT>(streamReader);
-        Outgoing = new AsyncRpcStreamWriter<OutgoingT>(streamWriter);
+    public AsyncBidirectionRpcStream(IMapper mapper, Grpc.Core.IAsyncStreamReader<InMappedT> streamReader, Grpc.Core.IServerStreamWriter<OutMappedT> streamWriter) {
+        Incoming = new AsyncRpcStreamReader<InT, InMappedT>(mapper, streamReader);
+        Outgoing = new AsyncRpcStreamWriter<OutT, OutMappedT>(mapper, streamWriter);
     }
+
+    public IAsyncStreamReader<InT> Incoming { get; init; }
+    public IAsyncStreamWriter<OutT> Outgoing { get; init; }
 }
