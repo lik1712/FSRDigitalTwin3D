@@ -27,7 +27,7 @@
     <Exec Command="$(Protoc) .\Protos\Services\SubmodelRepositoryService.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\AssetAdministrationShellService.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\SubmodelService.proto" />
-    <Exec Command="$(Protoc) .\Protos\Services\VirtualLayerOperationService.proto" />
+    <Exec Command="$(Protoc) .\Protos\Services\Operational\VirtualLayerOperationService.proto" />
   </Target>
 
 </Project>
