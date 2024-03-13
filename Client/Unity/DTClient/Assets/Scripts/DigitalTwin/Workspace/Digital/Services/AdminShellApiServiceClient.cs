@@ -1,7 +1,7 @@
-using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
-using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellService;
-using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
-using FSRAas.GRPC.Lib.V3.Services.SubmodelService;
+using FSR.Aas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
+using FSR.Aas.GRPC.Lib.V3.Services.AssetAdministrationShellService;
+using FSR.Aas.GRPC.Lib.V3.Services.SubmodelRepository;
+using FSR.Aas.GRPC.Lib.V3.Services.SubmodelService;
 using Grpc.Core;
 
 namespace FSR.Workspace.Digital.Services {

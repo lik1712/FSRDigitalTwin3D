@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="../FSR.DigitalTwin.Domain/FSR.DigitalTwin.Domain.csproj" />
     <ProjectReference Include="../FSR.DigitalTwin.App/FSR.DigitalTwin.App.csproj" />
-    <ProjectReference Include="../FSRVirtual.GRPC.Lib/FSRVirtual.GRPC.Lib.csproj" />
+    <ProjectReference Include="../FSR.DigitalTwinLayer.GRPC.Lib/FSR.DigitalTwinLayer.GRPC.Lib.csproj" />
   </ItemGroup>
 
 </Project>

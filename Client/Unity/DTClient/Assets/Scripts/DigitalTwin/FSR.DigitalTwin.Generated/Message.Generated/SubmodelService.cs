@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
+namespace FSR.Aas.GRPC.Lib.V3.Services.SubmodelService {
 
   /// <summary>Holder for reflection information generated from Protos/Services/SubmodelService.proto</summary>
   public static partial class SubmodelServiceReflection {
@@ -24,145 +24,146 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
     static SubmodelServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiVQcm90b3MvU2VydmljZXMvU3VibW9kZWxTZXJ2aWNlLnByb3RvEhJGU1JB",
-            "YXMuR1JQQy5MaWIuVjMaGVByb3Rvcy9BYXNNb2RlbHMuVjMucHJvdG8aHFBy",
-            "b3Rvcy9BYXNBcGlNb2RlbHMuVjMucHJvdG8iZwoVR2V0U3VibW9kZWxScGNS",
-            "ZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkSOgoOb3V0cHV0TW9kaWZpZXIY",
-            "AiABKAsyIi5GU1JBYXMuR1JQQy5MaWIuVjMuT3V0cHV0TW9kaWZpZXIikwEK",
-            "FkdldFN1Ym1vZGVsUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRIw",
-            "CgdwYXlsb2FkGAIgASgLMh8uRlNSQWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVs",
-            "RFRPEjMKCXJlZmVyZW5jZRgDIAEoCzIgLkZTUkFhcy5HUlBDLkxpYi5WMy5S",
-            "ZWZlcmVuY2VEVE8icgogR2V0QWxsU3VibW9kZWxFbGVtZW50c1JwY1JlcXVl",
-            "c3QSEgoKc3VibW9kZWxJZBgBIAEoCRI6Cg5vdXRwdXRNb2RpZmllchgCIAEo",
-            "CzIiLkZTUkFhcy5HUlBDLkxpYi5WMy5PdXRwdXRNb2RpZmllciKJAgohR2V0",
-            "QWxsU3VibW9kZWxFbGVtZW50c1JwY1Jlc3BvbnNlEhIKCnN0YXR1c0NvZGUY",
-            "ASABKAUSRQoOcGFnaW5nTWV0YURhdGEYAiABKAsyLS5GU1JBYXMuR1JQQy5M",
-            "aWIuVjMuUGFnZWRSZXN1bHRQYWdpbmdNZXRhZGF0YRI3CgdwYXlsb2FkGAMg",
-            "AygLMiYuRlNSQWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTxIN",
-            "CgV2YWx1ZRgEIAMoCRIzCglyZWZlcmVuY2UYBSADKAsyIC5GU1JBYXMuR1JQ",
-            "Qy5MaWIuVjMuUmVmZXJlbmNlRFRPEgwKBHBhdGgYBiADKAkingEKIkdldFN1",
-            "Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QSEgoKc3VibW9kZWxJZBgB",
-            "IAEoCRIoCgRwYXRoGAIgAygLMhouRlNSQWFzLkdSUEMuTGliLlYzLktleURU",
-            "TxI6Cg5vdXRwdXRNb2RpZmllchgDIAEoCzIiLkZTUkFhcy5HUlBDLkxpYi5W",
-            "My5PdXRwdXRNb2RpZmllciLEAQojR2V0U3VibW9kZWxFbGVtZW50QnlQYXRo",
-            "UnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRI3CgdwYXlsb2FkGAIg",
-            "ASgLMiYuRlNSQWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTxIN",
-            "CgV2YWx1ZRgDIAEoCRIzCglyZWZlcmVuY2UYBCABKAsyIC5GU1JBYXMuR1JQ",
-            "Qy5MaWIuVjMuUmVmZXJlbmNlRFRPEgwKBHBhdGgYBSABKAkiXgoVUHV0U3Vi",
-            "bW9kZWxScGNSZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkSMQoIc3VibW9k",
-            "ZWwYAiABKAsyHy5GU1JBYXMuR1JQQy5MaWIuVjMuU3VibW9kZWxEVE8iXwoW",
-            "UHV0U3VibW9kZWxScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgFEjEK",
-            "CHN1Ym1vZGVsGAIgASgLMh8uRlNSQWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVs",
-            "RFRPInQKHVBvc3RTdWJtb2RlbEVsZW1lbnRScGNSZXF1ZXN0EhIKCnN1Ym1v",
-            "ZGVsSWQYASABKAkSPwoPc3VibW9kZWxFbGVtZW50GAIgASgLMiYuRlNSQWFz",
-            "LkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTyJ1Ch5Qb3N0U3VibW9k",
-            "ZWxFbGVtZW50UnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRI/Cg9z",
-            "dWJtb2RlbEVsZW1lbnQYAiABKAsyJi5GU1JBYXMuR1JQQy5MaWIuVjMuU3Vi",
-            "bW9kZWxFbGVtZW50RFRPIqQBCiNQb3N0U3VibW9kZWxFbGVtZW50QnlQYXRo",
-            "UnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEigKBHBhdGgYAiADKAsy",
-            "Gi5GU1JBYXMuR1JQQy5MaWIuVjMuS2V5RFRPEj8KD3N1Ym1vZGVsRWxlbWVu",
-            "dBgDIAEoCzImLkZTUkFhcy5HUlBDLkxpYi5WMy5TdWJtb2RlbEVsZW1lbnRE",
-            "VE8iewokUG9zdFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jlc3BvbnNlEhIK",
-            "CnN0YXR1c0NvZGUYASABKAUSPwoPc3VibW9kZWxFbGVtZW50GAIgASgLMiYu",
-            "RlNSQWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTyKjAQoiUHV0",
-            "U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBISCgpzdWJtb2RlbElk",
-            "GAEgASgJEigKBHBhdGgYAiADKAsyGi5GU1JBYXMuR1JQQy5MaWIuVjMuS2V5",
-            "RFRPEj8KD3N1Ym1vZGVsRWxlbWVudBgDIAEoCzImLkZTUkFhcy5HUlBDLkxp",
-            "Yi5WMy5TdWJtb2RlbEVsZW1lbnREVE8iegojUHV0U3VibW9kZWxFbGVtZW50",
-            "QnlQYXRoUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBRI/Cg9zdWJt",
-            "b2RlbEVsZW1lbnQYAiABKAsyJi5GU1JBYXMuR1JQQy5MaWIuVjMuU3VibW9k",
-            "ZWxFbGVtZW50RFRPInYKJ1NldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRo",
-            "UnBjUmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEigKBHBhdGgYAiADKAsy",
-            "Gi5GU1JBYXMuR1JQQy5MaWIuVjMuS2V5RFRPEg0KBXZhbHVlGAMgASgJIj4K",
-            "KFNldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRoUnBjUmVzcG9uc2USEgoK",
-            "c3RhdHVzQ29kZRgBIAEoBSJlCiVEZWxldGVTdWJtb2RlbEVsZW1lbnRCeVBh",
-            "dGhScGNSZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkSKAoEcGF0aBgCIAMo",
-            "CzIaLkZTUkFhcy5HUlBDLkxpYi5WMy5LZXlEVE8iPAomRGVsZXRlU3VibW9k",
-            "ZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USEgoKc3RhdHVzQ29kZRgBIAEo",
-            "BSKHAgoaSW52b2tlT3BlcmF0aW9uU3luY1JlcXVlc3QSEgoKc3VibW9kZWxJ",
-            "ZBgBIAEoCRIoCgRwYXRoGAIgAygLMhouRlNSQWFzLkdSUEMuTGliLlYzLktl",
-            "eURUTxJACg5pbnB1dEFyZ3VtZW50cxgDIAMoCzIoLkZTUkFhcy5HUlBDLkxp",
-            "Yi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJDChFpbm91dHB1dEFyZ3VtZW50",
-            "cxgEIAMoCzIoLkZTUkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJs",
-            "ZURUTxIRCgl0aW1lc3RhbXAYBSABKAUSEQoJcmVxdWVzdElkGAYgASgJImcK",
-            "G0ludm9rZU9wZXJhdGlvblN5bmNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEg",
-            "ASgFEjQKB3BheWxvYWQYAiABKAsyIy5GU1JBYXMuR1JQQy5MaWIuVjMuT3Bl",
-            "cmF0aW9uUmVzdWx0IogCChtJbnZva2VPcGVyYXRpb25Bc3luY1JlcXVlc3QS",
-            "EgoKc3VibW9kZWxJZBgBIAEoCRIoCgRwYXRoGAIgAygLMhouRlNSQWFzLkdS",
-            "UEMuTGliLlYzLktleURUTxJACg5pbnB1dEFyZ3VtZW50cxgDIAMoCzIoLkZT",
-            "UkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJDChFpbm91",
-            "dHB1dEFyZ3VtZW50cxgEIAMoCzIoLkZTUkFhcy5HUlBDLkxpYi5WMy5PcGVy",
-            "YXRpb25WYXJpYWJsZURUTxIRCgl0aW1lc3RhbXAYBSABKAUSEQoJcmVxdWVz",
-            "dElkGAYgASgJIkMKHEludm9rZU9wZXJhdGlvbkFzeW5jUmVzcG9uc2USEgoK",
-            "c3RhdHVzQ29kZRgBIAEoBRIPCgdwYXlsb2FkGAIgASgJIjIKHkdldE9wZXJh",
-            "dGlvbkFzeW5jUmVzdWx0UmVxdWVzdBIQCghoYW5kbGVJZBgBIAEoCSJqCh9H",
-            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlc3BvbnNlEhIKCnN0YXR1c0NvZGUY",
-            "ASABKAUSMwoGcmVzdWx0GAIgASgLMiMuRlNSQWFzLkdSUEMuTGliLlYzLk9w",
-            "ZXJhdGlvblJlc3VsdDK8DAoPU3VibW9kZWxTZXJ2aWNlEmQKC0dldFN1Ym1v",
-            "ZGVsEikuRlNSQWFzLkdSUEMuTGliLlYzLkdldFN1Ym1vZGVsUnBjUmVxdWVz",
-            "dBoqLkZTUkFhcy5HUlBDLkxpYi5WMy5HZXRTdWJtb2RlbFJwY1Jlc3BvbnNl",
-            "EoUBChZHZXRBbGxTdWJtb2RlbEVsZW1lbnRzEjQuRlNSQWFzLkdSUEMuTGli",
-            "LlYzLkdldEFsbFN1Ym1vZGVsRWxlbWVudHNScGNSZXF1ZXN0GjUuRlNSQWFz",
-            "LkdSUEMuTGliLlYzLkdldEFsbFN1Ym1vZGVsRWxlbWVudHNScGNSZXNwb25z",
-            "ZRKLAQoYR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoEjYuRlNSQWFzLkdSUEMu",
-            "TGliLlYzLkdldFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QaNy5G",
-            "U1JBYXMuR1JQQy5MaWIuVjMuR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBj",
-            "UmVzcG9uc2USZAoLUHV0U3VibW9kZWwSKS5GU1JBYXMuR1JQQy5MaWIuVjMu",
-            "UHV0U3VibW9kZWxScGNSZXF1ZXN0GiouRlNSQWFzLkdSUEMuTGliLlYzLlB1",
-            "dFN1Ym1vZGVsUnBjUmVzcG9uc2USfAoTUG9zdFN1Ym1vZGVsRWxlbWVudBIx",
-            "LkZTUkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9kZWxFbGVtZW50UnBjUmVx",
-            "dWVzdBoyLkZTUkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9kZWxFbGVtZW50",
-            "UnBjUmVzcG9uc2USjgEKGVBvc3RTdWJtb2RlbEVsZW1lbnRCeVBhdGgSNy5G",
-            "U1JBYXMuR1JQQy5MaWIuVjMuUG9zdFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJw",
-            "Y1JlcXVlc3QaOC5GU1JBYXMuR1JQQy5MaWIuVjMuUG9zdFN1Ym1vZGVsRWxl",
-            "bWVudEJ5UGF0aFJwY1Jlc3BvbnNlEosBChhQdXRTdWJtb2RlbEVsZW1lbnRC",
-            "eVBhdGgSNi5GU1JBYXMuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxFbGVtZW50",
-            "QnlQYXRoUnBjUmVxdWVzdBo3LkZTUkFhcy5HUlBDLkxpYi5WMy5QdXRTdWJt",
-            "b2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25zZRKaAQodU2V0U3VibW9kZWxF",
-            "bGVtZW50VmFsdWVCeVBhdGgSOy5GU1JBYXMuR1JQQy5MaWIuVjMuU2V0U3Vi",
-            "bW9kZWxFbGVtZW50VmFsdWVCeVBhdGhScGNSZXF1ZXN0GjwuRlNSQWFzLkdS",
-            "UEMuTGliLlYzLlNldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRoUnBjUmVz",
-            "cG9uc2USlAEKG0RlbGV0ZVN1Ym1vZGVsRWxlbWVudEJ5UGF0aBI5LkZTUkFh",
-            "cy5HUlBDLkxpYi5WMy5EZWxldGVTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNS",
-            "ZXF1ZXN0GjouRlNSQWFzLkdSUEMuTGliLlYzLkRlbGV0ZVN1Ym1vZGVsRWxl",
-            "bWVudEJ5UGF0aFJwY1Jlc3BvbnNlEnYKE0ludm9rZU9wZXJhdGlvblN5bmMS",
-            "Li5GU1JBYXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uU3luY1JlcXVl",
-            "c3QaLy5GU1JBYXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uU3luY1Jl",
-            "c3BvbnNlEnkKFEludm9rZU9wZXJhdGlvbkFzeW5jEi8uRlNSQWFzLkdSUEMu",
-            "TGliLlYzLkludm9rZU9wZXJhdGlvbkFzeW5jUmVxdWVzdBowLkZTUkFhcy5H",
-            "UlBDLkxpYi5WMy5JbnZva2VPcGVyYXRpb25Bc3luY1Jlc3BvbnNlEoIBChdH",
-            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdBIyLkZTUkFhcy5HUlBDLkxpYi5WMy5H",
-            "ZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlcXVlc3QaMy5GU1JBYXMuR1JQQy5M",
-            "aWIuVjMuR2V0T3BlcmF0aW9uQXN5bmNSZXN1bHRSZXNwb25zZUIuqgIrRlNS",
-            "QWFzLkdSUEMuTGliLlYzLlNlcnZpY2VzLlN1Ym1vZGVsU2VydmljZWIGcHJv",
-            "dG8z"));
+            "CiVQcm90b3MvU2VydmljZXMvU3VibW9kZWxTZXJ2aWNlLnByb3RvEhNGU1Iu",
+            "QWFzLkdSUEMuTGliLlYzGhlQcm90b3MvQWFzTW9kZWxzLlYzLnByb3RvGhxQ",
+            "cm90b3MvQWFzQXBpTW9kZWxzLlYzLnByb3RvImgKFUdldFN1Ym1vZGVsUnBj",
+            "UmVxdWVzdBISCgpzdWJtb2RlbElkGAEgASgJEjsKDm91dHB1dE1vZGlmaWVy",
+            "GAIgASgLMiMuRlNSLkFhcy5HUlBDLkxpYi5WMy5PdXRwdXRNb2RpZmllciKV",
+            "AQoWR2V0U3VibW9kZWxScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgF",
+            "EjEKB3BheWxvYWQYAiABKAsyIC5GU1IuQWFzLkdSUEMuTGliLlYzLlN1Ym1v",
+            "ZGVsRFRPEjQKCXJlZmVyZW5jZRgDIAEoCzIhLkZTUi5BYXMuR1JQQy5MaWIu",
+            "VjMuUmVmZXJlbmNlRFRPInMKIEdldEFsbFN1Ym1vZGVsRWxlbWVudHNScGNS",
+            "ZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASABKAkSOwoOb3V0cHV0TW9kaWZpZXIY",
+            "AiABKAsyIy5GU1IuQWFzLkdSUEMuTGliLlYzLk91dHB1dE1vZGlmaWVyIowC",
+            "CiFHZXRBbGxTdWJtb2RlbEVsZW1lbnRzUnBjUmVzcG9uc2USEgoKc3RhdHVz",
+            "Q29kZRgBIAEoBRJGCg5wYWdpbmdNZXRhRGF0YRgCIAEoCzIuLkZTUi5BYXMu",
+            "R1JQQy5MaWIuVjMuUGFnZWRSZXN1bHRQYWdpbmdNZXRhZGF0YRI4CgdwYXls",
+            "b2FkGAMgAygLMicuRlNSLkFhcy5HUlBDLkxpYi5WMy5TdWJtb2RlbEVsZW1l",
+            "bnREVE8SDQoFdmFsdWUYBCADKAkSNAoJcmVmZXJlbmNlGAUgAygLMiEuRlNS",
+            "LkFhcy5HUlBDLkxpYi5WMy5SZWZlcmVuY2VEVE8SDAoEcGF0aBgGIAMoCSKg",
+            "AQoiR2V0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVxdWVzdBISCgpzdWJt",
+            "b2RlbElkGAEgASgJEikKBHBhdGgYAiADKAsyGy5GU1IuQWFzLkdSUEMuTGli",
+            "LlYzLktleURUTxI7Cg5vdXRwdXRNb2RpZmllchgDIAEoCzIjLkZTUi5BYXMu",
+            "R1JQQy5MaWIuVjMuT3V0cHV0TW9kaWZpZXIixgEKI0dldFN1Ym1vZGVsRWxl",
+            "bWVudEJ5UGF0aFJwY1Jlc3BvbnNlEhIKCnN0YXR1c0NvZGUYASABKAUSOAoH",
+            "cGF5bG9hZBgCIAEoCzInLkZTUi5BYXMuR1JQQy5MaWIuVjMuU3VibW9kZWxF",
+            "bGVtZW50RFRPEg0KBXZhbHVlGAMgASgJEjQKCXJlZmVyZW5jZRgEIAEoCzIh",
+            "LkZTUi5BYXMuR1JQQy5MaWIuVjMuUmVmZXJlbmNlRFRPEgwKBHBhdGgYBSAB",
+            "KAkiXwoVUHV0U3VibW9kZWxScGNSZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASAB",
+            "KAkSMgoIc3VibW9kZWwYAiABKAsyIC5GU1IuQWFzLkdSUEMuTGliLlYzLlN1",
+            "Ym1vZGVsRFRPImAKFlB1dFN1Ym1vZGVsUnBjUmVzcG9uc2USEgoKc3RhdHVz",
+            "Q29kZRgBIAEoBRIyCghzdWJtb2RlbBgCIAEoCzIgLkZTUi5BYXMuR1JQQy5M",
+            "aWIuVjMuU3VibW9kZWxEVE8idQodUG9zdFN1Ym1vZGVsRWxlbWVudFJwY1Jl",
+            "cXVlc3QSEgoKc3VibW9kZWxJZBgBIAEoCRJACg9zdWJtb2RlbEVsZW1lbnQY",
+            "AiABKAsyJy5GU1IuQWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERU",
+            "TyJ2Ch5Qb3N0U3VibW9kZWxFbGVtZW50UnBjUmVzcG9uc2USEgoKc3RhdHVz",
+            "Q29kZRgBIAEoBRJACg9zdWJtb2RlbEVsZW1lbnQYAiABKAsyJy5GU1IuQWFz",
+            "LkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTyKmAQojUG9zdFN1Ym1v",
+            "ZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QSEgoKc3VibW9kZWxJZBgBIAEo",
+            "CRIpCgRwYXRoGAIgAygLMhsuRlNSLkFhcy5HUlBDLkxpYi5WMy5LZXlEVE8S",
+            "QAoPc3VibW9kZWxFbGVtZW50GAMgASgLMicuRlNSLkFhcy5HUlBDLkxpYi5W",
+            "My5TdWJtb2RlbEVsZW1lbnREVE8ifAokUG9zdFN1Ym1vZGVsRWxlbWVudEJ5",
+            "UGF0aFJwY1Jlc3BvbnNlEhIKCnN0YXR1c0NvZGUYASABKAUSQAoPc3VibW9k",
+            "ZWxFbGVtZW50GAIgASgLMicuRlNSLkFhcy5HUlBDLkxpYi5WMy5TdWJtb2Rl",
+            "bEVsZW1lbnREVE8ipQEKIlB1dFN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1Jl",
+            "cXVlc3QSEgoKc3VibW9kZWxJZBgBIAEoCRIpCgRwYXRoGAIgAygLMhsuRlNS",
+            "LkFhcy5HUlBDLkxpYi5WMy5LZXlEVE8SQAoPc3VibW9kZWxFbGVtZW50GAMg",
+            "ASgLMicuRlNSLkFhcy5HUlBDLkxpYi5WMy5TdWJtb2RlbEVsZW1lbnREVE8i",
+            "ewojUHV0U3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USEgoKc3Rh",
+            "dHVzQ29kZRgBIAEoBRJACg9zdWJtb2RlbEVsZW1lbnQYAiABKAsyJy5GU1Iu",
+            "QWFzLkdSUEMuTGliLlYzLlN1Ym1vZGVsRWxlbWVudERUTyJ3CidTZXRTdWJt",
+            "b2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJwY1JlcXVlc3QSEgoKc3VibW9kZWxJ",
+            "ZBgBIAEoCRIpCgRwYXRoGAIgAygLMhsuRlNSLkFhcy5HUlBDLkxpYi5WMy5L",
+            "ZXlEVE8SDQoFdmFsdWUYAyABKAkiPgooU2V0U3VibW9kZWxFbGVtZW50VmFs",
+            "dWVCeVBhdGhScGNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgFImYKJURl",
+            "bGV0ZVN1Ym1vZGVsRWxlbWVudEJ5UGF0aFJwY1JlcXVlc3QSEgoKc3VibW9k",
+            "ZWxJZBgBIAEoCRIpCgRwYXRoGAIgAygLMhsuRlNSLkFhcy5HUlBDLkxpYi5W",
+            "My5LZXlEVE8iPAomRGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRoUnBjUmVz",
+            "cG9uc2USEgoKc3RhdHVzQ29kZRgBIAEoBSKKAgoaSW52b2tlT3BlcmF0aW9u",
+            "U3luY1JlcXVlc3QSEgoKc3VibW9kZWxJZBgBIAEoCRIpCgRwYXRoGAIgAygL",
+            "MhsuRlNSLkFhcy5HUlBDLkxpYi5WMy5LZXlEVE8SQQoOaW5wdXRBcmd1bWVu",
+            "dHMYAyADKAsyKS5GU1IuQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvblZhcmlh",
+            "YmxlRFRPEkQKEWlub3V0cHV0QXJndW1lbnRzGAQgAygLMikuRlNSLkFhcy5H",
+            "UlBDLkxpYi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxIRCgl0aW1lc3RhbXAY",
+            "BSABKAUSEQoJcmVxdWVzdElkGAYgASgJImgKG0ludm9rZU9wZXJhdGlvblN5",
+            "bmNSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgFEjUKB3BheWxvYWQYAiAB",
+            "KAsyJC5GU1IuQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvblJlc3VsdCKLAgob",
+            "SW52b2tlT3BlcmF0aW9uQXN5bmNSZXF1ZXN0EhIKCnN1Ym1vZGVsSWQYASAB",
+            "KAkSKQoEcGF0aBgCIAMoCzIbLkZTUi5BYXMuR1JQQy5MaWIuVjMuS2V5RFRP",
+            "EkEKDmlucHV0QXJndW1lbnRzGAMgAygLMikuRlNSLkFhcy5HUlBDLkxpYi5W",
+            "My5PcGVyYXRpb25WYXJpYWJsZURUTxJEChFpbm91dHB1dEFyZ3VtZW50cxgE",
+            "IAMoCzIpLkZTUi5BYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uVmFyaWFibGVE",
+            "VE8SEQoJdGltZXN0YW1wGAUgASgFEhEKCXJlcXVlc3RJZBgGIAEoCSJDChxJ",
+            "bnZva2VPcGVyYXRpb25Bc3luY1Jlc3BvbnNlEhIKCnN0YXR1c0NvZGUYASAB",
+            "KAUSDwoHcGF5bG9hZBgCIAEoCSIyCh5HZXRPcGVyYXRpb25Bc3luY1Jlc3Vs",
+            "dFJlcXVlc3QSEAoIaGFuZGxlSWQYASABKAkiawofR2V0T3BlcmF0aW9uQXN5",
+            "bmNSZXN1bHRSZXNwb25zZRISCgpzdGF0dXNDb2RlGAEgASgFEjQKBnJlc3Vs",
+            "dBgCIAEoCzIkLkZTUi5BYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uUmVzdWx0",
+            "MtQMCg9TdWJtb2RlbFNlcnZpY2USZgoLR2V0U3VibW9kZWwSKi5GU1IuQWFz",
+            "LkdSUEMuTGliLlYzLkdldFN1Ym1vZGVsUnBjUmVxdWVzdBorLkZTUi5BYXMu",
+            "R1JQQy5MaWIuVjMuR2V0U3VibW9kZWxScGNSZXNwb25zZRKHAQoWR2V0QWxs",
+            "U3VibW9kZWxFbGVtZW50cxI1LkZTUi5BYXMuR1JQQy5MaWIuVjMuR2V0QWxs",
+            "U3VibW9kZWxFbGVtZW50c1JwY1JlcXVlc3QaNi5GU1IuQWFzLkdSUEMuTGli",
+            "LlYzLkdldEFsbFN1Ym1vZGVsRWxlbWVudHNScGNSZXNwb25zZRKNAQoYR2V0",
+            "U3VibW9kZWxFbGVtZW50QnlQYXRoEjcuRlNSLkFhcy5HUlBDLkxpYi5WMy5H",
+            "ZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXF1ZXN0GjguRlNSLkFhcy5H",
+            "UlBDLkxpYi5WMy5HZXRTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNSZXNwb25z",
+            "ZRJmCgtQdXRTdWJtb2RlbBIqLkZTUi5BYXMuR1JQQy5MaWIuVjMuUHV0U3Vi",
+            "bW9kZWxScGNSZXF1ZXN0GisuRlNSLkFhcy5HUlBDLkxpYi5WMy5QdXRTdWJt",
+            "b2RlbFJwY1Jlc3BvbnNlEn4KE1Bvc3RTdWJtb2RlbEVsZW1lbnQSMi5GU1Iu",
+            "QWFzLkdSUEMuTGliLlYzLlBvc3RTdWJtb2RlbEVsZW1lbnRScGNSZXF1ZXN0",
+            "GjMuRlNSLkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9kZWxFbGVtZW50UnBj",
+            "UmVzcG9uc2USkAEKGVBvc3RTdWJtb2RlbEVsZW1lbnRCeVBhdGgSOC5GU1Iu",
+            "QWFzLkdSUEMuTGliLlYzLlBvc3RTdWJtb2RlbEVsZW1lbnRCeVBhdGhScGNS",
+            "ZXF1ZXN0GjkuRlNSLkFhcy5HUlBDLkxpYi5WMy5Qb3N0U3VibW9kZWxFbGVt",
+            "ZW50QnlQYXRoUnBjUmVzcG9uc2USjQEKGFB1dFN1Ym1vZGVsRWxlbWVudEJ5",
+            "UGF0aBI3LkZTUi5BYXMuR1JQQy5MaWIuVjMuUHV0U3VibW9kZWxFbGVtZW50",
+            "QnlQYXRoUnBjUmVxdWVzdBo4LkZTUi5BYXMuR1JQQy5MaWIuVjMuUHV0U3Vi",
+            "bW9kZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USnAEKHVNldFN1Ym1vZGVs",
+            "RWxlbWVudFZhbHVlQnlQYXRoEjwuRlNSLkFhcy5HUlBDLkxpYi5WMy5TZXRT",
+            "dWJtb2RlbEVsZW1lbnRWYWx1ZUJ5UGF0aFJwY1JlcXVlc3QaPS5GU1IuQWFz",
+            "LkdSUEMuTGliLlYzLlNldFN1Ym1vZGVsRWxlbWVudFZhbHVlQnlQYXRoUnBj",
+            "UmVzcG9uc2USlgEKG0RlbGV0ZVN1Ym1vZGVsRWxlbWVudEJ5UGF0aBI6LkZT",
+            "Ui5BYXMuR1JQQy5MaWIuVjMuRGVsZXRlU3VibW9kZWxFbGVtZW50QnlQYXRo",
+            "UnBjUmVxdWVzdBo7LkZTUi5BYXMuR1JQQy5MaWIuVjMuRGVsZXRlU3VibW9k",
+            "ZWxFbGVtZW50QnlQYXRoUnBjUmVzcG9uc2USeAoTSW52b2tlT3BlcmF0aW9u",
+            "U3luYxIvLkZTUi5BYXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uU3lu",
+            "Y1JlcXVlc3QaMC5GU1IuQWFzLkdSUEMuTGliLlYzLkludm9rZU9wZXJhdGlv",
+            "blN5bmNSZXNwb25zZRJ7ChRJbnZva2VPcGVyYXRpb25Bc3luYxIwLkZTUi5B",
+            "YXMuR1JQQy5MaWIuVjMuSW52b2tlT3BlcmF0aW9uQXN5bmNSZXF1ZXN0GjEu",
+            "RlNSLkFhcy5HUlBDLkxpYi5WMy5JbnZva2VPcGVyYXRpb25Bc3luY1Jlc3Bv",
+            "bnNlEoQBChdHZXRPcGVyYXRpb25Bc3luY1Jlc3VsdBIzLkZTUi5BYXMuR1JQ",
+            "Qy5MaWIuVjMuR2V0T3BlcmF0aW9uQXN5bmNSZXN1bHRSZXF1ZXN0GjQuRlNS",
+            "LkFhcy5HUlBDLkxpYi5WMy5HZXRPcGVyYXRpb25Bc3luY1Jlc3VsdFJlc3Bv",
+            "bnNlQi+qAixGU1IuQWFzLkdSUEMuTGliLlYzLlNlcnZpY2VzLlN1Ym1vZGVs",
+            "U2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::FSRAas.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSRAas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::FSR.Aas.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSR.Aas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Reference" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Value", "Reference", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "OutputModifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Value", "Reference", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "Submodel" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Submodel" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcRequest.Parser, new[]{ "SubmodelId", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest.Parser, new[]{ "HandleId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse), global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse.Parser, new[]{ "StatusCode", "Result" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcRequest.Parser, new[]{ "SubmodelId", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetAllSubmodelElementsRpcResponse.Parser, new[]{ "StatusCode", "PagingMetaData", "Payload", "Value", "Reference", "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "OutputModifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "Payload", "Value", "Reference", "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcRequest.Parser, new[]{ "SubmodelId", "Submodel" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelRpcResponse.Parser, new[]{ "StatusCode", "Submodel" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcRequest.Parser, new[]{ "SubmodelId", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PostSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.PutSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode", "SubmodelElement" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SetSubmodelElementValueByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcRequest.Parser, new[]{ "SubmodelId", "Path" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.DeleteSubmodelElementByPathRpcResponse.Parser, new[]{ "StatusCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationSyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncRequest.Parser, new[]{ "SubmodelId", "Path", "InputArguments", "InoutputArguments", "Timestamp", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.InvokeOperationAsyncResponse.Parser, new[]{ "StatusCode", "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultRequest.Parser, new[]{ "HandleId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse), global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.GetOperationAsyncResultResponse.Parser, new[]{ "StatusCode", "Result" }, null, null, null)
           }));
     }
     #endregion
@@ -177,7 +178,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -217,9 +218,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -300,7 +301,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSRAas.GRPC.Lib.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -321,7 +322,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSRAas.GRPC.Lib.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -340,7 +341,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -381,9 +382,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelDTO payload_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelDTO Payload {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -392,9 +393,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 3;
-    private global::FSRAas.GRPC.Lib.V3.ReferenceDTO reference_;
+    private global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO reference_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.ReferenceDTO Reference {
+    public global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO Reference {
       get { return reference_; }
       set {
         reference_ = value;
@@ -484,13 +485,13 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::FSRAas.GRPC.Lib.V3.SubmodelDTO();
+          Payload = new global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO();
         }
         Payload.MergeFrom(other.Payload);
       }
       if (other.reference_ != null) {
         if (reference_ == null) {
-          Reference = new global::FSRAas.GRPC.Lib.V3.ReferenceDTO();
+          Reference = new global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO();
         }
         Reference.MergeFrom(other.Reference);
       }
@@ -511,14 +512,14 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::FSRAas.GRPC.Lib.V3.SubmodelDTO();
+              Payload = new global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO();
             }
             input.ReadMessage(Payload);
             break;
           }
           case 26: {
             if (reference_ == null) {
-              Reference = new global::FSRAas.GRPC.Lib.V3.ReferenceDTO();
+              Reference = new global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO();
             }
             input.ReadMessage(Reference);
             break;
@@ -537,7 +538,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -577,9 +578,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -660,7 +661,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSRAas.GRPC.Lib.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -681,7 +682,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSRAas.GRPC.Lib.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -700,7 +701,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -744,9 +745,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "pagingMetaData" field.</summary>
     public const int PagingMetaDataFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.Services.PagedResultPagingMetadata pagingMetaData_;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.PagedResultPagingMetadata pagingMetaData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.PagedResultPagingMetadata PagingMetaData {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.PagedResultPagingMetadata PagingMetaData {
       get { return pagingMetaData_; }
       set {
         pagingMetaData_ = value;
@@ -755,11 +756,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO> _repeated_payload_codec
-        = pb::FieldCodec.ForMessage(26, global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO> payload_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO> _repeated_payload_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO> payload_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO> Payload {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO> Payload {
       get { return payload_; }
     }
 
@@ -775,11 +776,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.ReferenceDTO> _repeated_reference_codec
-        = pb::FieldCodec.ForMessage(42, global::FSRAas.GRPC.Lib.V3.ReferenceDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.ReferenceDTO> reference_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.ReferenceDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO> _repeated_reference_codec
+        = pb::FieldCodec.ForMessage(42, global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO> reference_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.ReferenceDTO> Reference {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO> Reference {
       get { return reference_; }
     }
 
@@ -883,7 +884,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.pagingMetaData_ != null) {
         if (pagingMetaData_ == null) {
-          PagingMetaData = new global::FSRAas.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
+          PagingMetaData = new global::FSR.Aas.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
         }
         PagingMetaData.MergeFrom(other.PagingMetaData);
       }
@@ -908,7 +909,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (pagingMetaData_ == null) {
-              PagingMetaData = new global::FSRAas.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
+              PagingMetaData = new global::FSR.Aas.GRPC.Lib.V3.Services.PagedResultPagingMetadata();
             }
             input.ReadMessage(PagingMetaData);
             break;
@@ -943,7 +944,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -984,19 +985,19 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "outputModifier" field.</summary>
     public const int OutputModifierFieldNumber = 3;
-    private global::FSRAas.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier outputModifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier OutputModifier {
       get { return outputModifier_; }
       set {
         outputModifier_ = value;
@@ -1082,7 +1083,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       path_.Add(other.path_);
       if (other.outputModifier_ != null) {
         if (outputModifier_ == null) {
-          OutputModifier = new global::FSRAas.GRPC.Lib.V3.Services.OutputModifier();
+          OutputModifier = new global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier();
         }
         OutputModifier.MergeFrom(other.OutputModifier);
       }
@@ -1107,7 +1108,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 26: {
             if (outputModifier_ == null) {
-              OutputModifier = new global::FSRAas.GRPC.Lib.V3.Services.OutputModifier();
+              OutputModifier = new global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier();
             }
             input.ReadMessage(OutputModifier);
             break;
@@ -1126,7 +1127,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1169,9 +1170,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO payload_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO Payload {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -1191,9 +1192,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "reference" field.</summary>
     public const int ReferenceFieldNumber = 4;
-    private global::FSRAas.GRPC.Lib.V3.ReferenceDTO reference_;
+    private global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO reference_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.ReferenceDTO Reference {
+    public global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO Reference {
       get { return reference_; }
       set {
         reference_ = value;
@@ -1312,7 +1313,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          Payload = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         Payload.MergeFrom(other.Payload);
       }
@@ -1321,7 +1322,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.reference_ != null) {
         if (reference_ == null) {
-          Reference = new global::FSRAas.GRPC.Lib.V3.ReferenceDTO();
+          Reference = new global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO();
         }
         Reference.MergeFrom(other.Reference);
       }
@@ -1345,7 +1346,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              Payload = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(Payload);
             break;
@@ -1356,7 +1357,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 34: {
             if (reference_ == null) {
-              Reference = new global::FSRAas.GRPC.Lib.V3.ReferenceDTO();
+              Reference = new global::FSR.Aas.GRPC.Lib.V3.ReferenceDTO();
             }
             input.ReadMessage(Reference);
             break;
@@ -1379,7 +1380,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1419,9 +1420,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodel" field.</summary>
     public const int SubmodelFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelDTO submodel_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO submodel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelDTO Submodel {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO Submodel {
       get { return submodel_; }
       set {
         submodel_ = value;
@@ -1502,7 +1503,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.submodel_ != null) {
         if (submodel_ == null) {
-          Submodel = new global::FSRAas.GRPC.Lib.V3.SubmodelDTO();
+          Submodel = new global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO();
         }
         Submodel.MergeFrom(other.Submodel);
       }
@@ -1523,7 +1524,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodel_ == null) {
-              Submodel = new global::FSRAas.GRPC.Lib.V3.SubmodelDTO();
+              Submodel = new global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO();
             }
             input.ReadMessage(Submodel);
             break;
@@ -1542,7 +1543,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1582,9 +1583,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodel" field.</summary>
     public const int SubmodelFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelDTO submodel_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO submodel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelDTO Submodel {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO Submodel {
       get { return submodel_; }
       set {
         submodel_ = value;
@@ -1665,7 +1666,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.submodel_ != null) {
         if (submodel_ == null) {
-          Submodel = new global::FSRAas.GRPC.Lib.V3.SubmodelDTO();
+          Submodel = new global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO();
         }
         Submodel.MergeFrom(other.Submodel);
       }
@@ -1686,7 +1687,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodel_ == null) {
-              Submodel = new global::FSRAas.GRPC.Lib.V3.SubmodelDTO();
+              Submodel = new global::FSR.Aas.GRPC.Lib.V3.SubmodelDTO();
             }
             input.ReadMessage(Submodel);
             break;
@@ -1705,7 +1706,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1745,9 +1746,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -1828,7 +1829,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -1849,7 +1850,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -1868,7 +1869,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1908,9 +1909,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -1991,7 +1992,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2012,7 +2013,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2031,7 +2032,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2072,19 +2073,19 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 3;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2170,7 +2171,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       path_.Add(other.path_);
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2195,7 +2196,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 26: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2214,7 +2215,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2254,9 +2255,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2337,7 +2338,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2358,7 +2359,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2377,7 +2378,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2418,19 +2419,19 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 3;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2516,7 +2517,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       path_.Add(other.path_);
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2541,7 +2542,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 26: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2560,7 +2561,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2600,9 +2601,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "submodelElement" field.</summary>
     public const int SubmodelElementFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
+    private global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO submodelElement_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
+    public global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO SubmodelElement {
       get { return submodelElement_; }
       set {
         submodelElement_ = value;
@@ -2683,7 +2684,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.submodelElement_ != null) {
         if (submodelElement_ == null) {
-          SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+          SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
         }
         SubmodelElement.MergeFrom(other.SubmodelElement);
       }
@@ -2704,7 +2705,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (submodelElement_ == null) {
-              SubmodelElement = new global::FSRAas.GRPC.Lib.V3.SubmodelElementDTO();
+              SubmodelElement = new global::FSR.Aas.GRPC.Lib.V3.SubmodelElementDTO();
             }
             input.ReadMessage(SubmodelElement);
             break;
@@ -2723,7 +2724,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2764,11 +2765,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
@@ -2900,7 +2901,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3029,7 +3030,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3069,11 +3070,11 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
@@ -3178,7 +3179,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3307,7 +3308,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3351,31 +3352,31 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "inputArguments" field.</summary>
     public const int InputArgumentsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inputArguments_codec
-        = pb::FieldCodec.ForMessage(26, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inputArguments_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inputArguments_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> inputArguments_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InputArguments {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> InputArguments {
       get { return inputArguments_; }
     }
 
     /// <summary>Field number for the "inoutputArguments" field.</summary>
     public const int InoutputArgumentsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
-        = pb::FieldCodec.ForMessage(34, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
+        = pb::FieldCodec.ForMessage(34, global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
       get { return inoutputArguments_; }
     }
 
@@ -3552,7 +3553,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3592,9 +3593,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.Services.OperationResult payload_;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OperationResult Payload {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult Payload {
       get { return payload_; }
       set {
         payload_ = value;
@@ -3675,7 +3676,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.payload_ != null) {
         if (payload_ == null) {
-          Payload = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+          Payload = new global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult();
         }
         Payload.MergeFrom(other.Payload);
       }
@@ -3696,7 +3697,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (payload_ == null) {
-              Payload = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+              Payload = new global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult();
             }
             input.ReadMessage(Payload);
             break;
@@ -3715,7 +3716,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3759,31 +3760,31 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(18, global::FSRAas.GRPC.Lib.V3.KeyDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.KeyDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> path_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.KeyDTO> Path {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.KeyDTO> Path {
       get { return path_; }
     }
 
     /// <summary>Field number for the "inputArguments" field.</summary>
     public const int InputArgumentsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inputArguments_codec
-        = pb::FieldCodec.ForMessage(26, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inputArguments_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inputArguments_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> inputArguments_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InputArguments {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> InputArguments {
       get { return inputArguments_; }
     }
 
     /// <summary>Field number for the "inoutputArguments" field.</summary>
     public const int InoutputArgumentsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
-        = pb::FieldCodec.ForMessage(34, global::FSRAas.GRPC.Lib.V3.OperationVariableDTO.Parser);
-    private readonly pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO>();
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
+        = pb::FieldCodec.ForMessage(34, global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::FSRAas.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
       get { return inoutputArguments_; }
     }
 
@@ -3960,7 +3961,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4117,7 +4118,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4246,7 +4247,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.SubmodelService.SubmodelServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4286,9 +4287,9 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
 
     /// <summary>Field number for the "result" field.</summary>
     public const int ResultFieldNumber = 2;
-    private global::FSRAas.GRPC.Lib.V3.Services.OperationResult result_;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult result_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OperationResult Result {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult Result {
       get { return result_; }
       set {
         result_ = value;
@@ -4369,7 +4370,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
       }
       if (other.result_ != null) {
         if (result_ == null) {
-          Result = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+          Result = new global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult();
         }
         Result.MergeFrom(other.Result);
       }
@@ -4390,7 +4391,7 @@ namespace FSRAas.GRPC.Lib.V3.Services.SubmodelService {
           }
           case 18: {
             if (result_ == null) {
-              Result = new global::FSRAas.GRPC.Lib.V3.Services.OperationResult();
+              Result = new global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult();
             }
             input.ReadMessage(Result);
             break;

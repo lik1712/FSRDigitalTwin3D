@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using FSRAas.GRPC.Lib.V3;
-using FSRAas.GRPC.Lib.V3.Services;
-using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
-using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
-using FSRAas.GRPC.Lib.V3.Services.SubmodelService;
-using FSRAas.GRPC.Lib.V3.Services.Operational;
+using FSR.Aas.GRPC.Lib.V3;
+using FSR.Aas.GRPC.Lib.V3.Services;
+using FSR.Aas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
+using FSR.Aas.GRPC.Lib.V3.Services.SubmodelRepository;
+using FSR.Aas.GRPC.Lib.V3.Services.SubmodelService;
+using FSR.Aas.GRPC.Lib.V3.Services.Operational;
 using FSR.Workspace.Digital.Services;
 using Grpc.Core;
 using UnityEngine;
@@ -24,7 +24,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 
     public Channel RpcChannel { get; }
     public AdminShellApiServiceClient AasApiClient { get; }
-    public VirtualLayerOperationService.VirtualLayerOperationServiceClient Operational { get; }
+    public DigitalTwinLayerOperationalService.DigitalTwinLayerOperationalServiceClient Operational { get; }
 
     public DigitalWorkspaceBridge() {
         RpcChannel = new Channel(digitalWorkspaceAddr, digitalWorkspacePort, ChannelCredentials.Insecure);
@@ -45,7 +45,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 // Test Requests to AAS
 // ============================================================= //
 public class DigitalWorkspaceExampleRequests {
-    public static async Task RunSyncInvokeRequest(AdminShellApiServiceClient client, VirtualLayerOperationService.VirtualLayerOperationServiceClient operational, Channel channel) {
+    public static async Task RunSyncInvokeRequest(AdminShellApiServiceClient client, DigitalTwinLayerOperationalService.DigitalTwinLayerOperationalServiceClient operational, Channel channel) {
         // Thread simulatedExternalRequest = new(() => {
         //     InvokeOperationSyncRequest invokeRequest = new() {
         //         SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FSR.Workspace.Digital.Services;
-using FSRAas.GRPC.Lib.V3;
-using FSRAas.GRPC.Lib.V3.Services;
-using FSRAas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
-using FSRAas.GRPC.Lib.V3.Services.SubmodelRepository;
+using FSR.Aas.GRPC.Lib.V3;
+using FSR.Aas.GRPC.Lib.V3.Services;
+using FSR.Aas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
+using FSR.Aas.GRPC.Lib.V3.Services.SubmodelRepository;
 using UnityEngine;
 
 namespace FSR.Workspace.Digital.UI {

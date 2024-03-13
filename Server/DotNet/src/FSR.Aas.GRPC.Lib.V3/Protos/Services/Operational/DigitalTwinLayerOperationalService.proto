@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+option csharp_namespace = "FSR.Aas.GRPC.Lib.V3.Services.Operational";
+
+import "Protos/AasModels.V3.proto";
+import "Protos/AasApiModels.V3.proto";
+
+package FSR.Aas.GRPC.Lib.V3.Operational;
+
+/* DigitalTwinLayerOperationalService */
+
+message OperationInvokeRequest {
+    string requestId = 1;
+    repeated OperationVariableDTO inputVariables = 2;
+    repeated OperationVariableDTO inoutVariables = 3;
+    int64 timestamp = 4;
+    bool isAsync = 5;
+    string handleId = 6;
+}
+
+message OperationRequest {
+    string requestId = 1;
+}
+
+message OperationStatus {
+    string requestId = 1;
+    ExecutionState executionState = 2;
+}
+
+message CloseRequest {
+
+}
+message CloseResponse {
+    
+}
+
+service DigitalTwinLayerOperationalService {
+    rpc OpenOperationInvocationStream (stream OperationStatus) returns (stream OperationInvokeRequest);
+    rpc OpenOperationResultStream (stream OperationResult) returns (stream OperationRequest);
+    rpc OpenExecutionStateStream (stream OperationStatus) returns (stream OperationRequest);
+
+    rpc CloseStreamsAndDisconnect (CloseRequest) returns (CloseResponse);
+}
