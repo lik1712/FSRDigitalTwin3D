@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../aasx/src/IO.Swagger.Lib.V3/IO.Swagger.Lib.V3.csproj" />
+    <ProjectReference Include="../../aasx/src/IO.Swagger.Registry.Lib.V3/IO.Swagger.registry.Lib.V3.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos/AasModels.V3.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/AasApiModels.V3.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/AdminShellRepositoryService.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/SubmodelRepositoryService.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/AssetAdministrationShellService.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/SubmodelService.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/Operational/DigitalTwinLayerOperationalService.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+</Project>

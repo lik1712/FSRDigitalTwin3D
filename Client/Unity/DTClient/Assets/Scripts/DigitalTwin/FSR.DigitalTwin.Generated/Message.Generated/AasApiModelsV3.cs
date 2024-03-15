@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace FSRAas.GRPC.Lib.V3.Services {
+namespace FSR.Aas.GRPC.Lib.V3.Services {
 
   /// <summary>Holder for reflection information generated from Protos/AasApiModels.V3.proto</summary>
   public static partial class AasApiModelsV3Reflection {
@@ -24,25 +24,37 @@ namespace FSRAas.GRPC.Lib.V3.Services {
     static AasApiModelsV3Reflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxQcm90b3MvQWFzQXBpTW9kZWxzLlYzLnByb3RvEhJGU1JBYXMuR1JQQy5M",
-            "aWIuVjMiKwoZUGFnZWRSZXN1bHRQYWdpbmdNZXRhZGF0YRIOCgZjdXJzb3IY",
-            "ASABKAkixQEKDk91dHB1dE1vZGlmaWVyEg4KBmN1cnNvchgBIAEoCRINCgVs",
-            "aW1pdBgCIAEoBRIuCgVsZXZlbBgDIAEoDjIfLkZTUkFhcy5HUlBDLkxpYi5W",
-            "My5PdXRwdXRMZXZlbBIyCgdjb250ZW50GAQgASgOMiEuRlNSQWFzLkdSUEMu",
-            "TGliLlYzLk91dHB1dENvbnRlbnQSMAoGZXh0ZW50GAUgASgOMiAuRlNSQWFz",
-            "LkdSUEMuTGliLlYzLk91dHB1dEV4dGVudCo7CgtPdXRwdXRMZXZlbBIVChFP",
-            "VVRQVVRfTEVWRUxfREVFUBAAEhUKEU9VVFBVVF9MRVZFTF9DT1JFEAEqewoN",
-            "T3V0cHV0Q29udGVudBIZChVPVVRQVVRfQ09OVEVOVF9OT1JNQUwQABIYChRP",
-            "VVRQVVRfQ09OVEVOVF9WQUxVRRABEhwKGE9VVFBVVF9DT05URU5UX1JFRkVS",
-            "RU5DRRACEhcKE09VVFBVVF9DT05URU5UX1BBVEgQAypXCgxPdXRwdXRFeHRl",
-            "bnQSJAogT1VUUFVUX0VYVEVOVF9XSVRIT1VUX0JMT0JfVkFMVUUQABIhCh1P",
-            "VVRQVVRfRVhURU5UX1dJVEhfQkxPQl9WQUxVRRABQh6qAhtGU1JBYXMuR1JQ",
-            "Qy5MaWIuVjMuU2VydmljZXNiBnByb3RvMw=="));
+            "ChxQcm90b3MvQWFzQXBpTW9kZWxzLlYzLnByb3RvEhNGU1IuQWFzLkdSUEMu",
+            "TGliLlYzGhlQcm90b3MvQWFzTW9kZWxzLlYzLnByb3RvIisKGVBhZ2VkUmVz",
+            "dWx0UGFnaW5nTWV0YWRhdGESDgoGY3Vyc29yGAEgASgJIsgBCg5PdXRwdXRN",
+            "b2RpZmllchIOCgZjdXJzb3IYASABKAkSDQoFbGltaXQYAiABKAUSLwoFbGV2",
+            "ZWwYAyABKA4yIC5GU1IuQWFzLkdSUEMuTGliLlYzLk91dHB1dExldmVsEjMK",
+            "B2NvbnRlbnQYBCABKA4yIi5GU1IuQWFzLkdSUEMuTGliLlYzLk91dHB1dENv",
+            "bnRlbnQSMQoGZXh0ZW50GAUgASgOMiEuRlNSLkFhcy5HUlBDLkxpYi5WMy5P",
+            "dXRwdXRFeHRlbnQijQIKD09wZXJhdGlvblJlc3VsdBIRCglyZXF1ZXN0SWQY",
+            "ASABKAkSQgoPb3V0cHV0QXJndW1lbnRzGAIgAygLMikuRlNSLkFhcy5HUlBD",
+            "LkxpYi5WMy5PcGVyYXRpb25WYXJpYWJsZURUTxJEChFpbm91dHB1dEFyZ3Vt",
+            "ZW50cxgDIAMoCzIpLkZTUi5BYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uVmFy",
+            "aWFibGVEVE8SDwoHc3VjY2VzcxgEIAEoCBIPCgdtZXNzYWdlGAUgASgJEjsK",
+            "DmV4ZWN1dGlvblN0YXRlGAYgASgOMiMuRlNSLkFhcy5HUlBDLkxpYi5WMy5F",
+            "eGVjdXRpb25TdGF0ZSo7CgtPdXRwdXRMZXZlbBIVChFPVVRQVVRfTEVWRUxf",
+            "REVFUBAAEhUKEU9VVFBVVF9MRVZFTF9DT1JFEAEqewoNT3V0cHV0Q29udGVu",
+            "dBIZChVPVVRQVVRfQ09OVEVOVF9OT1JNQUwQABIYChRPVVRQVVRfQ09OVEVO",
+            "VF9WQUxVRRABEhwKGE9VVFBVVF9DT05URU5UX1JFRkVSRU5DRRACEhcKE09V",
+            "VFBVVF9DT05URU5UX1BBVEgQAypXCgxPdXRwdXRFeHRlbnQSJAogT1VUUFVU",
+            "X0VYVEVOVF9XSVRIT1VUX0JMT0JfVkFMVUUQABIhCh1PVVRQVVRfRVhURU5U",
+            "X1dJVEhfQkxPQl9WQUxVRRABKsIBCg5FeGVjdXRpb25TdGF0ZRIdChlFWEVD",
+            "VVRJT05fU1RBVEVfSU5JVElBVEVEEAASGwoXRVhFQ1VUSU9OX1NUQVRFX1JV",
+            "Tk5JTkcQARIdChlFWEVDVVRJT05fU1RBVEVfQ09NUExFVEVEEAISHAoYRVhF",
+            "Q1VUSU9OX1NUQVRFX0NBTkNFTEVEEAMSGgoWRVhFQ1VUSU9OX1NUQVRFX0ZB",
+            "SUxFRBAEEhsKF0VYRUNVVElPTl9TVEFURV9USU1FT1VUEAVCH6oCHEZTUi5B",
+            "YXMuR1JQQy5MaWIuVjMuU2VydmljZXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::FSRAas.GRPC.Lib.V3.Services.OutputLevel), typeof(global::FSRAas.GRPC.Lib.V3.Services.OutputContent), typeof(global::FSRAas.GRPC.Lib.V3.Services.OutputExtent), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.PagedResultPagingMetadata), global::FSRAas.GRPC.Lib.V3.Services.PagedResultPagingMetadata.Parser, new[]{ "Cursor" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSRAas.GRPC.Lib.V3.Services.OutputModifier), global::FSRAas.GRPC.Lib.V3.Services.OutputModifier.Parser, new[]{ "Cursor", "Limit", "Level", "Content", "Extent" }, null, null, null)
+          new pbr::FileDescriptor[] { global::FSR.Aas.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::FSR.Aas.GRPC.Lib.V3.Services.OutputLevel), typeof(global::FSR.Aas.GRPC.Lib.V3.Services.OutputContent), typeof(global::FSR.Aas.GRPC.Lib.V3.Services.OutputExtent), typeof(global::FSR.Aas.GRPC.Lib.V3.Services.ExecutionState), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.PagedResultPagingMetadata), global::FSR.Aas.GRPC.Lib.V3.Services.PagedResultPagingMetadata.Parser, new[]{ "Cursor" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier), global::FSR.Aas.GRPC.Lib.V3.Services.OutputModifier.Parser, new[]{ "Cursor", "Limit", "Level", "Content", "Extent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult), global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult.Parser, new[]{ "RequestId", "OutputArguments", "InoutputArguments", "Success", "Message", "ExecutionState" }, null, null, null)
           }));
     }
     #endregion
@@ -66,6 +78,15 @@ namespace FSRAas.GRPC.Lib.V3.Services {
     [pbr::OriginalName("OUTPUT_EXTENT_WITH_BLOB_VALUE")] WithBlobValue = 1,
   }
 
+  public enum ExecutionState {
+    [pbr::OriginalName("EXECUTION_STATE_INITIATED")] Initiated = 0,
+    [pbr::OriginalName("EXECUTION_STATE_RUNNING")] Running = 1,
+    [pbr::OriginalName("EXECUTION_STATE_COMPLETED")] Completed = 2,
+    [pbr::OriginalName("EXECUTION_STATE_CANCELED")] Canceled = 3,
+    [pbr::OriginalName("EXECUTION_STATE_FAILED")] Failed = 4,
+    [pbr::OriginalName("EXECUTION_STATE_TIMEOUT")] Timeout = 5,
+  }
+
   #endregion
 
   #region Messages
@@ -77,7 +98,7 @@ namespace FSRAas.GRPC.Lib.V3.Services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor.MessageTypes[0]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -206,7 +227,7 @@ namespace FSRAas.GRPC.Lib.V3.Services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSRAas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor.MessageTypes[1]; }
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -260,9 +281,9 @@ namespace FSRAas.GRPC.Lib.V3.Services {
 
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 3;
-    private global::FSRAas.GRPC.Lib.V3.Services.OutputLevel level_ = 0;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OutputLevel level_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OutputLevel Level {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OutputLevel Level {
       get { return level_; }
       set {
         level_ = value;
@@ -271,9 +292,9 @@ namespace FSRAas.GRPC.Lib.V3.Services {
 
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 4;
-    private global::FSRAas.GRPC.Lib.V3.Services.OutputContent content_ = 0;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OutputContent content_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OutputContent Content {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OutputContent Content {
       get { return content_; }
       set {
         content_ = value;
@@ -282,9 +303,9 @@ namespace FSRAas.GRPC.Lib.V3.Services {
 
     /// <summary>Field number for the "extent" field.</summary>
     public const int ExtentFieldNumber = 5;
-    private global::FSRAas.GRPC.Lib.V3.Services.OutputExtent extent_ = 0;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.OutputExtent extent_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::FSRAas.GRPC.Lib.V3.Services.OutputExtent Extent {
+    public global::FSR.Aas.GRPC.Lib.V3.Services.OutputExtent Extent {
       get { return extent_; }
       set {
         extent_ = value;
@@ -422,15 +443,268 @@ namespace FSRAas.GRPC.Lib.V3.Services {
             break;
           }
           case 24: {
-            Level = (global::FSRAas.GRPC.Lib.V3.Services.OutputLevel) input.ReadEnum();
+            Level = (global::FSR.Aas.GRPC.Lib.V3.Services.OutputLevel) input.ReadEnum();
             break;
           }
           case 32: {
-            Content = (global::FSRAas.GRPC.Lib.V3.Services.OutputContent) input.ReadEnum();
+            Content = (global::FSR.Aas.GRPC.Lib.V3.Services.OutputContent) input.ReadEnum();
             break;
           }
           case 40: {
-            Extent = (global::FSRAas.GRPC.Lib.V3.Services.OutputExtent) input.ReadEnum();
+            Extent = (global::FSR.Aas.GRPC.Lib.V3.Services.OutputExtent) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class OperationResult : pb::IMessage<OperationResult> {
+    private static readonly pb::MessageParser<OperationResult> _parser = new pb::MessageParser<OperationResult>(() => new OperationResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OperationResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::FSR.Aas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OperationResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OperationResult(OperationResult other) : this() {
+      requestId_ = other.requestId_;
+      outputArguments_ = other.outputArguments_.Clone();
+      inoutputArguments_ = other.inoutputArguments_.Clone();
+      success_ = other.success_;
+      message_ = other.message_;
+      executionState_ = other.executionState_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OperationResult Clone() {
+      return new OperationResult(this);
+    }
+
+    /// <summary>Field number for the "requestId" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private string requestId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "outputArguments" field.</summary>
+    public const int OutputArgumentsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> _repeated_outputArguments_codec
+        = pb::FieldCodec.ForMessage(18, global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> outputArguments_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> OutputArguments {
+      get { return outputArguments_; }
+    }
+
+    /// <summary>Field number for the "inoutputArguments" field.</summary>
+    public const int InoutputArgumentsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> _repeated_inoutputArguments_codec
+        = pb::FieldCodec.ForMessage(26, global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO.Parser);
+    private readonly pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> inoutputArguments_ = new pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::FSR.Aas.GRPC.Lib.V3.OperationVariableDTO> InoutputArguments {
+      get { return inoutputArguments_; }
+    }
+
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 4;
+    private bool success_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Success {
+      get { return success_; }
+      set {
+        success_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 5;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "executionState" field.</summary>
+    public const int ExecutionStateFieldNumber = 6;
+    private global::FSR.Aas.GRPC.Lib.V3.Services.ExecutionState executionState_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::FSR.Aas.GRPC.Lib.V3.Services.ExecutionState ExecutionState {
+      get { return executionState_; }
+      set {
+        executionState_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OperationResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OperationResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      if(!outputArguments_.Equals(other.outputArguments_)) return false;
+      if(!inoutputArguments_.Equals(other.inoutputArguments_)) return false;
+      if (Success != other.Success) return false;
+      if (Message != other.Message) return false;
+      if (ExecutionState != other.ExecutionState) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      hash ^= outputArguments_.GetHashCode();
+      hash ^= inoutputArguments_.GetHashCode();
+      if (Success != false) hash ^= Success.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (ExecutionState != 0) hash ^= ExecutionState.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RequestId);
+      }
+      outputArguments_.WriteTo(output, _repeated_outputArguments_codec);
+      inoutputArguments_.WriteTo(output, _repeated_inoutputArguments_codec);
+      if (Success != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Success);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Message);
+      }
+      if (ExecutionState != 0) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) ExecutionState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      size += outputArguments_.CalculateSize(_repeated_outputArguments_codec);
+      size += inoutputArguments_.CalculateSize(_repeated_inoutputArguments_codec);
+      if (Success != false) {
+        size += 1 + 1;
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (ExecutionState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExecutionState);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OperationResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      outputArguments_.Add(other.outputArguments_);
+      inoutputArguments_.Add(other.inoutputArguments_);
+      if (other.Success != false) {
+        Success = other.Success;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      if (other.ExecutionState != 0) {
+        ExecutionState = other.ExecutionState;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 18: {
+            outputArguments_.AddEntriesFrom(input, _repeated_outputArguments_codec);
+            break;
+          }
+          case 26: {
+            inoutputArguments_.AddEntriesFrom(input, _repeated_inoutputArguments_codec);
+            break;
+          }
+          case 32: {
+            Success = input.ReadBool();
+            break;
+          }
+          case 42: {
+            Message = input.ReadString();
+            break;
+          }
+          case 48: {
+            ExecutionState = (global::FSR.Aas.GRPC.Lib.V3.Services.ExecutionState) input.ReadEnum();
             break;
           }
         }

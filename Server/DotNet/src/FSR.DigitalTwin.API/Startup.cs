@@ -1,8 +1,6 @@
 ﻿//var builder = WebApplication.CreateBuilder(args);
 //var app = builder.Build();
 
-using AasCore.Aas3_0;
-using AasOperationInvocation;
 using AasSecurity;
 using AasxServer;
 using AasxServerStandardBib.Extensions;
@@ -10,8 +8,12 @@ using AasxServerStandardBib.Interfaces;
 using AasxServerStandardBib.Logging;
 using AasxServerStandardBib.Services;
 using AdminShellNS;
-using FSRAas.GRPC.Lib.V3.Common;
-using FSRAas.GRPC.Lib.V3.Common.Utils;
+using FSR.DigitalTwin.App;
+using FSR.DigitalTwin.App.Common.Interfaces;
+using FSR.Aas.GRPC.Lib.V3.Common;
+using FSR.Aas.GRPC.Lib.V3.Common.Utils;
+using FSR.DigitalTwinLayer.GRPC.Lib;
+using FSR.DigitalTwinLayer.GRPC.Lib.Services;
 using IO.Swagger.Controllers;
 using IO.Swagger.Lib.V3.Formatters;
 using IO.Swagger.Lib.V3.Interfaces;
@@ -28,6 +30,9 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
+using FSR.DigitalTwin.App.Interfaces;
+using FSR.DigitalTwin.App.Services;
+using FSR.DigitalTwinLayer.GRPC.Lib.Common.Utils;
 
 internal class Startup
 {
@@ -96,6 +101,8 @@ internal class Startup
         services.AddTransient<IAasRegistryService, AasRegistryService>();
         services.AddTransient<IAasDescriptorPaginationService, AasDescriptorPaginationService>();
         services.AddTransient<IOperationReceiver, OperationReceiver>();
+        
+        FSR.DigitalTwinLayer.GRPC.Lib.Common.Utils.DependencyInjection.AddServices(services);
 
         // Add GraphQL services
         services
@@ -214,7 +221,8 @@ internal class Startup
         {
             endpoints.MapControllers();
             endpoints.MapGet("/", () => "*** Welcome to FORSocialRobots Digital Twin Framework! ***");
-            endpoints.MapGrpcServices();
+            endpoints.MapAasGrpcServices();
+            endpoints.MapDTLayerGrpcServices();
         });
 
 

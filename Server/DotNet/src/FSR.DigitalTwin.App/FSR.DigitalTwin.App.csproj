@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../FSR.DigitalTwin.Domain/FSR.DigitalTwin.Domain.csproj" />
-    <ProjectReference Include="../FSRAas.GRPC.Lib.V3/FSRAas.GRPC.Lib.V3.csproj" />
+    <ProjectReference Include="../FSR.Aas.GRPC.Lib.V3/FSR.Aas.GRPC.Lib.V3.csproj" />
   </ItemGroup>
 
 </Project>

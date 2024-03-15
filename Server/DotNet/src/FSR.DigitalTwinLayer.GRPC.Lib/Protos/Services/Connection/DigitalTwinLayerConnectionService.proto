@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "FSR.DigitalTwinLayer.GRPC.Lib.Services.Connection";
+
+package FSR.DigitalTwinLayer.GRPC.Lib;
+
+import "Protos/DigitalTwinLayerModels.proto";
+
+/* DT Layer Models */
+
+message ConnectRequest {
+    DigitalTwinLayerType type = 1;
+    string info = 2;
+}
+message ConnectResponse {
+    bool success = 1;
+    string message = 2;
+    string layerId = 3;
+}
+
+message AbortConnectionRequest {
+    string layerId = 1;
+    DigitalTwinLayerType type = 2;
+}
+message AbortConnectionResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+service DigitalTwinLayerConnectionService {
+    rpc Connect (ConnectRequest) returns (ConnectResponse);
+    rpc AbortConnection (AbortConnectionRequest) returns (AbortConnectionResponse);
+}
