@@ -16,8 +16,6 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
     static readonly grpc::Marshaller<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest> __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_OperationInvokeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult> __Marshaller_FSR_Aas_GRPC_Lib_V3_OperationResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest> __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_OperationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest> __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_CloseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse> __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_CloseResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest> __Method_OpenOperationInvocationStream = new grpc::Method<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest>(
         grpc::MethodType.DuplexStreaming,
@@ -40,13 +38,6 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
         __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_OperationStatus,
         __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_OperationRequest);
 
-    static readonly grpc::Method<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse> __Method_CloseStreamsAndDisconnect = new grpc::Method<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CloseStreamsAndDisconnect",
-        __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_CloseRequest,
-        __Marshaller_FSR_Aas_GRPC_Lib_V3_Operational_CloseResponse);
-
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -68,11 +59,6 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
       }
 
       public virtual global::System.Threading.Tasks.Task OpenExecutionStateStream(grpc::IAsyncStreamReader<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus> requestStream, grpc::IServerStreamWriter<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest> responseStream, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse> CloseStreamsAndDisconnect(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -126,22 +112,6 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_OpenExecutionStateStream, null, options);
       }
-      public virtual global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse CloseStreamsAndDisconnect(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CloseStreamsAndDisconnect(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse CloseStreamsAndDisconnect(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CloseStreamsAndDisconnect, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse> CloseStreamsAndDisconnectAsync(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CloseStreamsAndDisconnectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse> CloseStreamsAndDisconnectAsync(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CloseStreamsAndDisconnect, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DigitalTwinLayerOperationalServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -156,8 +126,7 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_OpenOperationInvocationStream, serviceImpl.OpenOperationInvocationStream)
           .AddMethod(__Method_OpenOperationResultStream, serviceImpl.OpenOperationResultStream)
-          .AddMethod(__Method_OpenExecutionStateStream, serviceImpl.OpenExecutionStateStream)
-          .AddMethod(__Method_CloseStreamsAndDisconnect, serviceImpl.CloseStreamsAndDisconnect).Build();
+          .AddMethod(__Method_OpenExecutionStateStream, serviceImpl.OpenExecutionStateStream).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -169,7 +138,6 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
       serviceBinder.AddMethod(__Method_OpenOperationInvocationStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest>(serviceImpl.OpenOperationInvocationStream));
       serviceBinder.AddMethod(__Method_OpenOperationResultStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSR.Aas.GRPC.Lib.V3.Services.OperationResult, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest>(serviceImpl.OpenOperationResultStream));
       serviceBinder.AddMethod(__Method_OpenExecutionStateStream, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest>(serviceImpl.OpenExecutionStateStream));
-      serviceBinder.AddMethod(__Method_CloseStreamsAndDisconnect, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest, global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse>(serviceImpl.CloseStreamsAndDisconnect));
     }
 
   }

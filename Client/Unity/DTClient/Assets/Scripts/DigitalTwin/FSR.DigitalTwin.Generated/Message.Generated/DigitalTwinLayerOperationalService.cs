@@ -35,30 +35,24 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
             "DwoHaXNBc3luYxgFIAEoCBIQCghoYW5kbGVJZBgGIAEoCSIlChBPcGVyYXRp",
             "b25SZXF1ZXN0EhEKCXJlcXVlc3RJZBgBIAEoCSJhCg9PcGVyYXRpb25TdGF0",
             "dXMSEQoJcmVxdWVzdElkGAEgASgJEjsKDmV4ZWN1dGlvblN0YXRlGAIgASgO",
-            "MiMuRlNSLkFhcy5HUlBDLkxpYi5WMy5FeGVjdXRpb25TdGF0ZSIOCgxDbG9z",
-            "ZVJlcXVlc3QiDwoNQ2xvc2VSZXNwb25zZTKxBAoiRGlnaXRhbFR3aW5MYXll",
-            "ck9wZXJhdGlvbmFsU2VydmljZRKOAQodT3Blbk9wZXJhdGlvbkludm9jYXRp",
-            "b25TdHJlYW0SMC5GU1IuQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvbmFsLk9w",
-            "ZXJhdGlvblN0YXR1cxo3LkZTUi5BYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9u",
-            "YWwuT3BlcmF0aW9uSW52b2tlUmVxdWVzdCgBMAESeAoZT3Blbk9wZXJhdGlv",
-            "blJlc3VsdFN0cmVhbRIkLkZTUi5BYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9u",
-            "UmVzdWx0GjEuRlNSLkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25hbC5PcGVy",
-            "YXRpb25SZXF1ZXN0KAEwARKDAQoYT3BlbkV4ZWN1dGlvblN0YXRlU3RyZWFt",
-            "EjAuRlNSLkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25hbC5PcGVyYXRpb25T",
-            "dGF0dXMaMS5GU1IuQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvbmFsLk9wZXJh",
-            "dGlvblJlcXVlc3QoATABEnoKGUNsb3NlU3RyZWFtc0FuZERpc2Nvbm5lY3QS",
-            "LS5GU1IuQWFzLkdSUEMuTGliLlYzLk9wZXJhdGlvbmFsLkNsb3NlUmVxdWVz",
-            "dBouLkZTUi5BYXMuR1JQQy5MaWIuVjMuT3BlcmF0aW9uYWwuQ2xvc2VSZXNw",
-            "b25zZUIrqgIoRlNSLkFhcy5HUlBDLkxpYi5WMy5TZXJ2aWNlcy5PcGVyYXRp",
-            "b25hbGIGcHJvdG8z"));
+            "MiMuRlNSLkFhcy5HUlBDLkxpYi5WMy5FeGVjdXRpb25TdGF0ZTK1AwoiRGln",
+            "aXRhbFR3aW5MYXllck9wZXJhdGlvbmFsU2VydmljZRKOAQodT3Blbk9wZXJh",
+            "dGlvbkludm9jYXRpb25TdHJlYW0SMC5GU1IuQWFzLkdSUEMuTGliLlYzLk9w",
+            "ZXJhdGlvbmFsLk9wZXJhdGlvblN0YXR1cxo3LkZTUi5BYXMuR1JQQy5MaWIu",
+            "VjMuT3BlcmF0aW9uYWwuT3BlcmF0aW9uSW52b2tlUmVxdWVzdCgBMAESeAoZ",
+            "T3Blbk9wZXJhdGlvblJlc3VsdFN0cmVhbRIkLkZTUi5BYXMuR1JQQy5MaWIu",
+            "VjMuT3BlcmF0aW9uUmVzdWx0GjEuRlNSLkFhcy5HUlBDLkxpYi5WMy5PcGVy",
+            "YXRpb25hbC5PcGVyYXRpb25SZXF1ZXN0KAEwARKDAQoYT3BlbkV4ZWN1dGlv",
+            "blN0YXRlU3RyZWFtEjAuRlNSLkFhcy5HUlBDLkxpYi5WMy5PcGVyYXRpb25h",
+            "bC5PcGVyYXRpb25TdGF0dXMaMS5GU1IuQWFzLkdSUEMuTGliLlYzLk9wZXJh",
+            "dGlvbmFsLk9wZXJhdGlvblJlcXVlc3QoATABQiuqAihGU1IuQWFzLkdSUEMu",
+            "TGliLlYzLlNlcnZpY2VzLk9wZXJhdGlvbmFsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::FSR.Aas.GRPC.Lib.V3.AasModelsV3Reflection.Descriptor, global::FSR.Aas.GRPC.Lib.V3.Services.AasApiModelsV3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationInvokeRequest.Parser, new[]{ "RequestId", "InputVariables", "InoutVariables", "Timestamp", "IsAsync", "HandleId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationRequest.Parser, new[]{ "RequestId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus.Parser, new[]{ "RequestId", "ExecutionState" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseRequest.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.CloseResponse.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus), global::FSR.Aas.GRPC.Lib.V3.Services.Operational.OperationStatus.Parser, new[]{ "RequestId", "ExecutionState" }, null, null, null)
           }));
     }
     #endregion
@@ -598,208 +592,6 @@ namespace FSR.Aas.GRPC.Lib.V3.Services.Operational {
             ExecutionState = (global::FSR.Aas.GRPC.Lib.V3.Services.ExecutionState) input.ReadEnum();
             break;
           }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class CloseRequest : pb::IMessage<CloseRequest> {
-    private static readonly pb::MessageParser<CloseRequest> _parser = new pb::MessageParser<CloseRequest>(() => new CloseRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CloseRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.Aas.GRPC.Lib.V3.Services.Operational.DigitalTwinLayerOperationalServiceReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CloseRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CloseRequest(CloseRequest other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CloseRequest Clone() {
-      return new CloseRequest(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as CloseRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CloseRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CloseRequest other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class CloseResponse : pb::IMessage<CloseResponse> {
-    private static readonly pb::MessageParser<CloseResponse> _parser = new pb::MessageParser<CloseResponse>(() => new CloseResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CloseResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::FSR.Aas.GRPC.Lib.V3.Services.Operational.DigitalTwinLayerOperationalServiceReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CloseResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CloseResponse(CloseResponse other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CloseResponse Clone() {
-      return new CloseResponse(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as CloseResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CloseResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CloseResponse other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
         }
       }
     }

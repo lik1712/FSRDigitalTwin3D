@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "FSR.DigitalTwinLayer.GRPC.Lib";
+
+package FSR.DigitalTwinLayer.GRPC.Lib;
+
+/* DT Layer Models */
+
+enum DigitalTwinLayerType {
+    DT_LAYER_TYPE_VIRTUAL = 0;
+    DT_LAYER_TYPE_PHYSICAL = 1;
+}

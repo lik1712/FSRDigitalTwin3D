@@ -13,9 +13,6 @@ public class DigitalTwinLayerOperationalRpcService : DigitalTwinLayerOperational
     public DigitalTwinLayerOperationalRpcService(IMapper mapper, IDigitalTwinLayerService layerService) {
         _mapper = mapper ?? throw new NullReferenceException();
         _layerService = layerService ?? throw new NullReferenceException();
-        if (!_layerService.HasLayer(_layerService.Mode)) { // TODO Remove later!
-            _layerService.AddLayer<DigitalTwinLayerRpcBridge>(_layerService.Mode);
-        }
     }
 
     public override async Task OpenOperationInvocationStream(Grpc.Core.IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationInvokeRequest> responseStream, ServerCallContext context)
@@ -58,11 +55,5 @@ public class DigitalTwinLayerOperationalRpcService : DigitalTwinLayerOperational
 
         Console.WriteLine("[Server]: Done!");
     }
-
-    public override Task<CloseResponse> CloseStreamsAndDisconnect(CloseRequest request, ServerCallContext context)
-    {
-        Console.WriteLine("[Server]: Closing connection to client...");
-        _layerService.RemoveLayer(_layerService.Mode);
-        return Task.FromResult(new CloseResponse());
-    }
+    
 }

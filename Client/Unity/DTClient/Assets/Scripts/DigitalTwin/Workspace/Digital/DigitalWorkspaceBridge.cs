@@ -15,6 +15,10 @@ using System.IO;
 using UnityEngine.UIElements;
 using System.Threading;
 
+using Operational = FSR.Aas.GRPC.Lib.V3.Services.Operational.DigitalTwinLayerOperationalService.DigitalTwinLayerOperationalServiceClient;
+using Connection = FSR.DigitalTwinLayer.GRPC.Lib.Services.Connection.DigitalTwinLayerConnectionService.DigitalTwinLayerConnectionServiceClient;
+using FSR.DigitalTwinLayer.GRPC.Lib.Services.Connection;
+
 namespace FSR.Workspace.Digital {
 
 public class DigitalWorkspaceBridge : MonoBehaviour
@@ -24,17 +28,19 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 
     public Channel RpcChannel { get; }
     public AdminShellApiServiceClient AasApiClient { get; }
-    public DigitalTwinLayerOperationalService.DigitalTwinLayerOperationalServiceClient Operational { get; }
+    public Operational Operational { get; }
+    public Connection Connection { get; }
 
     public DigitalWorkspaceBridge() {
         RpcChannel = new Channel(digitalWorkspaceAddr, digitalWorkspacePort, ChannelCredentials.Insecure);
         AasApiClient = new AdminShellApiServiceClient(RpcChannel);
         Operational = new(RpcChannel);
+        Connection = new(RpcChannel);
     }
 
     async void Start() {
         Debug.Log("Running data channel test...");
-        await DigitalWorkspaceExampleRequests.RunSyncInvokeRequest(AasApiClient, Operational, RpcChannel);
+        await DigitalWorkspaceExampleRequests.RunSyncInvokeRequest(AasApiClient, Connection, Operational, RpcChannel);
         Debug.Log("Done!");
     }
 
@@ -45,7 +51,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
 // Test Requests to AAS
 // ============================================================= //
 public class DigitalWorkspaceExampleRequests {
-    public static async Task RunSyncInvokeRequest(AdminShellApiServiceClient client, DigitalTwinLayerOperationalService.DigitalTwinLayerOperationalServiceClient operational, Channel channel) {
+    public static async Task RunSyncInvokeRequest(AdminShellApiServiceClient client, Connection connection, Operational operational, Channel channel) {
         // Thread simulatedExternalRequest = new(() => {
         //     InvokeOperationSyncRequest invokeRequest = new() {
         //         SubmodelId = "aHR0cHM6Ly93d3cuaHMtZW1kZW4tbGVlci5kZS9pZHMvc20vNjQ5NF8yMTYyXzUwMzJfMjgxMw",
@@ -88,6 +94,16 @@ public class DigitalWorkspaceExampleRequests {
             Debug.Log("[From server]: Execution State = " + resultResponse.Result.ExecutionState + ", Success = " + resultResponse.Result.Success);
         });
 
+        var connectRequest = new ConnectRequest() {
+            Type = DigitalTwinLayer.GRPC.Lib.DigitalTwinLayerType.DtLayerTypeVirtual,
+            Info = "Unity Visualisation Layer"
+        };
+        var connectResponse = await connection.ConnectAsync(connectRequest);
+        if (!connectResponse.Success) {
+            Debug.LogError(connectResponse.Message);
+            return;
+        }
+
         var invokeStream = operational.OpenOperationInvocationStream();
         var resultStream = operational.OpenOperationResultStream();
         // var statusStream = operational.OpenExecutionStateStream();
@@ -112,7 +128,11 @@ public class DigitalWorkspaceExampleRequests {
                 Message = "Test operation finished!"
             });
             
-            await operational.CloseStreamsAndDisconnectAsync(new CloseRequest());
+            var abortResponse = await connection.AbortConnectionAsync(new AbortConnectionRequest() { LayerId = "DTLayer::0", Type = DigitalTwinLayer.GRPC.Lib.DigitalTwinLayerType.DtLayerTypeVirtual });
+            if (!abortResponse.Success) {
+                Debug.LogError(abortResponse.Message);
+                return;
+            }
         }
 
         simulatedExternalRequest.Join();

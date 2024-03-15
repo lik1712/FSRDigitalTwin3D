@@ -14,4 +14,9 @@
     <ProjectReference Include="../FSR.DigitalTwin.App/FSR.DigitalTwin.App.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Protobuf Include="Protos/DigitalTwinLayerModels.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/Services/Connection/DigitalTwinLayerConnectionService.proto" GrpcServices="Server" />
+  </ItemGroup>
+
 </Project>

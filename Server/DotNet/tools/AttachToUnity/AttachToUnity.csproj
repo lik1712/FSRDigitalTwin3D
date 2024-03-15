@@ -20,14 +20,17 @@
     <Exec Command="if not exist $(UnityOutputDir)Message.Generated\ mkdir $(UnityOutputDir)Message.Generated\" />
     <Exec Command="if not exist $(UnityOutputDir)GRPC.Generated\ mkdir $(UnityOutputDir)GRPC.Generated\" />
     <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.Aas.GRPC.Lib.V3\Protos\ $(ProjectDir)\Protos\" />
+    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.DigitalTwinLayer.GRPC.Lib\Protos\ $(ProjectDir)\Protos\" />
     <!-- Protos here -->
     <Exec Command="$(Protoc) .\Protos\AasModels.V3.proto" />
     <Exec Command="$(Protoc) .\Protos\AasApiModels.V3.proto" />
+    <Exec Command="$(Protoc) .\Protos\DigitalTwinLayerModels.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\AdminShellRepositoryService.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\SubmodelRepositoryService.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\AssetAdministrationShellService.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\SubmodelService.proto" />
     <Exec Command="$(Protoc) .\Protos\Services\Operational\DigitalTwinLayerOperationalService.proto" />
+    <Exec Command="$(Protoc) .\Protos\Services\Connection\DigitalTwinLayerConnectionService.proto" />
   </Target>
 
 </Project>

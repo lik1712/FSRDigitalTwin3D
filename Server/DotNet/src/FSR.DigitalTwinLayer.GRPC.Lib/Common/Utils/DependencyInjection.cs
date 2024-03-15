@@ -18,5 +18,6 @@ public class DependencyInjection
 public static class GrpcService {
     public static void MapDTLayerGrpcServices(this IEndpointRouteBuilder endpoints) {
         endpoints.MapGrpcService<DigitalTwinLayerOperationalRpcService>();
+        endpoints.MapGrpcService<DigitalTwinLayerConnectionRpcService>();
     }
 }
