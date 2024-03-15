@@ -24,14 +24,6 @@ public class DigitalTwinLayerRpcOperational : IDigitalTwinLayerOperational
         set => _statusRequestStream ??= value;
     }
 
-    public Task OnDisconnect()
-    {
-        _invokeRequestStream = null;
-        _resultRequestStream = null;
-        _statusRequestStream = null;
-        return Task.CompletedTask;
-    }
-
     public async Task<ExecutionState> GetExecutionStateAsync(string requestId)
     {
         if (_statusRequestStream == null) {
@@ -89,10 +81,5 @@ public class DigitalTwinLayerRpcOperational : IDigitalTwinLayerOperational
         catch (ObjectDisposedException) {
             return ExecutionState.FailedEnum;
         }
-    }
-
-    public bool HasConnection()
-    {
-        return _invokeRequestStream != null || _resultRequestStream != null || _statusRequestStream != null;
     }
 }

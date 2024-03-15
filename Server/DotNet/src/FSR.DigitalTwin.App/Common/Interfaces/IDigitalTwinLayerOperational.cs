@@ -8,9 +8,6 @@ public interface IDigitalTwinLayerOperational {
     IAsyncBidirectionalStream<OperationResult, string> ResultRequestStream { set; get; }
     IAsyncBidirectionalStream<ExecutionState, string> StatusRequestStream { set; get; }
 
-    Task OnDisconnect();
-    bool HasConnection();
-
     Task<ExecutionState> InvokeAsync(IOperation operation, int? timestamp, string requestId, string? handleId = null);
     Task<OperationResult> GetResultAsync(string requestId);
     Task<ExecutionState> GetExecutionStateAsync(string requestId);

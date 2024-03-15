@@ -30,6 +30,9 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
+using FSR.DigitalTwin.App.Interfaces;
+using FSR.DigitalTwin.App.Services;
+using FSR.DigitalTwinLayer.GRPC.Lib.Common.Utils;
 
 internal class Startup
 {
@@ -98,7 +101,8 @@ internal class Startup
         services.AddTransient<IAasRegistryService, AasRegistryService>();
         services.AddTransient<IAasDescriptorPaginationService, AasDescriptorPaginationService>();
         services.AddTransient<IOperationReceiver, OperationReceiver>();
-        services.AddSingleton<IDigitalTwinLayerBridge, DigitalTwinLayerRpcBridge>();
+        
+        FSR.DigitalTwinLayer.GRPC.Lib.Common.Utils.DependencyInjection.AddServices(services);
 
         // Add GraphQL services
         services
@@ -217,8 +221,8 @@ internal class Startup
         {
             endpoints.MapControllers();
             endpoints.MapGet("/", () => "*** Welcome to FORSocialRobots Digital Twin Framework! ***");
-            endpoints.MapGrpcServices();
-            endpoints.MapGrpcService<DigitalTwinLayerOperationalRpcService>();
+            endpoints.MapAasGrpcServices();
+            endpoints.MapDTLayerGrpcServices();
         });
 
 
