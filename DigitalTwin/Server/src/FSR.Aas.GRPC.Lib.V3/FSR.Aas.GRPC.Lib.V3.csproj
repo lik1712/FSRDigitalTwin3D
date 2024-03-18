@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../../aasx/src/IO.Swagger.Lib.V3/IO.Swagger.Lib.V3.csproj" />
-    <ProjectReference Include="../../aasx/src/IO.Swagger.Registry.Lib.V3/IO.Swagger.registry.Lib.V3.csproj" />
+    <ProjectReference Include="../../aasx/src/IO.Swagger.Registry.Lib.V3/IO.Swagger.Registry.Lib.V3.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,7 +4,7 @@
 echo "Downloading Unity Plugins..."
 
 URL="https://packages.grpc.io/archive/2019/11/6950e15882f28e43685e948a7e5227bfcef398cd-6d642d6c-a6fc-4897-a612-62b0a3c9026b/csharp/grpc_unity_package.2.26.0-dev.zip"
-DESTINATION="../Client/Unity/DTClient/Assets/"
+DESTINATION="../DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/"
 
 # Create the destination directory if it doesn't exist
 if [ ! -d "./.tmp/" ]; then
@@ -29,7 +29,7 @@ fi
 
 # =============== UniRx ============== #
 URL="https://github.com/neuecc/UniRx.git"
-DESTINATION="../Client/Unity/DTClient/Assets/Plugins/UniRx/"
+DESTINATION="../DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/Plugins/UniRx/"
 
 echo "Cloning repo at $URL..."
 git clone $URL ./.tmp/unirx.7.1.0/
@@ -44,7 +44,7 @@ echo "DONE"
 
 # =============== Treeview ============== #
 URL="https://github.com/neomasterhub/Unity-Treeview.git"
-DESTINATION="../Client/Unity/DTClient/Assets/Plugins/Treeview/"
+DESTINATION="../DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/Plugins/Treeview/"
 
 echo "Cloning repo from $URL..."
 git clone "$URL"  "./.tmp/treeview/"

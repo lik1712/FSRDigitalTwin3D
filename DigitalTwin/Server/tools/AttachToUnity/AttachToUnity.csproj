@@ -9,7 +9,7 @@
   <PropertyGroup>
     <ProtocExec>$(SolutionDir)..\..\Tools\protoc\protoc.exe</ProtocExec>
     <ProtocCSharpPlugin>$(SolutionDir)..\..\Tools\protoc\grpc_csharp_plugin.exe</ProtocCSharpPlugin>
-    <UnityOutputDir>$(SolutionDir)..\..\Client\Unity\DTClient\Assets\Scripts\DigitalTwin\FSR.DigitalTwin.Generated\</UnityOutputDir>
+    <UnityOutputDir>$(SolutionDir)..\Client\FSR.DigitalTwin.Unity\Assets\Scripts\DigitalTwin\FSR.DigitalTwin.Generated\</UnityOutputDir>
     <Protoc>$(ProtocExec) --csharp_out=$(UnityOutputDir)\Message.Generated\ --grcp_out=$(UnityOutputDir)\GRPC.Generated\ --plugin=protoc-gen-grcp=$(ProtocCSharpPlugin)</Protoc>
   </PropertyGroup>
 

@@ -1,3 +1,6 @@
 [submodule "Server/DotNet/aasx"]
 	path = Server/DotNet/aasx
 	url = https://github.com/Neroware/AasxServer.git
+[submodule "DigitalTwin/Server/aasx"]
+	path = DigitalTwin/Server/aasx
+	url = https://github.com/Neroware/AasxServer.git
