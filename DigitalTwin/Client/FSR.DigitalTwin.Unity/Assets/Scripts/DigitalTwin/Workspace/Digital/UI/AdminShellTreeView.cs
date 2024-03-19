@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FSR.Workspace.Digital.Services;
+using FSR.DigitalTwin.Unity.Workspace.Digital.Services;
 using FSR.Aas.GRPC.Lib.V3;
 using FSR.Aas.GRPC.Lib.V3.Services;
 using FSR.Aas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
 using FSR.Aas.GRPC.Lib.V3.Services.SubmodelRepository;
 using UnityEngine;
 
-namespace FSR.Workspace.Digital.UI {
+namespace FSR.DigitalTwin.Unity.Workspace.Digital.UI {
 
 public class AdminShellTreeView : MonoBehaviour {
 

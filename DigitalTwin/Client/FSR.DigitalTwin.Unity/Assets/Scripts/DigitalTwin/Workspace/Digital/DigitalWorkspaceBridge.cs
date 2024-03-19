@@ -7,19 +7,18 @@ using FSR.Aas.GRPC.Lib.V3.Services.AssetAdministrationShellRepository;
 using FSR.Aas.GRPC.Lib.V3.Services.SubmodelRepository;
 using FSR.Aas.GRPC.Lib.V3.Services.SubmodelService;
 using FSR.Aas.GRPC.Lib.V3.Services.Operational;
-using FSR.Workspace.Digital.Services;
+using FSR.DigitalTwinLayer.GRPC.Lib.Services.Connection;
+using FSR.DigitalTwin.Unity.Workspace.Digital.Services;
 using Grpc.Core;
 using UnityEngine;
 using Unity.VisualScripting;
 using System.IO;
 using UnityEngine.UIElements;
 using System.Threading;
-
 using Operational = FSR.Aas.GRPC.Lib.V3.Services.Operational.DigitalTwinLayerOperationalService.DigitalTwinLayerOperationalServiceClient;
 using Connection = FSR.DigitalTwinLayer.GRPC.Lib.Services.Connection.DigitalTwinLayerConnectionService.DigitalTwinLayerConnectionServiceClient;
-using FSR.DigitalTwinLayer.GRPC.Lib.Services.Connection;
 
-namespace FSR.Workspace.Digital {
+namespace FSR.DigitalTwin.Unity.Workspace.Digital {
 
 public class DigitalWorkspaceBridge : MonoBehaviour
 {

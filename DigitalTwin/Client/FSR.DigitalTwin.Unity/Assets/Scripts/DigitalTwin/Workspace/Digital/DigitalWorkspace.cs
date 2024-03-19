@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FSR.Workspace.Digital {
+namespace FSR.DigitalTwin.Unity.Workspace.Digital {
 public class DigitalWorkspace : Workspace
 {
     private static DigitalWorkspace instance;

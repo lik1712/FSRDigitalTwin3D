@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FSR.Workspace.Virtual.Sensors;
+using FSR.DigitalTwin.Unity.Workspace.Virtual.Sensors;
 using System;
 using UniRx;
 
-namespace FSR.Workspace.Virtual.Actors {
+namespace FSR.DigitalTwin.Unity.Workspace.Virtual.Actors {
 
 /**
  * Provides naive controls for a lawnmower robot

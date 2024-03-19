@@ -4,7 +4,7 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 
-namespace FSR.Workspace.Virtual.Sensors {
+namespace FSR.DigitalTwin.Unity.Workspace.Virtual.Sensors {
 
 public class CollisionSensorSource : SensorSource
 {
