@@ -10,7 +10,7 @@
     <ProtocExecWin>$(SolutionDir)..\..\Tools\protoc\protoc.exe</ProtocExecWin>
     <ProtocCSharpPluginWin>$(SolutionDir)..\..\Tools\protoc\grpc_csharp_plugin.exe</ProtocCSharpPluginWin>
     <UnityOutputDirWin>$(SolutionDir)..\Client\FSR.DigitalTwin.Unity\Assets\Scripts\DigitalTwin\FSR.DigitalTwin.Generated\</UnityOutputDirWin>
-    <ProtocWin>$(ProtocExec) --csharp_out=$(UnityOutputDirWin)\Message.Generated\ --grcp_out=$(UnityOutputDirWin)\GRPC.Generated\ --plugin=protoc-gen-grcp=$(ProtocCSharpPluginWin)</ProtocWin>
+    <ProtocWin>$(ProtocExecWin) --csharp_out=$(UnityOutputDirWin)\Message.Generated\ --grcp_out=$(UnityOutputDirWin)\GRPC.Generated\ --plugin=protoc-gen-grcp=$(ProtocCSharpPluginWin)</ProtocWin>
   </PropertyGroup>
 
   <Target Name="AttachToUnityWin" BeforeTargets="BeforeBuild" Condition=" '$(OS)' == 'Windows_NT' ">
