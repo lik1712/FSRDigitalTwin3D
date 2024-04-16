@@ -57,5 +57,18 @@ Copy-Item -Path "./.tmp/treeview/Assets/Treeview/" -Destination $DESTINATION -Re
 
 Write-Host "DONE"
 
+# =============== URDF Importer ============== #
+
+$URL = "https://github.com/Unity-Technologies/URDF-Importer.git"
+$DESTINATION = "../DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/Plugins/URDF-Importer/"
+
+Write-Host "Cloning repo from $URL..."
+git clone $URL  "./.tmp/urdfimporter/"
+
+Write-Host "Copying URDF-Importer into Plugin folder..."
+Copy-Item -Path "./.tmp/urdfimporter/" -Destination $DESTINATION -Recurse
+
+Write-Host "DONE"
+
 Write-Host "Deleting temp directory..."
 rm -r .tmp/

@@ -78,7 +78,7 @@ public class SubmodelRepositoryRpcService : SubmodelRepositoryService.SubmodelRe
 
         _logger.LogInformation($"Received request to get the Submodel with id {request.Id}.");
 
-        GetSubmodelByIdRpcResponse response = new();
+        GetSubmodelByIdRpcResponse response = new() { StatusCode = 200 };
 
         ISubmodel submodel;
         try {

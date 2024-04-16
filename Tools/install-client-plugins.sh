@@ -54,5 +54,18 @@ cp -r "./.tmp/treeview/Assets/Treeview/" "$DESTINATION"
 
 echo "DONE"
 
+# =============== URDF Importer ============== #
+
+URL="https://github.com/Unity-Technologies/URDF-Importer.git"
+DESTINATION="../DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/Plugins/URDF-Importer/"
+
+echo "Cloning repo from $URL..."
+git clone $URL  "./.tmp/urdfimporter/"
+
+echo "Copying URDF-Importer into Plugin folder..."
+cp -r "./.tmp/urdfimporter/" "$DESTINATION"
+
+echo "DONE"
+
 echo "Deleting temp directory..."
 rm -rf .tmp/

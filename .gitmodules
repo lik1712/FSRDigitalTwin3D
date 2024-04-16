@@ -1,3 +1,6 @@
 [submodule "DigitalTwin/Server/aasx"]
 	path = DigitalTwin/Server/aasx
 	url = https://github.com/Neroware/AasxServer.git
+[submodule "DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/URDF"]
+	path = DigitalTwin/Client/FSR.DigitalTwin.Unity/Assets/URDF
+	url = https://github.com/Neroware/FSRDigitalTwin-URDF.git

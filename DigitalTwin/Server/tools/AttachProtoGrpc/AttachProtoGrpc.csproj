@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Protos here -->
+    <Protos>"./Protos/AasModels.V3.proto,./Protos/AasApiModels.V3.proto,./Protos/DigitalTwinLayerModels.proto,./Protos/Services/AdminShellRepositoryService.proto,./Protos/Services/SubmodelRepositoryService.proto,./Protos/Services/AssetAdministrationShellService.proto,./Protos/Services/SubmodelService.proto,./Protos/Services/Operational/DigitalTwinLayerOperationalService.proto,./Protos/Services/Connection/DigitalTwinLayerConnectionService.proto"</Protos>
+  </PropertyGroup>
+
+  <Target Name="AttachToUnityWin" BeforeTargets="BeforeBuild" Condition=" '$(OS)' == 'Windows_NT' ">
+    <Exec Command="if exist $(ProjectDir)\Protos\ del /F /Q $(ProjectDir)\Protos\" />
+    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.Aas.GRPC.Lib.V3\Protos\ $(ProjectDir)\Protos\" />
+    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.DigitalTwinLayer.GRPC.Lib\Protos\ $(ProjectDir)\Protos\" />
+    <Exec Command="powershell .\attach-proto-grpc.ps1 csharp --proto-tools $(SolutionDir)..\..\Tools\protoc\ --output $(SolutionDir)..\Client\FSR.DigitalTwin.Unity\Assets\Scripts\DigitalTwin\FSR.DigitalTwin.Generated\ --protos $(Protos)" />
+  </Target>
+
+  <Target Name="AttachToUnity" BeforeTargets="BeforeBuild" Condition=" '$(OS)' == 'UNIX' ">
+    <Exec Command="mkdir -p $(ProjectDir)/Protos/" />
+    <Exec Command="cp -r $(SolutionDir)src/FSR.Aas.GRPC.Lib.V3/Protos/* $(ProjectDir)/Protos/" />
+    <Exec Command="cp -r $(SolutionDir)src/FSR.DigitalTwinLayer.GRPC.Lib/Protos/* $(ProjectDir)/Protos/" />
+    <Exec Command="./attach-proto-grpc.sh csharp --proto-tools $(SolutionDir)../../Tools/protoc/ --output $(SolutionDir)../Client/FSR.DigitalTwin.Unity/Assets/Scripts/DigitalTwin/FSR.DigitalTwin.Generated/ --protos $(Protos)" />
+  </Target>
+
+  <Target Name="AttachToRos2Win" BeforeTargets="BeforeBuild" Condition=" '$(OS)' == 'Windows_NT' ">
+    <Exec Command="if exist $(ProjectDir)\Protos\ del /F /Q $(ProjectDir)\Protos\" />
+    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.Aas.GRPC.Lib.V3\Protos\ $(ProjectDir)\Protos\" />
+    <Exec Command="xcopy /E /Y $(SolutionDir)src\FSR.DigitalTwinLayer.GRPC.Lib\Protos\ $(ProjectDir)\Protos\" />
+    <Exec Command="powershell .\attach-proto-grpc.ps1 python --proto-tools $(SolutionDir)..\..\Tools\protoc\ --output $(SolutionDir)..\Client\FSR.DigitalTwin.ROS2\FSR.DigitalTwin.Generated\ --protos $(Protos)" />
+  </Target>
+
+  <Target Name="AttachToRos2" BeforeTargets="BeforeBuild" Condition=" '$(OS)' == 'UNIX' ">
+    <Exec Command="mkdir -p $(ProjectDir)/Protos/" />
+    <Exec Command="cp -r $(SolutionDir)src/FSR.Aas.GRPC.Lib.V3/Protos/* $(ProjectDir)/Protos/" />
+    <Exec Command="cp -r $(SolutionDir)src/FSR.DigitalTwinLayer.GRPC.Lib/Protos/* $(ProjectDir)/Protos/" />
+    <Exec Command="./attach-proto-grpc.sh python --proto-tools $(SolutionDir)../../Tools/protoc/ --output $(SolutionDir)../Client/FSR.DigitalTwin.ROS2/FSR.DigitalTwin.Generated/ --protos $(Protos)" />
+  </Target>
+
+</Project>

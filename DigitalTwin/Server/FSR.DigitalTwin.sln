@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{457FFD7A-C9A5-4648-98CE-A8F31DA196E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachToUnity", "tools\AttachToUnity\AttachToUnity.csproj", "{D0813AA5-99A5-49DB-9106-76BE3BE14332}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachProtoGrpc", "tools\AttachProtoGrpc\AttachProtoGrpc.csproj", "{D0813AA5-99A5-49DB-9106-76BE3BE14332}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aasx", "aasx", "{CA3A4509-4BA4-4D31-BC1B-5713D70A1304}"
 EndProject

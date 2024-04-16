@@ -11,17 +11,17 @@ namespace FSR.DigitalTwin.Unity.Workspace.Virtual.Sensors {
  *
  * Generates Data for a Sensor within the Digital Workspace
  */
-public abstract class SensorSource : MonoBehaviour
+public abstract class SensorSource<T> : MonoBehaviour
 {
     [SerializeField] private VirtualWorkspace ws;
 
-    protected IObservable<Hashtable> sensorData = Observable.Empty<Hashtable>();
+    protected IObservable<T> sensorData = Observable.Empty<T>();
 
     private void Awake() {
         ws = ws ? ws : FindFirstObjectByType<VirtualWorkspace>();
     }
 
-    public IObservable<Hashtable> SensorData {
+    public IObservable<T> SensorData {
         get { return sensorData; }
     }
 

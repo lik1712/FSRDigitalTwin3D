@@ -26,7 +26,7 @@ public class AdminShellTreeView : MonoBehaviour {
     };
 
     async void Start() {
-        aasClient = DigitalWorkspace.Instance.ApiBridge.AasApiClient;
+        aasClient = DigitalWorkspace.Instance.ApiBridge.AasApi;
         await OnUpdateTreeViewAsync();
     }
 
