@@ -31,7 +31,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
     public AdminShellApiServiceClient AasApi => aasApiServiceClient;
     public DigitalTwinLayerServiceClient Layer => layerServiceClient;
 
-    public bool IsConnected => rpcChannel != null;
+    public bool IsConnected => rpcChannel != null && rpcChannel.State == ChannelState.Ready;
 
     public DigitalWorkspaceBridge() {
         rpcChannel = null;
@@ -63,13 +63,20 @@ public class DigitalWorkspaceBridge : MonoBehaviour
         }
     }
 
-    async void Awake() {
-        await Task.Delay(3000); // For setup
-        Connect();
+    public void SetServerConnectionAddress(string ip, int port) {
+        digitalWorkspaceAddr = ip;
+        digitalWorkspacePort = port;
     }
 
+    // async void Awake() {
+    //     await Task.Delay(3000); // For setup
+    //     Connect();
+    // }
+
     void OnDestroy() {
-        Disconnect();
+        if (IsConnected) { 
+            Disconnect(); 
+        }
     }
 
     // async void Start() {
