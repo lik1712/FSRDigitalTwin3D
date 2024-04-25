@@ -46,6 +46,9 @@ namespace FSR.DigitalTwin.Unity.Workspace.Digital {
         }
 
         public async Task<bool> HasConnectionAsync() {
+            if (!DigitalWorkspace.ApiBridge.IsConnected) {
+                return false;
+            }
             var aasApi = DigitalWorkspace.ApiBridge.AasApi;
             GetAssetAdministrationShellByIdRpcRequest request = new() {
                 Id = Base64Converter.ToBase64(AdminShellId),

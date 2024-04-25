@@ -13,9 +13,7 @@ namespace FSR.DigitalTwin.Unity.Workspace.Digital.UI {
 
 public class AdminShellTreeView : MonoBehaviour {
 
-    [SerializeField]
-    private Treeview treeView;
-    private AdminShellApiServiceClient aasClient;
+    [SerializeField] private Treeview treeView;
 
     private static OutputModifier Default = new OutputModifier() {
         Cursor = "",
@@ -26,8 +24,9 @@ public class AdminShellTreeView : MonoBehaviour {
     };
 
     async void Start() {
-        aasClient = DigitalWorkspace.Instance.ApiBridge.AasApi;
-        await OnUpdateTreeViewAsync();
+        if (DigitalWorkspace.Instance.ApiBridge.IsConnected) {
+            await OnUpdateTreeViewAsync();
+        }
     }
 
     private class SubmodelElementModelCollection {
@@ -35,7 +34,10 @@ public class AdminShellTreeView : MonoBehaviour {
     }
 
     private async Task OnUpdateTreeViewAsync() {
+        var aasClient = DigitalWorkspace.Instance.ApiBridge.AasApi;
+
         treeView.Root.Text = "[Environment (Digital Workspace)]";
+        treeView.Root.Children.Clear();
         var aasNode = treeView.Root.AddChild("[AdminShells]", ReturnedNode.Created);
         var submodelNode = treeView.Root.AddChild("[Submodels]", ReturnedNode.Created);
 
