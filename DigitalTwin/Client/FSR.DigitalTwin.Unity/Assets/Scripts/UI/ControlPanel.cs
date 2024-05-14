@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace FSR.UI {
-    public class ServerControlPanel : MonoBehaviour
+    public class ControlPanel : MonoBehaviour
     {
 
         [SerializeField] private Button connectButton;

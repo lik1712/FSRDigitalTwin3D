@@ -105,21 +105,21 @@ namespace FSR.DigitalTwin.Unity.Workspace.Virtual.Actors {
             return response.StatusCode;
         }
 
-        async void Start() {
-            if (!await HasConnectionAsync()) {
-                Debug.LogError("[Client]: Missing Operational submodel! Cannot upload inital joint values!");
-                return;
-            }
-            PostSubmodelElementRpcRequest request = new() {
-                SubmodelId = Base64Converter.ToBase64(SubmodelId),
-                SubmodelElement = CreateJointOrientationSubmodelElement()
-            };
-            var response = await DigitalWorkspace.ApiBridge.AasApi.Submodel.PostSubmodelElementAsync(request);
-            if (response.StatusCode == 403) {
-                Debug.Log("[Client]: Initial joint orientation data already present...");
-            }
+        void Start() {
+            DigitalWorkspace.ApiBridge.ObserveConnected.Subscribe(async _ => {
+                PostSubmodelElementRpcRequest request = new() {
+                    SubmodelId = Base64Converter.ToBase64(SubmodelId),
+                    SubmodelElement = CreateJointOrientationSubmodelElement()
+                };
+                var response = await DigitalWorkspace.ApiBridge.AasApi.Submodel.PostSubmodelElementAsync(request);
+                if (response.StatusCode == 403) {
+                    Debug.Log("[Client]: Initial joint orientation data already present...");
+                }
+            })
+            .AddTo(this);
 
             Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1))
+                .Where(_ => DigitalWorkspace.ApiBridge.IsConnected)
                 .Subscribe(async _ =>  { 
                     if (isListening) { 
                         await OnSynchronizeDataAsync(); 

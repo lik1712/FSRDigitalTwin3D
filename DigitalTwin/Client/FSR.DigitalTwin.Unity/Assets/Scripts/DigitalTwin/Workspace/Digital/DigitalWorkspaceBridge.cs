@@ -15,6 +15,7 @@ using Unity.VisualScripting;
 using System.IO;
 using UnityEngine.UIElements;
 using System.Threading;
+using UniRx;
 
 namespace FSR.DigitalTwin.Unity.Workspace.Digital {
 
@@ -32,6 +33,14 @@ public class DigitalWorkspaceBridge : MonoBehaviour
     public DigitalTwinLayerServiceClient Layer => layerServiceClient;
 
     public bool IsConnected => rpcChannel != null && rpcChannel.State == ChannelState.Ready;
+
+    public IObservable<bool> ObserveConnection => Observable.EveryUpdate()
+        .Select(_ => IsConnected)
+        .DistinctUntilChanged();
+    public IObservable<Channel> ObserveConnected => ObserveConnection.Where(_ => IsConnected)
+        .Select(_ => rpcChannel);
+    public IObservable<UniRx.Unit> ObserveDisconnected => ObserveConnection.Where(_ => IsConnected)
+        .Select(_ => UniRx.Unit.Default);
 
     public DigitalWorkspaceBridge() {
         rpcChannel = null;
@@ -61,6 +70,7 @@ public class DigitalWorkspaceBridge : MonoBehaviour
         if (!abortResponse.Success) {
             Debug.LogError(abortResponse.Message);
         }
+        rpcChannel = null;
     }
 
     public void SetServerConnectionAddress(string ip, int port) {

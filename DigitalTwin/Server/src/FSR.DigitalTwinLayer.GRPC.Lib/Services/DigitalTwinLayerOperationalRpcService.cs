@@ -17,7 +17,7 @@ public class DigitalTwinLayerOperationalRpcService : DigitalTwinLayerOperational
 
     public override async Task OpenOperationInvocationStream(Grpc.Core.IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationInvokeRequest> responseStream, ServerCallContext context)
     {
-        Console.WriteLine("[Server]: Opened invoke channel to client...");
+        // Console.WriteLine("[Server]: Opened invoke channel to client...");
         var stream = new AsyncBidirectionRpcStream<AdminShellNS.Models.ExecutionState, OperationStatus, AdminShellNS.Models.OperationInvocation, OperationInvokeRequest>(_mapper, requestStream, responseStream);
         _layerService.Layer.Operational.InvokeRequestStream = stream;
 
@@ -25,12 +25,12 @@ public class DigitalTwinLayerOperationalRpcService : DigitalTwinLayerOperational
             await Task.Delay(100);
         }
 
-        Console.WriteLine("[Server]: Done!");
+        // Console.WriteLine("[Server]: Done!");
     }
 
     public override async Task OpenOperationResultStream(Grpc.Core.IAsyncStreamReader<OperationResult> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
     {
-        Console.WriteLine("[Server]: Opened result channel to client...");
+        // Console.WriteLine("[Server]: Opened result channel to client...");
 
         var stream = new AsyncBidirectionRpcStream<AdminShellNS.Models.OperationResult, OperationResult, string, OperationRequest>(_mapper, requestStream, responseStream);
         _layerService.Layer.Operational.ResultRequestStream = stream;
@@ -39,12 +39,12 @@ public class DigitalTwinLayerOperationalRpcService : DigitalTwinLayerOperational
             await Task.Delay(100);
         }
 
-        Console.WriteLine("[Server]: Done!");
+        // Console.WriteLine("[Server]: Done!");
     }
 
     public override async Task OpenExecutionStateStream(Grpc.Core.IAsyncStreamReader<OperationStatus> requestStream, IServerStreamWriter<OperationRequest> responseStream, ServerCallContext context)
     {
-        Console.WriteLine("[Server]: Opened operation execution status channel to client...");
+        // Console.WriteLine("[Server]: Opened operation execution status channel to client...");
 
         var stream = new AsyncBidirectionRpcStream<AdminShellNS.Models.ExecutionState, OperationStatus, string, OperationRequest>(_mapper, requestStream, responseStream);
         _layerService.Layer.Operational.StatusRequestStream = stream;
@@ -53,7 +53,7 @@ public class DigitalTwinLayerOperationalRpcService : DigitalTwinLayerOperational
             await Task.Delay(100);
         }
 
-        Console.WriteLine("[Server]: Done!");
+        // Console.WriteLine("[Server]: Done!");
     }
     
 }
