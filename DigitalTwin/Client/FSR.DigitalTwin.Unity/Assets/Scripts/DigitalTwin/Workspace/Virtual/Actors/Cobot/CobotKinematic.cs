@@ -22,11 +22,11 @@ namespace FSR.DigitalTwin.Unity.Workspace.Virtual.Actors {
     public class CobotKinematic : DigitalTwinComponent
     {
         [SerializeField] private List<JointSensorSource> joints;
-        [SerializeField] private bool isListening = true;
 
         private readonly SubmodelElementFactory submodelElementFactory = new();
 
         public JointSensorSource[] Joints => joints.ToArray();
+        public bool IsListening { get; set; } = false;
 
         private SubmodelElementDTO CreateJointOrientationSubmodelElement() {
             List<SubmodelElementDTO> jointProperties = new();
@@ -121,7 +121,7 @@ namespace FSR.DigitalTwin.Unity.Workspace.Virtual.Actors {
             Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1))
                 .Where(_ => DigitalWorkspace.ApiBridge.IsConnected)
                 .Subscribe(async _ =>  { 
-                    if (isListening) { 
+                    if (IsListening) { 
                         await OnSynchronizeDataAsync(); 
                     } else {
                         await OnPushDataAsync();

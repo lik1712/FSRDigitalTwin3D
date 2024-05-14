@@ -14,7 +14,8 @@ public class DigitalWorkspace : Workspace
     [SerializeField]
     private DigitalWorkspaceBridge digitalWorkspaceBridge;
 
-    public DigitalWorkspaceBridge ApiBridge { get => digitalWorkspaceBridge; }
+    public DigitalWorkspaceBridge ApiBridge => digitalWorkspaceBridge;
+    public DigitalWorkspaceSettings Settings { get; } = new();
 
     public override EKind Kind => EKind.DIGITAL;
 

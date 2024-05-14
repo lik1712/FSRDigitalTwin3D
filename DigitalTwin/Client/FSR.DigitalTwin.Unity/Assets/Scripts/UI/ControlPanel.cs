@@ -52,6 +52,14 @@ namespace FSR.UI {
                 disconnectButton.gameObject.SetActive(false);
             }
         }
+
+        public void OnIsListeningTick(bool value) {
+            DigitalWorkspace.Instance.Settings.SetListening(value);
+        }
+
+        public void OnNoClipTick(bool value) {
+            DigitalWorkspace.Instance.Settings.SetNoClipMode(value);
+        }
     }
 }
 
